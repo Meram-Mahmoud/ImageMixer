@@ -17,7 +17,7 @@ class ImageUploader(QWidget):
         self.original_image_label.setAlignment(Qt.AlignCenter)
         self.original_image_label.setStyleSheet("background-color: lightgray; border: 1px solid gray;")
         self.original_image_label.setFixedSize(300, 400)  # Rectangle size
-        pixmap = QPixmap("ImageMixer/icons/upload.png")  # Replace with your icon file path
+        pixmap = QPixmap("ImageMixer/icons/upload.png")
         self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
         self.image = None
         
