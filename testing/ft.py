@@ -3,25 +3,57 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Load the image in grayscale
-image = cv2.imread('ImageMixer/images/FB_IMG_1579124180609.jpg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread(r"C:\Users\HP\OneDrive\Documents\GitHub\equalizerrrr for data\ImageMixer\images\IMG_20200410_220644_467.jpg", cv2.IMREAD_GRAYSCALE)
 
-# Compute the 2D Fourier Transform
+# Perform Fourier Transform
 f_transform = np.fft.fft2(image)
-f_shift = np.fft.fftshift(f_transform)  # Shift the zero frequency component to the center
+f_transform_shifted = np.fft.fftshift(f_transform)
 
-# Compute the magnitude spectrum (2D result)
-magnitude_spectrum = np.log1p(np.abs(f_shift))  # Use log1p for better numerical stability
+# Extract Fourier components
+magnitude = np.abs(f_transform_shifted)
+phase = np.angle(f_transform_shifted)
+real_part = np.real(f_transform_shifted)
+imaginary_part = np.imag(f_transform_shifted)
 
-# Normalize the result to display as an image
-magnitude_spectrum = cv2.normalize(magnitude_spectrum, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+# Modify Components
 
-# Plot the original image and the 2D Fourier magnitude spectrum
-plt.figure(figsize=(10, 5))
+# 1. Modified Magnitude (Scale up all frequencies)
+modified_magnitude = magnitude * 0.5
+
+# 2. Modified Phase (Shift phase by a constant)
+modified_phase = phase + np.pi / 1
+
+# 3. Modified Real Part (Add constant to real part)
+modified_real = real_part + 100
+
+# 4. Modified Imaginary Part (Zero out imaginary part)
+modified_imaginary = np.zeros_like(imaginary_part)
+
+# Combine modified components into a single complex Fourier Transform
+# Use the modified magnitude and phase to create a complex array
+modified_complex = modified_magnitude * np.exp(1j * modified_phase)
+
+# Combine the modified real and imaginary parts into the Fourier array
+final_complex = modified_real + 1j * modified_imaginary
+
+# Reconstruct the image from the final Fourier coefficients
+f_inverse_shifted = np.fft.ifftshift(final_complex)
+reconstructed_image = np.fft.ifft2(f_inverse_shifted).real
+
+# Plotting
+plt.figure(figsize=(8, 6))
+
+# Original Image
 plt.subplot(1, 2, 1)
 plt.title("Original Image")
 plt.imshow(image, cmap='gray')
+plt.axis('off')
 
+# Reconstructed Image with modified components
 plt.subplot(1, 2, 2)
-plt.title("2D Fourier Transform (Magnitude)")
-plt.imshow(magnitude_spectrum, cmap='gray')
+plt.title("Reconstructed with Modified Components")
+plt.imshow(reconstructed_image, cmap='gray')
+plt.axis('off')
+
+plt.tight_layout()
 plt.show()
