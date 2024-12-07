@@ -142,22 +142,6 @@ class ImageUploader(QWidget):
         self.real = real
         self.imaginary = imaginary
 
-        # # Normalize the desired component for display (e.g., phase)
-        # normalized_phase = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-
-        # # Convert the phase spectrum to a QPixmap for GUI display
-        # height, width = normalized_phase.shape
-        # qimage_phase = QImage(normalized_phase.data, width, height, width, QImage.Format_Grayscale8)
-
-        # # Convert QImage to QPixmap
-        # pixmap_phase = QPixmap.fromImage(qimage_phase)
-
-        # # Apply rounded corners to the phase pixmap
-        # rounded_pixmap_phase = self.get_rounded_pixmap(pixmap_phase, self.ft_image_label.size(), self.radius)
-
-        # # Display the rounded phase pixmap in the QLabel
-        # self.ft_image_label.setPixmap(rounded_pixmap_phase.scaled(self.width, self.height, Qt.KeepAspectRatio))
-
     def plot_fourier(self):
         # Get the selected component from the combobox
         selected_component = self.component_combo.currentText()
