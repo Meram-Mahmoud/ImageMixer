@@ -18,41 +18,65 @@ imaginary_part = np.imag(f_transform_shifted)
 # Modify Components
 
 # 1. Modified Magnitude (Scale up all frequencies)
-modified_magnitude = magnitude * 0.5
+modified_magnitude = magnitude * 0.1
 
 # 2. Modified Phase (Shift phase by a constant)
-modified_phase = phase + np.pi / 1
+modified_phase = phase + np.pi / 2
 
 # 3. Modified Real Part (Add constant to real part)
-modified_real = real_part + 100
+modified_real = real_part + 500
 
 # 4. Modified Imaginary Part (Zero out imaginary part)
 modified_imaginary = np.zeros_like(imaginary_part)
 
-# Combine modified components into a single complex Fourier Transform
-# Use the modified magnitude and phase to create a complex array
-modified_complex = modified_magnitude * np.exp(1j * modified_phase)
+# Reconstruct Images
+def reconstruct_from_components(mag, ph):
+    complex_array = mag * np.exp(1j * ph)
+    f_inverse_shifted = np.fft.ifftshift(complex_array)
+    return np.fft.ifft2(f_inverse_shifted).real
 
-# Combine the modified real and imaginary parts into the Fourier array
-final_complex = modified_real + 1j * modified_imaginary
+def reconstruct_from_real_imag(real, imag):
+    complex_array = real + 1j * imag
+    f_inverse_shifted = np.fft.ifftshift(complex_array)
+    return np.fft.ifft2(f_inverse_shifted).real
 
-# Reconstruct the image from the final Fourier coefficients
-f_inverse_shifted = np.fft.ifftshift(final_complex)
-reconstructed_image = np.fft.ifft2(f_inverse_shifted).real
+# Reconstructed Images
+image_modified_magnitude = reconstruct_from_components(modified_magnitude, phase)
+image_modified_phase = reconstruct_from_components(magnitude, modified_phase)
+image_modified_real = reconstruct_from_real_imag(modified_real, imaginary_part)
+image_modified_imaginary = reconstruct_from_real_imag(real_part, modified_imaginary)
 
 # Plotting
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(15, 10))
 
 # Original Image
-plt.subplot(1, 2, 1)
+plt.subplot(2, 3, 1)
 plt.title("Original Image")
 plt.imshow(image, cmap='gray')
 plt.axis('off')
 
-# Reconstructed Image with modified components
-plt.subplot(1, 2, 2)
-plt.title("Reconstructed with Modified Components")
-plt.imshow(reconstructed_image, cmap='gray')
+# Modified Magnitude
+plt.subplot(2, 3, 2)
+plt.title("Modified Magnitude")
+plt.imshow(image_modified_magnitude, cmap='gray')
+plt.axis('off')
+
+# Modified Phase
+plt.subplot(2, 3, 3)
+plt.title("Modified Phase")
+plt.imshow(image_modified_phase, cmap='gray')
+plt.axis('off')
+
+# Modified Real Part
+plt.subplot(2, 3, 4)
+plt.title("Modified Real Part")
+plt.imshow(image_modified_real, cmap='gray')
+plt.axis('off')
+
+# Modified Imaginary Part
+plt.subplot(2, 3, 5)
+plt.title("Modified Imaginary Part")
+plt.imshow(image_modified_imaginary, cmap='gray')
 plt.axis('off')
 
 plt.tight_layout()
