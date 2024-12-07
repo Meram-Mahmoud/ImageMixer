@@ -8,11 +8,10 @@ import numpy as np
 class ImageUploader(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        
-        # Create the layout for the window
-        layout = QHBoxLayout(self)
+
         self.width, self.height, self.radius = 250, 350, 15
-        # Create the original image display QLabel
+
+        layout = QHBoxLayout(self)
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
         self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #73917b;")
@@ -21,7 +20,6 @@ class ImageUploader(QWidget):
         self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
         self.image = None
         
-        # Create the FT image display QLabel
         self.ft_image_label = QLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
         self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #73917b;")
@@ -30,29 +28,21 @@ class ImageUploader(QWidget):
         
         # Add labels to the layout
         layout.addWidget(self.original_image_label)
-        layout.addSpacing(10)  # 30px space between the original image and FT image
+        layout.addSpacing(10)
         layout.addWidget(self.ft_image_label)
         
-        # Set the layout for the window
         self.setLayout(layout)
     
     def mousePressEvent(self, event):
-        # Handle double-click event to open file dialog
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
             self.upload_image()
             
     def upload_image(self):
-        # Open file dialog to select an image
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Images (*.png *.jpg *.bmp)")
         
         if file_path:
-            # Load the image using OpenCV
             img_bgr = cv2.imread(file_path)
-
-            # Convert the image to grayscale
             img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
-
-            # Store the image for FFT processing
             self.image = img_gray
 
             # Convert the grayscale image to QImage
@@ -64,7 +54,6 @@ class ImageUploader(QWidget):
             pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
             self.original_image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-            # Compute the Fourier Transform and display it
             self.fft()
 
     def fft(self):
