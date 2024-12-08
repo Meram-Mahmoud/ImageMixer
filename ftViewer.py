@@ -45,6 +45,12 @@ class FourierTransformViewer(QWidget):
         # Connections
         self.component_combo.currentIndexChanged.connect(self.update_ft_view)
 
+    def setData(self, original):
+        self.image=original
+        print("setting the data before fourier, IMAGE:")
+        print(self.image)
+        self.compute_fft(self.image)
+
     def compute_fft(self, image):
         """Computes Fourier Transform of the input image."""
         f_transform = np.fft.fft2(image)
@@ -53,11 +59,13 @@ class FourierTransformViewer(QWidget):
         self.phase = np.angle(f_shift)
         self.real = np.real(f_shift)
         self.imaginary = np.imag(f_shift)
+        print("setting the data after fourier, MAGNITUDE:")
+        print(self.magnitude)
 
     def update_ft_view(self):
         """Updates the Fourier component display based on user selection."""
-        if not self.image:
-            return
+        # if not self.image:
+        #     return
 
         selected = self.component_combo.currentText()
         if selected == "Magnitude":

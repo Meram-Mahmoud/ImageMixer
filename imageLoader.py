@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QLabel, QFileDialog, QHBoxLayout, QWid
 from PyQt5.QtGui import QPixmap, QImage, QPainter, QPainterPath
 from PyQt5.QtCore import Qt, QEvent
 import cv2
+from ftViewer import FourierTransformViewer
 import numpy as np
 
 class ImageUploader(QWidget):
@@ -11,6 +12,13 @@ class ImageUploader(QWidget):
         super().__init__(parent)
 
         self.width, self.height, self.radius = 250, 350, 15
+
+        # Variables for brightness and contrast control
+        self.brightness = 0  # Starting brightness (no change)
+        self.contrast = 1    # Starting contrast (no change)
+        self.is_dragging = False  # To track mouse dragging
+
+        self.image_ft=FourierTransformViewer()
 
         # Main horizontal layout
         layout = QHBoxLayout(self)
@@ -26,52 +34,48 @@ class ImageUploader(QWidget):
 
         layout.addSpacing(20)  # Space between original image and FT section
 
-        # Fourier Transform Section (ComboBox + Rectangle)
+
         ft_layout = QVBoxLayout()  # Vertical layout for ComboBox and FT image
-
-        # ComboBox
-        self.component_combo = QComboBox(self)
-        self.component_combo.addItem("Choose Component")
-        self.component_combo.addItem("Magnitude")
-        self.component_combo.addItem("Phase")
-        self.component_combo.addItem("Real")
-        self.component_combo.addItem("Imaginary")
-        self.component_combo.setStyleSheet("""
-            QComboBox {
-                background-color: #01240e;
-                color: #ffffff;
-                border: 1px solid #888888;
-                border-radius: 5px;
-                padding: 5px;
-            }
-            QComboBox QAbstractItemView {
-                background: #ffffff;
-                selection-background-color: #01240e;
-                selection-color: #ffffff;
-                border: 1px solid #888888;
-            }
-        """)
-        self.component_combo.currentIndexChanged.connect(self.plot_fourier)
-        ft_layout.addWidget(self.component_combo)  # Add ComboBox to the vertical layout
-
-        # FT Image Rectangle
-        self.ft_image_label = QLabel(self)
-        self.ft_image_label.setAlignment(Qt.AlignCenter)
-        self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
-        self.ft_image_label.setFixedSize(self.width, self.height)  # Same size as the original image label
-        ft_layout.addWidget(self.ft_image_label)  # Add FT image to the vertical layout
-
+        ft_layout.addWidget(self.image_ft.component_combo)  # Add FourierTransformViewer ComboBox
+        ft_layout.addWidget(self.image_ft.ft_image_label)  # Add FourierTransformViewer FT Image
         layout.addLayout(ft_layout)
 
-        self.magnitude = None
-        self.phase = None
-        self.real = None
-        self.imaginary = None
+        # # Fourier Transform Section (ComboBox + Rectangle)
+        # ft_layout = QVBoxLayout()  # Vertical layout for ComboBox and FT image
 
-        # Variables for brightness and contrast control
-        self.brightness = 0  # Starting brightness (no change)
-        self.contrast = 1    # Starting contrast (no change)
-        self.is_dragging = False  # To track mouse dragging
+        # # ComboBox
+        # self.component_combo = QComboBox(self)
+        # self.component_combo.addItem("Choose Component")
+        # self.component_combo.addItem("Magnitude")
+        # self.component_combo.addItem("Phase")
+        # self.component_combo.addItem("Real")
+        # self.component_combo.addItem("Imaginary")
+        # self.component_combo.setStyleSheet("""
+        #     QComboBox {
+        #         background-color: #01240e;
+        #         color: #ffffff;
+        #         border: 1px solid #888888;
+        #         border-radius: 5px;
+        #         padding: 5px;
+        #     }
+        #     QComboBox QAbstractItemView {
+        #         background: #ffffff;
+        #         selection-background-color: #01240e;
+        #         selection-color: #ffffff;
+        #         border: 1px solid #888888;
+        #     }
+        # """)
+        # self.component_combo.currentIndexChanged.connect(self.plot_fourier)
+        # ft_layout.addWidget(self.component_combo)  # Add ComboBox to the vertical layout
+
+        # # FT Image Rectangle
+        # self.ft_image_label = QLabel(self)
+        # self.ft_image_label.setAlignment(Qt.AlignCenter)
+        # self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        # self.ft_image_label.setFixedSize(self.width, self.height)  # Same size as the original image label
+        # ft_layout.addWidget(self.ft_image_label)  # Add FT image to the vertical layout
+
+        # layout.addLayout(ft_layout)
     
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
@@ -130,56 +134,12 @@ class ImageUploader(QWidget):
             pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
             self.original_image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-            self.fft()
+            #self.fft()
 
-    def fft(self):
-        # Compute the 2D Fourier Transform for the entire image
-        f_transform = np.fft.fft2(self.image)  # Complex array
-        f_shift = np.fft.fftshift(f_transform)  # Shift the zero frequency component to the center
+            self.image_ft.setData(self.image)
+            print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
+            print(self.image_ft.magnitude)
 
-        # Extract the components
-        magnitude = np.log1p(np.abs(f_shift)) # Magnitude spectrum
-        phase = np.angle(f_shift)   # Phase spectrum
-        real = np.real(f_shift)     # Real part
-        imaginary = np.imag(f_shift)  # Imaginary part
-
-        # Store these components as attributes for later use
-        self.magnitude = magnitude
-        self.phase = phase
-        self.real = real
-        self.imaginary = imaginary
-
-    def plot_fourier(self):
-        # Get the selected component from the combobox
-        selected_component = self.component_combo.currentText()
-        
-        # Based on the selected component, plot the corresponding FT image
-        if selected_component == "Magnitude" and self.magnitude is not None:
-            component_data = self.magnitude
-        elif selected_component == "Phase" and self.phase is not None:
-            component_data = self.phase
-        elif selected_component == "Real" and self.real is not None:
-            component_data = self.real
-        elif selected_component == "Imaginary" and self.imaginary is not None:
-            component_data = self.imaginary
-        else:
-            return  # Do nothing if no valid component is selected
-
-        # Normalize the component for display
-        normalized_component = cv2.normalize(component_data, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-
-        # Convert the component to QImage for display
-        height, width = normalized_component.shape
-        qimage_component = QImage(normalized_component.data, width, height, width, QImage.Format_Grayscale8)
-
-        # Convert QImage to QPixmap
-        pixmap_component = QPixmap.fromImage(qimage_component)
-
-        # Apply rounded corners to the pixmap
-        rounded_pixmap = self.get_rounded_pixmap(pixmap_component, self.ft_image_label.size(), self.radius)
-
-        # Display the rounded pixmap in the QLabel
-        self.ft_image_label.setPixmap(rounded_pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
     
     # Changing the style of the image to match the size of the rectangle
     def get_rounded_pixmap(self, pixmap, size, radius):
