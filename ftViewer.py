@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout
 from PyQt5.QtGui import QPixmap, QImage, QPainter
+=======
+from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
+from PyQt5.QtGui import QPixmap, QImage
+>>>>>>> 10ef4279dbce7dffb255c04c8a3f4581e75539b0
 from PyQt5.QtCore import Qt
 import cv2
 import numpy as np
+from region_selector import ROISelectableLabel
+
 
 class FourierTransformViewer(QWidget):
     def __init__(self, parent=None):
@@ -13,6 +20,7 @@ class FourierTransformViewer(QWidget):
         self.phase = None
         self.real = None
         self.imaginary = None
+        self.component=None
 
         # ComboBox for selecting Fourier components
         self.component_combo = QComboBox(self)
@@ -32,10 +40,13 @@ class FourierTransformViewer(QWidget):
         """)
 
         # Fourier component display
-        self.ft_image_label = QLabel(self)
+        self.ft_image_label = ROISelectableLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
         self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
         self.ft_image_label.setFixedSize(self.width, self.height)
+
+        # Connect the ROI selection signal to the slot
+        self.ft_image_label.regionSelected.connect(self.get_region_data)
 
         # Layout
         layout = QVBoxLayout(self)
@@ -69,17 +80,17 @@ class FourierTransformViewer(QWidget):
 
         selected = self.component_combo.currentText()
         if selected == "Magnitude":
-            component = self.magnitude
+            self.component = self.magnitude
         elif selected == "Phase":
-            component = self.phase
+            self.component = self.phase
         elif selected == "Real":
-            component = self.real
+            self.component = self.real
         elif selected == "Imaginary":
-            component = self.imaginary
+            self.component = self.imaginary
         else:
             return
 
-        self.display_component(component)
+        self.display_component(self.component)
 
     def display_component(self, component):
         """Displays the selected Fourier component with rounded corners."""
@@ -105,3 +116,34 @@ class FourierTransformViewer(QWidget):
 
         # Set the rounded pixmap to the QLabel
         self.ft_image_label.setPixmap(pixmap_component)
+        self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
+
+    def get_region_data(self, rect, region_type='inner'):
+        """Extracts and saves data within the selected ROI or outside the selected ROI."""
+        if self.image is not None and not rect.isNull():
+            # Map QRect to image coordinates
+            x1 = int(rect.left() * self.component.shape[1] / self.ft_image_label.width())
+            x2 = int(rect.right() * self.component.shape[1] / self.ft_image_label.width())
+            y1 = int(rect.top() * self.component.shape[0] / self.ft_image_label.height())
+            y2 = int(rect.bottom() * self.component.shape[0] / self.ft_image_label.height())
+
+            # Extract data based on region_type
+            if region_type == 'inner':
+                # Crop the region inside the rectangle (inner region)
+                region = self.component[y1:y2, x1:x2]
+                print("Inner Region Data:")
+                print(region)
+            elif region_type == 'outer':
+                # Extract the outer region (everything except inside the rectangle)
+                outer_region = np.copy(self.component)  # Create a copy of the entire image
+
+                # Set the area inside the rectangle to 0 (black or empty)
+                outer_region[y1:y2, x1:x2] = 0
+
+                print("Outer Region Data:")
+                print(outer_region)
+                region = outer_region  # Return the outer region data
+
+            # Save or process the region as needed
+            return region
+
