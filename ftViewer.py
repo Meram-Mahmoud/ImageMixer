@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout
 from PyQt5.QtGui import QPixmap, QImage, QPainter
-=======
 from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtGui import QPixmap, QImage
->>>>>>> 10ef4279dbce7dffb255c04c8a3f4581e75539b0
 from PyQt5.QtCore import Qt
 import cv2
 import numpy as np
