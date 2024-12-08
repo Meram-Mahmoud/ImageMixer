@@ -1,8 +1,50 @@
-from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtGui import QPixmap, QImage
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout, QRubberBand
+from PyQt5.QtGui import QPixmap, QImage, QMouseEvent,QPainter, QColor, QPen
+from PyQt5.QtCore import Qt, QRect , pyqtSignal
 import cv2
 import numpy as np
+
+
+class ROISelectableLabel(QLabel):
+    # Signal to send the selected ROI
+    regionSelected = pyqtSignal(QRect)
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.start_point = None
+        self.end_point = None
+        self.rect = QRect()
+        self.drawing = False
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.start_point = event.pos()
+            self.drawing = True
+            self.rect = QRect()
+
+    def mouseMoveEvent(self, event):
+        if self.drawing:
+            self.end_point = event.pos()
+            self.rect = QRect(self.start_point, self.end_point).normalized()
+            self.update()  # Trigger a repaint to show the rectangle
+
+    def mouseReleaseEvent(self, event):
+        if event.button() == Qt.LeftButton and self.drawing:
+            self.drawing = False
+            self.end_point = event.pos()
+            self.rect = QRect(self.start_point, self.end_point).normalized()
+            self.update()
+            self.regionSelected.emit(self.rect)  # Emit the region for external use
+
+    def paintEvent(self, event):
+        """Draw the ROI rectangle."""
+        super().paintEvent(event)
+        if not self.rect.isNull():
+            painter = QPainter(self)
+            painter.setPen(QPen(QColor(255, 0, 0), 2, Qt.SolidLine))
+            painter.setBrush(QColor(255, 0, 0, 50))  # Semi-transparent red
+            painter.drawRect(self.rect)
+
 
 class FourierTransformViewer(QWidget):
     def __init__(self, parent=None):
@@ -32,10 +74,13 @@ class FourierTransformViewer(QWidget):
         """)
 
         # Fourier component display
-        self.ft_image_label = QLabel(self)
+        self.ft_image_label = ROISelectableLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
         self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
         self.ft_image_label.setFixedSize(self.width, self.height)
+
+        # Connect the ROI selection signal to the slot
+        self.ft_image_label.regionSelected.connect(self.get_region_data)
 
         # Layout
         layout = QVBoxLayout(self)
@@ -88,3 +133,19 @@ class FourierTransformViewer(QWidget):
         qimage_component = QImage(normalized_component.data, width, height, width, QImage.Format_Grayscale8)
         pixmap_component = QPixmap.fromImage(qimage_component)
         self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
+
+    def get_region_data(self, rect):
+        print("benkhosh fe get_region_data")
+        """Extracts and saves data within the selected ROI."""
+        if self.image is not None and not rect.isNull():
+            # Map QRect to image coordinates
+            x1 = int(rect.left() * self.image.shape[1] / self.ft_image_label.width())
+            x2 = int(rect.right() * self.image.shape[1] / self.ft_image_label.width())
+            y1 = int(rect.top() * self.image.shape[0] / self.ft_image_label.height())
+            y2 = int(rect.bottom() * self.image.shape[0] / self.ft_image_label.height())
+
+            # Crop the region
+            region = self.image[y1:y2, x1:x2]
+            print("Region Data:")
+            print(region)
+            # Save or process `region` as needed
