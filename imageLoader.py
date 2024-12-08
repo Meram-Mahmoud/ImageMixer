@@ -49,7 +49,7 @@ class ImageUploader(QWidget):
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
             self.image=self.image_loader.upload_image()
-            self.image_ft.setData(cv2.resize(self.image, (250, 350)))
+            self.image_ft.setData(cv2.resize(self.image, (self.width, self.height)))
             print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
             print(self.image_ft.magnitude)
         elif event.button() == Qt.LeftButton:
@@ -82,11 +82,10 @@ class ImageUploader(QWidget):
         if file_path:
             img_bgr = cv2.imread(file_path)
             img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
-            self.image = img_gray
+            self.image = cv2.resize(img_gray, (self.width, self.height))
 
             # Convert the grayscale image to QImage
             height, width = img_gray.shape
-            print(height, width)
             qimage = QImage(img_gray.data, width, height, width, QImage.Format_Grayscale8)
 
             # Convert QImage to QPixmap and set it in the QLabel

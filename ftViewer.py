@@ -1,12 +1,13 @@
 from PyQt5.QtGui import QPixmap, QImage, QPainter
 from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, pyqtSignal
 import cv2
 import numpy as np
 from region_selector import ROISelectableLabel
 
-
 class FourierTransformViewer(QWidget):
+    fourier_image = pyqtSignal(object)
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.width, self.height, self.radius = 250, 350, 15
@@ -67,6 +68,8 @@ class FourierTransformViewer(QWidget):
         self.imaginary = np.imag(f_shift)
         print("setting the data after fourier, MAGNITUDE:")
         print(self.magnitude)
+
+        self.fourier_image.emit([self.magnitude, self.phase, self.real, self.imaginary])
 
     def update_ft_view(self):
         """Updates the Fourier component display based on user selection."""
