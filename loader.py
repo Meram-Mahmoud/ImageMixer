@@ -5,22 +5,15 @@ import cv2
 import numpy as np
 
 class ImageLoader(QWidget):
-    def __init__(self, parent=None):
+    def __init__(self, viewport, parent=None):
         super().__init__(parent)
 
         self.width, self.height, self.radius = 250, 350, 15
         self.image = None
         self.brightness = 0
         self.contrast = 1
-        self.is_dragging = False
-
-        # Image label
-        self.image_label = QLabel(self)
-        self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
-        self.image_label.setFixedSize(self.width, self.height)
-        pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
-        self.image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))
+        self.is_dragging = False   #not used
+        self.viewport=viewport
 
     def upload_image(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Images (*.png *.jpg *.bmp)")
@@ -33,8 +26,8 @@ class ImageLoader(QWidget):
             height, width = img_gray.shape
             qimage = QImage(img_gray.data, width, height, width, QImage.Format_Grayscale8)
             pixmap = QPixmap.fromImage(qimage)
-            pixmap = self.get_rounded_pixmap(pixmap, self.image_label.size(), self.radius)
-            self.image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
+            pixmap = self.get_rounded_pixmap(pixmap, self.viewport.size(), self.radius)
+            self.viewport.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
             return img_gray
 
     def update_image(self):
@@ -43,8 +36,8 @@ class ImageLoader(QWidget):
             height, width = adjusted_image.shape
             qimage = QImage(adjusted_image.data, width, height, width, QImage.Format_Grayscale8)
             pixmap = QPixmap.fromImage(qimage)
-            pixmap = self.get_rounded_pixmap(pixmap, self.image_label.size(), self.radius)
-            self.image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
+            pixmap = self.get_rounded_pixmap(pixmap, self.viewport.size(), self.radius)
+            self.viewport.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
     def get_rounded_pixmap(self, pixmap, size, radius):
         pixmap = pixmap.scaled(size, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)

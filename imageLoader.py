@@ -21,12 +21,22 @@ class ImageUploader(QWidget):
 
         self.image=None
         self.image_ft=FourierTransformViewer()
-        self.image_loader = ImageLoader()
 
         # Main horizontal layout
         layout = QHBoxLayout(self)
 
-        layout.addWidget(self.image_loader.image_label)
+        # Original Image Section
+        self.original_image_label = QLabel(self)
+        self.original_image_label.setAlignment(Qt.AlignCenter)
+        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
+        pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
+        self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
+        layout.addWidget(self.original_image_label)
+
+        self.image_loader = ImageLoader(self.original_image_label)
+
+        #layout.addWidget(self.image_loader.image_label)
 
         layout.addSpacing(20)  # Space between original image and FT section
 
