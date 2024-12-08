@@ -1,49 +1,9 @@
-from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout, QRubberBand
-from PyQt5.QtGui import QPixmap, QImage, QMouseEvent,QPainter, QColor, QPen
-from PyQt5.QtCore import Qt, QRect , pyqtSignal
+from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
+from PyQt5.QtGui import QPixmap, QImage
+from PyQt5.QtCore import Qt
 import cv2
 import numpy as np
-
-
-class ROISelectableLabel(QLabel):
-    # Signal to send the selected ROI
-    regionSelected = pyqtSignal(QRect)
-
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.start_point = None
-        self.end_point = None
-        self.rect = QRect()
-        self.drawing = False
-
-    def mousePressEvent(self, event):
-        if event.button() == Qt.LeftButton:
-            self.start_point = event.pos()
-            self.drawing = True
-            self.rect = QRect()
-
-    def mouseMoveEvent(self, event):
-        if self.drawing:
-            self.end_point = event.pos()
-            self.rect = QRect(self.start_point, self.end_point).normalized()
-            self.update()  # Trigger a repaint to show the rectangle
-
-    def mouseReleaseEvent(self, event):
-        if event.button() == Qt.LeftButton and self.drawing:
-            self.drawing = False
-            self.end_point = event.pos()
-            self.rect = QRect(self.start_point, self.end_point).normalized()
-            self.update()
-            self.regionSelected.emit(self.rect)  # Emit the region for external use
-
-    def paintEvent(self, event):
-        """Draw the ROI rectangle."""
-        super().paintEvent(event)
-        if not self.rect.isNull():
-            painter = QPainter(self)
-            painter.setPen(QPen(QColor(255, 0, 0), 2, Qt.SolidLine))
-            painter.setBrush(QColor(255, 0, 0, 50))  # Semi-transparent red
-            painter.drawRect(self.rect)
+from region_selector import ROISelectableLabel
 
 
 class FourierTransformViewer(QWidget):
@@ -55,6 +15,7 @@ class FourierTransformViewer(QWidget):
         self.phase = None
         self.real = None
         self.imaginary = None
+        self.component=None
 
         # ComboBox for selecting Fourier components
         self.component_combo = QComboBox(self)
@@ -114,17 +75,17 @@ class FourierTransformViewer(QWidget):
 
         selected = self.component_combo.currentText()
         if selected == "Magnitude":
-            component = self.magnitude
+            self.component = self.magnitude
         elif selected == "Phase":
-            component = self.phase
+            self.component = self.phase
         elif selected == "Real":
-            component = self.real
+            self.component = self.real
         elif selected == "Imaginary":
-            component = self.imaginary
+            self.component = self.imaginary
         else:
             return
 
-        self.display_component(component)
+        self.display_component(self.component)
 
     def display_component(self, component):
         """Displays the selected Fourier component."""
@@ -134,18 +95,32 @@ class FourierTransformViewer(QWidget):
         pixmap_component = QPixmap.fromImage(qimage_component)
         self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-    def get_region_data(self, rect):
-        print("benkhosh fe get_region_data")
-        """Extracts and saves data within the selected ROI."""
+    def get_region_data(self, rect, region_type='inner'):
+        """Extracts and saves data within the selected ROI or outside the selected ROI."""
         if self.image is not None and not rect.isNull():
             # Map QRect to image coordinates
-            x1 = int(rect.left() * self.image.shape[1] / self.ft_image_label.width())
-            x2 = int(rect.right() * self.image.shape[1] / self.ft_image_label.width())
-            y1 = int(rect.top() * self.image.shape[0] / self.ft_image_label.height())
-            y2 = int(rect.bottom() * self.image.shape[0] / self.ft_image_label.height())
+            x1 = int(rect.left() * self.component.shape[1] / self.ft_image_label.width())
+            x2 = int(rect.right() * self.component.shape[1] / self.ft_image_label.width())
+            y1 = int(rect.top() * self.component.shape[0] / self.ft_image_label.height())
+            y2 = int(rect.bottom() * self.component.shape[0] / self.ft_image_label.height())
 
-            # Crop the region
-            region = self.image[y1:y2, x1:x2]
-            print("Region Data:")
-            print(region)
-            # Save or process `region` as needed
+            # Extract data based on region_type
+            if region_type == 'inner':
+                # Crop the region inside the rectangle (inner region)
+                region = self.component[y1:y2, x1:x2]
+                print("Inner Region Data:")
+                print(region)
+            elif region_type == 'outer':
+                # Extract the outer region (everything except inside the rectangle)
+                outer_region = np.copy(self.component)  # Create a copy of the entire image
+
+                # Set the area inside the rectangle to 0 (black or empty)
+                outer_region[y1:y2, x1:x2] = 0
+
+                print("Outer Region Data:")
+                print(outer_region)
+                region = outer_region  # Return the outer region data
+
+            # Save or process the region as needed
+            return region
+
