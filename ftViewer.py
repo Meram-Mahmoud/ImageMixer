@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QLabel, QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtGui import QPixmap, QImage
+from PyQt5.QtGui import QPixmap, QImage, QPainter
 from PyQt5.QtCore import Qt
 import cv2
 import numpy as np
@@ -82,9 +82,26 @@ class FourierTransformViewer(QWidget):
         self.display_component(component)
 
     def display_component(self, component):
-        """Displays the selected Fourier component."""
+        """Displays the selected Fourier component with rounded corners."""
+        # Normalize the component to 8-bit grayscale
         normalized_component = cv2.normalize(component, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
         height, width = normalized_component.shape
         qimage_component = QImage(normalized_component.data, width, height, width, QImage.Format_Grayscale8)
         pixmap_component = QPixmap.fromImage(qimage_component)
-        self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
+
+        # Create a rounded mask
+        rounded_pixmap = QPixmap(self.width, self.height)
+        rounded_pixmap.fill(Qt.transparent)  # Transparent background
+        painter = QPainter(rounded_pixmap)
+        painter.setRenderHint(QPainter.Antialiasing)
+        painter.setBrush(Qt.black)
+        painter.setPen(Qt.NoPen)
+        painter.drawRoundedRect(0, 0, self.width, self.height, self.radius, self.radius)
+        painter.end()
+
+        # Apply the mask to the pixmap
+        pixmap_component = pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        pixmap_component.setMask(rounded_pixmap.mask())
+
+        # Set the rounded pixmap to the QLabel
+        self.ft_image_label.setPixmap(pixmap_component)

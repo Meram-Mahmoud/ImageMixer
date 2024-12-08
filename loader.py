@@ -20,7 +20,8 @@ class ImageLoader(QWidget):
         if file_path:
             img_bgr = cv2.imread(file_path)
             img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
-            self.image = img_gray
+            # self.image = img_gray
+            self.image = cv2.resize(img_gray, (self.width, self.height))
 
             # Convert to QPixmap for display
             height, width = img_gray.shape
