@@ -4,6 +4,7 @@ from PyQt5.QtGui import QPixmap, QImage, QPainter, QPainterPath
 from PyQt5.QtCore import Qt, QEvent
 import cv2
 from ftViewer import FourierTransformViewer
+from loader import ImageLoader
 import numpy as np
 
 class ImageUploader(QWidget):
@@ -19,18 +20,21 @@ class ImageUploader(QWidget):
         self.is_dragging = False  # To track mouse dragging
 
         self.image_ft=FourierTransformViewer()
+        self.image_loader = ImageLoader()
 
         # Main horizontal layout
         layout = QHBoxLayout(self)
 
-        # Original Image Section
-        self.original_image_label = QLabel(self)
-        self.original_image_label.setAlignment(Qt.AlignCenter)
-        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
-        self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
-        pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
-        self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
-        layout.addWidget(self.original_image_label)
+        layout.addWidget(self.image_loader.image_label)
+
+        # # Original Image Section
+        # self.original_image_label = QLabel(self)
+        # self.original_image_label.setAlignment(Qt.AlignCenter)
+        # self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        # self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
+        # pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
+        # self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
+        # layout.addWidget(self.original_image_label)
 
         layout.addSpacing(20)  # Space between original image and FT section
 
@@ -96,26 +100,26 @@ class ImageUploader(QWidget):
             self.brightness += dy * 0.1  # Sensitivity for brightness
             
             # Apply the changes to the image
-            self.update_image()
+            self.image_loader.update_image()
 
     def mouseReleaseEvent(self, event):
         # Stop dragging when mouse button is released
         if event.button() == Qt.LeftButton:
             self.is_dragging = False
 
-    def update_image(self):
-        # Apply the current window/level (brightness/contrast) to the image
-        if self.image is not None:
-            adjusted_image = cv2.convertScaleAbs(self.image, alpha=self.contrast, beta=self.brightness)
+    # def update_image(self):
+    #     # Apply the current window/level (brightness/contrast) to the image
+    #     if self.image is not None:
+    #         adjusted_image = cv2.convertScaleAbs(self.image, alpha=self.contrast, beta=self.brightness)
             
-            # Convert the adjusted image to QImage for display
-            height, width = adjusted_image.shape
-            qimage = QImage(adjusted_image.data, width, height, width, QImage.Format_Grayscale8)
+    #         # Convert the adjusted image to QImage for display
+    #         height, width = adjusted_image.shape
+    #         qimage = QImage(adjusted_image.data, width, height, width, QImage.Format_Grayscale8)
             
-            # Convert QImage to QPixmap and set it in the QLabel
-            pixmap = QPixmap.fromImage(qimage)
-            pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
-            self.original_image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
+    #         # Convert QImage to QPixmap and set it in the QLabel
+    #         pixmap = QPixmap.fromImage(qimage)
+    #         pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
+    #         self.original_image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
             
     def upload_image(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Images (*.png *.jpg *.bmp)")
@@ -131,8 +135,8 @@ class ImageUploader(QWidget):
 
             # Convert QImage to QPixmap and set it in the QLabel
             pixmap = QPixmap.fromImage(qimage)
-            pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
-            self.original_image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
+            pixmap = self.image_loader.get_rounded_pixmap(pixmap, self.image_loader.image_label.size(), self.radius)
+            self.image_loader.image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
             #self.fft()
 
@@ -142,29 +146,29 @@ class ImageUploader(QWidget):
 
     
     # Changing the style of the image to match the size of the rectangle
-    def get_rounded_pixmap(self, pixmap, size, radius):
-        # Resize the pixmap to fit the QLabel
-        pixmap = pixmap.scaled(size, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
+    # def get_rounded_pixmap(self, pixmap, size, radius):
+    #     # Resize the pixmap to fit the QLabel
+    #     pixmap = pixmap.scaled(size, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
 
-        # Create a transparent pixmap with the QLabel's size
-        rounded_pixmap = QPixmap(size)
-        rounded_pixmap.fill(Qt.transparent)
+    #     # Create a transparent pixmap with the QLabel's size
+    #     rounded_pixmap = QPixmap(size)
+    #     rounded_pixmap.fill(Qt.transparent)
 
-        # Create a QPainter to draw the rounded pixmap
-        painter = QPainter(rounded_pixmap)
-        painter.setRenderHint(QPainter.Antialiasing)
-        painter.setRenderHint(QPainter.SmoothPixmapTransform)
+    #     # Create a QPainter to draw the rounded pixmap
+    #     painter = QPainter(rounded_pixmap)
+    #     painter.setRenderHint(QPainter.Antialiasing)
+    #     painter.setRenderHint(QPainter.SmoothPixmapTransform)
 
-        # Create a rounded rectangle path
-        path = QPainterPath()
-        path.addRoundedRect(0, 0, size.width(), size.height(), radius, radius)
+    #     # Create a rounded rectangle path
+    #     path = QPainterPath()
+    #     path.addRoundedRect(0, 0, size.width(), size.height(), radius, radius)
 
-        # Set the clip path and draw the pixmap
-        painter.setClipPath(path)
-        painter.drawPixmap(0, 0, pixmap)
-        painter.end()
+    #     # Set the clip path and draw the pixmap
+    #     painter.setClipPath(path)
+    #     painter.drawPixmap(0, 0, pixmap)
+    #     painter.end()
 
-        return rounded_pixmap
+    #     return rounded_pixmap
 
 
 
