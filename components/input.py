@@ -3,7 +3,7 @@ from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtCore import Qt
 
 class Input(QWidget):
-    def __init__(self,x=0, y=0, width=250, height=350, color="#73917b", parent=None):
+    def __init__(self,x=0, y=0, width=250, height=350, color="#01240e", parent=None):
         super().__init__(parent)
         self.width = width
         self.height = height
@@ -18,7 +18,7 @@ class Input(QWidget):
 
         pen = painter.pen()
         pen.setColor(QColor(self.color))  # Border color (e.g., red)
-        pen.setWidth(5)  # Border thickness
+        pen.setWidth(3)  # Border thickness
         painter.setPen(pen)
 
         painter.drawRect(self.x, self.y, self.width, self.height)  # Draw the rectangle

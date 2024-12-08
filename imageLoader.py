@@ -1,49 +1,67 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QFileDialog, QHBoxLayout, QWidget, QComboBox
+from PyQt5.QtWidgets import QApplication, QLabel, QFileDialog, QHBoxLayout, QWidget, QComboBox, QVBoxLayout
 from PyQt5.QtGui import QPixmap, QImage, QPainter, QPainterPath
 from PyQt5.QtCore import Qt, QEvent
 import cv2
 import numpy as np
 
 class ImageUploader(QWidget):
+
     def __init__(self, parent=None):
         super().__init__(parent)
 
         self.width, self.height, self.radius = 250, 350, 15
 
+        # Main horizontal layout
         layout = QHBoxLayout(self)
+
+        # Original Image Section
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
-        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #73917b;")
+        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
         self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
         pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
         self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
-        self.image = None
+        layout.addWidget(self.original_image_label)
 
-        # Create a ComboBox below the original image label
+        layout.addSpacing(20)  # Space between original image and FT section
+
+        # Fourier Transform Section (ComboBox + Rectangle)
+        ft_layout = QVBoxLayout()  # Vertical layout for ComboBox and FT image
+
+        # ComboBox
         self.component_combo = QComboBox(self)
         self.component_combo.addItem("Choose Component")
         self.component_combo.addItem("Magnitude")
         self.component_combo.addItem("Phase")
         self.component_combo.addItem("Real")
         self.component_combo.addItem("Imaginary")
-        
-        # Connect the ComboBox to the plot_fourier function
+        self.component_combo.setStyleSheet("""
+            QComboBox {
+                background-color: #01240e;
+                color: #ffffff;
+                border: 1px solid #888888;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            QComboBox QAbstractItemView {
+                background: #ffffff;
+                selection-background-color: #01240e;
+                selection-color: #ffffff;
+                border: 1px solid #888888;
+            }
+        """)
         self.component_combo.currentIndexChanged.connect(self.plot_fourier)
-        
+        ft_layout.addWidget(self.component_combo)  # Add ComboBox to the vertical layout
+
+        # FT Image Rectangle
         self.ft_image_label = QLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
-        self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #73917b;")
+        self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
         self.ft_image_label.setFixedSize(self.width, self.height)  # Same size as the original image label
-        self.ftImage = None
-        
-        # Add labels to the layout
-        layout.addWidget(self.original_image_label)
-        layout.addWidget(self.component_combo)
-        layout.addSpacing(20)  # 30px space between the original image and FT image
-        layout.addWidget(self.ft_image_label)
-        
-        self.setLayout(layout)
+        ft_layout.addWidget(self.ft_image_label)  # Add FT image to the vertical layout
+
+        layout.addLayout(ft_layout)
 
         self.magnitude = None
         self.phase = None
