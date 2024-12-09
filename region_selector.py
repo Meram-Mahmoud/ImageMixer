@@ -5,6 +5,7 @@ from PyQt5.QtCore import Qt, QRect, pyqtSignal, QPoint
 class ROISelectableLabel(QLabel):
     # Signal to send the selected ROI
     regionSelected = pyqtSignal(QRect)
+    roiChanged = pyqtSignal(QRect)
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -43,10 +44,12 @@ class ROISelectableLabel(QLabel):
     def mouseMoveEvent(self, event: QMouseEvent):
         if self.resizing and self.selected_handle:
             self.resize_rect(event.pos())
+            self.roiChanged.emit(self.rect) 
         elif self.moving:
             # Calculate new top-left position considering the offset
             new_top_left = event.pos() - self.offset
             self.move_rect(new_top_left)
+            self.roiChanged.emit(self.rect) 
         elif self.drawing:
             self.end_point = event.pos()
             self.rect = QRect(self.start_point, self.end_point).normalized()
@@ -64,6 +67,8 @@ class ROISelectableLabel(QLabel):
                 self.selected_handle = None
             elif self.moving:
                 self.moving = False
+
+            self.roiChanged.emit(self.rect)
             self.update()
 
     def paintEvent(self, event):

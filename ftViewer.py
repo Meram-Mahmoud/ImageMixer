@@ -1,12 +1,13 @@
 from PyQt5.QtGui import QPixmap, QImage, QPainter
 from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtCore import Qt, pyqtSignal
+from PyQt5.QtCore import Qt, pyqtSignal, QRect
 import cv2
 import numpy as np
 from region_selector import ROISelectableLabel
 
 class FourierTransformViewer(QWidget):
     fourier_image = pyqtSignal(object)
+    instances = []  # Class-level list to track all instances
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -44,6 +45,7 @@ class FourierTransformViewer(QWidget):
 
         # Connect the ROI selection signal to the slot
         self.ft_image_label.regionSelected.connect(self.get_region_data)
+        self.ft_image_label.roiChanged.connect(self.propagate_roi)
 
         # Layout
         layout = QVBoxLayout(self)
@@ -52,6 +54,29 @@ class FourierTransformViewer(QWidget):
 
         # Connections
         self.component_combo.currentIndexChanged.connect(self.update_ft_view)
+
+        # Add this instance to the class-level list
+        FourierTransformViewer.instances.append(self)
+
+    def propagate_roi(self, rect: QRect):
+        """Update all other instances with the new ROI."""
+        if self.component is None:
+            return  # Skip instances with no component
+        for instance in FourierTransformViewer.instances:
+            if instance is not self:
+                instance.update_roi(rect)
+                instance.get_region_data(rect, region_type='outer')
+
+        # for instance in FourierTransformViewer.instances:
+        #     if instance.image is not None:
+        #         instance.get_region_data(rect, region_type='outer')
+
+    def update_roi(self, rect: QRect):
+        """Update the ROI of the current instance."""
+        if self.component is None:
+            return  # Skip instances with no component
+        self.ft_image_label.rect = rect
+        self.ft_image_label.update()
 
     def setData(self, original):
         self.image=original
@@ -117,7 +142,7 @@ class FourierTransformViewer(QWidget):
         self.ft_image_label.setPixmap(pixmap_component)
         self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-    def get_region_data(self, rect, region_type='inner'):
+    def get_region_data(self, rect, region_type='outer'):
         """Extracts and saves data within the selected ROI or outside the selected ROI."""
         if self.image is not None and not rect.isNull():
             # Map QRect to image coordinates
@@ -129,20 +154,46 @@ class FourierTransformViewer(QWidget):
             # Extract data based on region_type
             if region_type == 'inner':
                 # Crop the region inside the rectangle (inner region)
-                region = self.component[y1:y2, x1:x2]
-                # print("Inner Region Data:")
-                # print(region)
+                inner_magnitude = self.magnitude[y1:y2, x1:x2]
+                inner_phase = self.phase[y1:y2, x1:x2]
+                inner_real = self.real[y1:y2, x1:x2]
+                inner_imaginary = self.imaginary[y1:y2, x1:x2]
+                print("Inner MAG:")
+                print(inner_magnitude)
+                print("Inner PHASE:")
+                print(inner_phase)
+                print("Inner REAL:")
+                print(inner_real)
+                print("Inner IMAG:")
+                print(inner_imaginary)
             elif region_type == 'outer':
                 # Extract the outer region (everything except inside the rectangle)
-                outer_region = np.copy(self.component)  # Create a copy of the entire image
-
+                outer_magnitude = np.copy(self.magnitude)  # Create a copy of the entire image
                 # Set the area inside the rectangle to 0 (black or empty)
-                outer_region[y1:y2, x1:x2] = 0
+                outer_magnitude[y1:y2, x1:x2] = 0
 
-                # print("Outer Region Data:")
-                # print(outer_region)
-                region = outer_region  # Return the outer region data
+                outer_phase = np.copy(self.phase)  # Create a copy of the entire image
+                outer_phase[y1:y2, x1:x2] = 0
 
-            # Save or process the region as needed
-            return region
+                outer_real = np.copy(self.real)  # Create a copy of the entire image
+                outer_real[y1:y2, x1:x2] = 0
 
+                outer_imaginary = np.copy(self.imaginary)  # Create a copy of the entire image
+                outer_imaginary[y1:y2, x1:x2] = 0
+                
+
+                print("Outer MAG:")
+                print(outer_magnitude)
+                print("Outer PHASE:")
+                print(outer_phase)
+                print("Outer REAL:")
+                print(outer_real)
+                print("Outer IMAG:")
+                print(outer_imaginary)
+                region = outer_magnitude  # Return the outer region data
+
+            # # Save or process the region as needed
+            # return outer_magnitude
+        
+        
+    
