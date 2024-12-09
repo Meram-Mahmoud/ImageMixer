@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QLabel
-from PyQt5.QtGui import  QMouseEvent,QPainter, QColor, QPen
-from PyQt5.QtCore import Qt, QRect , pyqtSignal, QPoint, QTimer
+from PyQt5.QtGui import QMouseEvent, QPainter, QColor, QPen
+from PyQt5.QtCore import Qt, QRect, pyqtSignal, QPoint
 
 class ROISelectableLabel(QLabel):
     # Signal to send the selected ROI
@@ -15,9 +15,8 @@ class ROISelectableLabel(QLabel):
         self.resizing = False
         self.selected_handle = None
         self.handle_size = 10  # Size of the resizing handles
-        self.resize_timer = QTimer(self)  # Timer to delay region data computation
-        self.resize_timer.setSingleShot(True)  # Only trigger once
-        self.resize_timer.timeout.connect(self.send_region_data)  # Connect to the method that sends region data
+        self.moving = False  # Flag for moving the rectangle
+        self.offset = QPoint()  # Offset for dragging
 
     def mousePressEvent(self, event: QMouseEvent):
         if event.button() == Qt.LeftButton:
@@ -30,6 +29,13 @@ class ROISelectableLabel(QLabel):
                     self.resizing = True
                     return
 
+            # Check if the user clicked inside the rectangle
+            if self.rect.contains(event.pos()):
+                self.moving = True
+                # Calculate offset between mouse position and rectangle's top-left corner
+                self.offset = event.pos() - self.rect.topLeft()
+                return
+
             # Otherwise, start drawing a new rectangle
             self.drawing = True
             self.rect = QRect(self.start_point, self.start_point)
@@ -37,13 +43,14 @@ class ROISelectableLabel(QLabel):
     def mouseMoveEvent(self, event: QMouseEvent):
         if self.resizing and self.selected_handle:
             self.resize_rect(event.pos())
+        elif self.moving:
+            # Calculate new top-left position considering the offset
+            new_top_left = event.pos() - self.offset
+            self.move_rect(new_top_left)
         elif self.drawing:
             self.end_point = event.pos()
             self.rect = QRect(self.start_point, self.end_point).normalized()
         self.update()  # Trigger a repaint to show updates
-
-        if self.resizing:  # Reset the timer each time we move the mouse during resizing
-            self.resize_timer.start(300)  # Start or reset the timer to 300ms
 
     def mouseReleaseEvent(self, event: QMouseEvent):
         if event.button() == Qt.LeftButton:
@@ -55,6 +62,8 @@ class ROISelectableLabel(QLabel):
             elif self.resizing:
                 self.resizing = False
                 self.selected_handle = None
+            elif self.moving:
+                self.moving = False
             self.update()
 
     def paintEvent(self, event):
@@ -70,7 +79,7 @@ class ROISelectableLabel(QLabel):
 
             # Draw resizing handles
             for rect in self.get_handles().values():
-                painter.setBrush(QColor(255, 0, 0))  # Green handles
+                painter.setBrush(QColor(255, 0, 0))  # Red handles
                 painter.setPen(Qt.NoPen)
                 painter.drawRect(rect)
 
@@ -113,9 +122,12 @@ class ROISelectableLabel(QLabel):
 
         # Ensure the rectangle stays normalized
         self.rect = self.rect.normalized()
+        self.regionSelected.emit(self.rect)
 
-    def send_region_data(self):
-        """Emit the selected region once resizing has stopped."""
-        if not self.rect.isNull():
-            self.regionSelected.emit(self.rect)
-
+    def move_rect(self, new_top_left):
+        """Move the rectangle to the new top-left position."""
+        rect_size = self.rect.size()  # Get the size of the rectangle
+        self.rect.setTopLeft(new_top_left)  # Set the top-left corner
+        self.rect.setSize(rect_size)  # Adjust the size
+        self.update()  # Trigger a repaint to reflect changes visually
+        self.regionSelected.emit(self.rect)  # Emit the updated region
