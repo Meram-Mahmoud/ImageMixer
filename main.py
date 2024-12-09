@@ -79,16 +79,16 @@ class Mixer(QMainWindow):
         rightColumn = QVBoxLayout()
 
         self.radio = Controls()
-        rightColumn.addWidget(self.radio)
+        rightColumn.addWidget(self.radio, 1)
         
         # Output ports
         self.port1 = Output()
         self.port2 = Output()
-        rightColumn.addWidget(self.port1)
-        rightColumn.addWidget(self.port2)
+        rightColumn.addWidget(self.port1, 4)
+        rightColumn.addWidget(self.port2, 4)
 
         self.mix_button = Mix()
-        rightColumn.addWidget(self.mix_button)
+        rightColumn.addWidget(self.mix_button, 2)
         rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)  # Center the button
         self.mix_button.clicked.connect(self.get_ft_components)
 
@@ -101,6 +101,8 @@ class Mixer(QMainWindow):
                                             padding: 10px;
                                         }""")
         # Add the right column to the main layout
+        rightColumnWidget.setFixedHeight(960)
+
         self.mainLayout.addWidget(rightColumnWidget, 1)
 
     def get_ft_components(self):

@@ -11,7 +11,7 @@ class Controls(QWidget):
         self.radio()
     
     def mode(self):
-        row = QHBoxLayout(self)
+        row = QHBoxLayout()
 
         label = QLabel("Mode:")
         label.setStyleSheet("""color: #11361e;
@@ -38,7 +38,7 @@ class Controls(QWidget):
         self.mode_combo.currentIndexChanged.connect(self.update_mode)
 
     def radio(self):
-        row = QHBoxLayout(self)
+        row = QHBoxLayout()
         label = QLabel("View:")
         label.setStyleSheet("""color: #11361e;
                             font-size: 20px;

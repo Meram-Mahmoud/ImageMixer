@@ -1,5 +1,5 @@
 from PyQt5.QtGui import QPixmap, QImage, QPainter
-from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QSlider
+from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QSlider, QHBoxLayout
 from PyQt5.QtCore import Qt, pyqtSignal, QRect
 import cv2
 import numpy as np
@@ -19,24 +19,6 @@ class FourierTransformViewer(QWidget):
         self.imaginary = None
         self.component=None
 
-        # ComboBox for selecting Fourier components
-        self.component_combo = QComboBox(self)
-        self.component_combo.addItem("Choose Component")
-        self.component_combo.addItem("Magnitude")
-        self.component_combo.addItem("Phase")
-        self.component_combo.addItem("Real")
-        self.component_combo.addItem("Imaginary")
-        self.component_combo.setStyleSheet("""
-            QComboBox {
-                background-color: #11361e;
-                color: #ffffff;
-                border: 1px solid #888888;
-                border-radius: 5px;
-                padding: 5px;
-                font-size: 18px;
-            }
-        """)
-
         # Fourier component display
         self.ft_image_label = ROISelectableLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
@@ -47,16 +29,11 @@ class FourierTransformViewer(QWidget):
         self.ft_image_label.regionSelected.connect(self.get_region_data)
         self.ft_image_label.roiChanged.connect(self.propagate_roi)
 
-        # Layout
-        layout = QVBoxLayout(self)
-        layout.addWidget(self.component_combo)
-        layout.addWidget(self.ft_image_label)
-
-        # Connections
-        self.component_combo.currentIndexChanged.connect(self.update_ft_view)
-
-        # Add this instance to the class-level list
         FourierTransformViewer.instances.append(self)
+        
+        # Create controls
+        self.add_slider()
+        self.comp_combo()
 
     def propagate_roi(self, rect: QRect):
         """Update all other instances with the new ROI."""
@@ -180,7 +157,6 @@ class FourierTransformViewer(QWidget):
 
                 outer_imaginary = np.copy(self.imaginary)  # Create a copy of the entire image
                 outer_imaginary[y1:y2, x1:x2] = 0
-                
 
                 print("Outer MAG:")
                 print(outer_magnitude)
@@ -194,36 +170,55 @@ class FourierTransformViewer(QWidget):
 
             # # Save or process the region as needed
             # return outer_magnitude
+
     def add_slider(self):
         self.slider = QSlider(Qt.Horizontal)  # Horizontal slider
         self.slider.setMinimum(0)  # Minimum value
         self.slider.setMaximum(100)  # Maximum value
         self.slider.setValue(100)  # Initial value
-        self.slider.setTickPosition(QSlider.TicksBelow)  # Show ticks below the slider
+        # self.slider.setTickPosition(QSlider.TicksBelow)  # Show ticks below the slider
         self.slider.setTickInterval(10)  # Interval between ticks
         self.slider.setStyleSheet("""
             QSlider::handle:horizontal {
-                background-color: #11361e;
-                border: 1px solid #888888;
-                width: 15px;
-                height: 15px;
-                border-radius: 7px;
+                background-color: #3c7551;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin-top: -8px;
+                margin-bottom: -8px;
             }
             QSlider::groove:horizontal {
                 height: 5px;
-                background: lightgray;
+                background: white;
             }
             QSlider::sub-page:horizontal {
                 background: #11361e;
             }
         """)
 
-        # Update value display when the slider changes
-        self.slider.valueChanged.connect(self.update_slider_value)
-        return self.slider
+        # self.slider.valueChanged.connect(self.update_slider_value)
 
-    def update_slider_value(self):
-        # Update the value label when the slider value changes
-        self.slider_value_label.setText(f"{self.slider.value()}")        
+    # def update_slider_value(self):
+    #     # Update the value label when the slider value changes
+    #     self.slider_value_label.setText(f"{self.slider.value()}")        
         
-    
+    def comp_combo(self):
+        # ComboBox for selecting Fourier components
+        self.component_combo = QComboBox(self)
+        self.component_combo.addItem("Choose Component")
+        self.component_combo.addItem("Magnitude")
+        self.component_combo.addItem("Phase")
+        self.component_combo.addItem("Real")
+        self.component_combo.addItem("Imaginary")
+        self.component_combo.setStyleSheet("""
+            QComboBox {
+                background-color: #11361e;
+                color: #ffffff;
+                border: 1px solid #888888;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 18px;
+            }
+        """)
+        self.component_combo.currentIndexChanged.connect(self.update_ft_view)
+

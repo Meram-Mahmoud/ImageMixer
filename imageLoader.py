@@ -1,11 +1,10 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QLabel, QFileDialog, QHBoxLayout, QWidget, QComboBox, QVBoxLayout
-from PyQt5.QtGui import QPixmap, QImage, QPainter, QPainterPath
+from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt, QEvent
 import cv2
 from ftViewer import FourierTransformViewer
 from loader import ImageLoader
-import numpy as np
 
 class ImageUploader(QWidget):
 
@@ -19,38 +18,50 @@ class ImageUploader(QWidget):
         self.contrast = 1    # Starting contrast (no change)
         self.is_dragging = False  # To track mouse dragging
 
-        self.image=None
-        self.image_ft=FourierTransformViewer()
+        self.image = None
+        self.image_ft = FourierTransformViewer()
 
-        # Main horizontal layout
-        layout = QHBoxLayout(self)
+        # Main vertical layout
+        main_column = QVBoxLayout(self)
+
+        # Create the upper and lower row layouts
+        upper_row = QHBoxLayout()
+        lower_row = QHBoxLayout()
 
         # Original Image Section
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
         self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #11361e;")
-        self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
+        self.original_image_label.setFixedSize(self.width, self.height)
         pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
-        self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
-        layout.addWidget(self.original_image_label)
-
+        self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio)) 
         self.image_loader = ImageLoader(self.original_image_label)
 
-        #layout.addWidget(self.image_loader.image_label)
+        # Add components to upper_row
+        upper_row.addWidget(self.image_ft.slider, 1)
+        upper_row.addSpacing(40)
+        upper_row.addWidget(self.image_ft.component_combo, 1)
 
-        layout.addSpacing(20)  # Space between original image and FT section
+        # Container widget for the upper_row layout
+        container_widget = QWidget(self)
+        container_widget.setLayout(upper_row)
+        container_widget.setFixedWidth(570)  # Set the desired width
 
-        ft_layout = QVBoxLayout()  # Vertical layout for ComboBox and FT image
-        ft_layout.addWidget(self.image_ft.component_combo)  # Add FourierTransformViewer ComboBox
-        ft_layout.addWidget(self.image_ft.ft_image_label)  # Add FourierTransformViewer FT Image
-        layout.addLayout(ft_layout)
-    
+        # Add original image and transformed image to lower_row
+        lower_row.addWidget(self.original_image_label)
+        lower_row.addWidget(self.image_ft.ft_image_label)
+
+        # Add the container_widget and lower_row to the main layout
+        main_column.addWidget(container_widget, alignment=Qt.AlignHCenter)
+        main_column.addLayout(lower_row)
+
+        # Set the layout for the main window
+        self.setLayout(main_column)
+
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
-            self.image=self.image_loader.upload_image()
+            self.image = self.image_loader.upload_image()
             self.image_ft.setData(cv2.resize(self.image, (self.width, self.height)))
-            # print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
-            # print(self.image_ft.magnitude)
         elif event.button() == Qt.LeftButton:
             self.is_dragging = True
             self.last_pos = event.pos()  # Remember the mouse position
@@ -74,7 +85,6 @@ class ImageUploader(QWidget):
         if event.button() == Qt.LeftButton:
             self.is_dragging = False
 
-            
     def upload_image(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Images (*.png *.jpg *.bmp)")
         
@@ -92,11 +102,7 @@ class ImageUploader(QWidget):
             pixmap = self.image_loader.get_rounded_pixmap(pixmap, self.image_loader.image_label.size(), self.radius)
             self.image_loader.image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-            #self.fft()
-
             self.image_ft.setData(self.image)
-            # print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
-            # print(self.image_ft.magnitude)
 
     def get_component(self):
         return self.image_ft.magnitude
