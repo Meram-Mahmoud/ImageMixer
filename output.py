@@ -3,6 +3,7 @@ from PyQt5.QtGui import QPixmap, QImage, QPainter, QPainterPath
 from PyQt5.QtCore import Qt
 import cv2
 import numpy as np
+from ftViewer import FourierTransformViewer
 
 class Output(QWidget):
     def __init__(self, parent = None):
@@ -63,9 +64,9 @@ class Output(QWidget):
             reconstructed_image = np.fft.ifft2(np.fft.ifftshift(complex_spectrum)).real
             reconstructed_image = cv2.normalize(reconstructed_image, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
             # print(reconstructed_image.shape)
-            self.dispaly(reconstructed_image)
+            self.display(reconstructed_image)
 
-    def dispaly(self, image):
+    def display(self, image):
         height, width = image.shape
         byte_data = image.tobytes()
         qimage = QImage(image.data, width, height, width, QImage.Format_Grayscale8)
