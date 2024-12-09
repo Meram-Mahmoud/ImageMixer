@@ -4,7 +4,7 @@ class Line(QFrame):
     def __init__(self, horizontal=True, parent=None):
         super().__init__(parent)
         self.horizontal = horizontal
-        self.setStyleSheet("QFrame { background-color: #01240e; }")
+        self.setStyleSheet("QFrame { background-color: #fff; height: 1}")
         self.update_style()
 
     def update_style(self):

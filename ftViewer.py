@@ -1,5 +1,5 @@
 from PyQt5.QtGui import QPixmap, QImage, QPainter
-from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QSlider
 from PyQt5.QtCore import Qt, pyqtSignal
 import cv2
 import numpy as np
@@ -27,7 +27,7 @@ class FourierTransformViewer(QWidget):
         self.component_combo.addItem("Imaginary")
         self.component_combo.setStyleSheet("""
             QComboBox {
-                background-color: #01240e;
+                background-color: #11361e;
                 color: #ffffff;
                 border: 1px solid #888888;
                 border-radius: 5px;
@@ -39,7 +39,7 @@ class FourierTransformViewer(QWidget):
         # Fourier component display
         self.ft_image_label = ROISelectableLabel(self)
         self.ft_image_label.setAlignment(Qt.AlignCenter)
-        self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        self.ft_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #11361e;")
         self.ft_image_label.setFixedSize(self.width, self.height)
 
         # Connect the ROI selection signal to the slot
@@ -146,3 +146,35 @@ class FourierTransformViewer(QWidget):
             # Save or process the region as needed
             return region
 
+
+    def add_slider(self):
+        self.slider = QSlider(Qt.Horizontal)  # Horizontal slider
+        self.slider.setMinimum(0)  # Minimum value
+        self.slider.setMaximum(100)  # Maximum value
+        self.slider.setValue(100)  # Initial value
+        self.slider.setTickPosition(QSlider.TicksBelow)  # Show ticks below the slider
+        self.slider.setTickInterval(10)  # Interval between ticks
+        self.slider.setStyleSheet("""
+            QSlider::handle:horizontal {
+                background-color: #11361e;
+                border: 1px solid #888888;
+                width: 15px;
+                height: 15px;
+                border-radius: 7px;
+            }
+            QSlider::groove:horizontal {
+                height: 5px;
+                background: lightgray;
+            }
+            QSlider::sub-page:horizontal {
+                background: #11361e;
+            }
+        """)
+
+        # Update value display when the slider changes
+        self.slider.valueChanged.connect(self.update_slider_value)
+        return self.slider
+
+    def update_slider_value(self):
+        # Update the value label when the slider value changes
+        self.slider_value_label.setText(f"{self.slider.value()}")

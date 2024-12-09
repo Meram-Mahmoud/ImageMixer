@@ -9,20 +9,20 @@ class Mix(QWidget):
         self.button = QPushButton("Mix")
         self.button.setStyleSheet("""
             QPushButton {
-                background-color: #01240e;  
+                background-color: #11361e;  
                 color: white; 
-                font-size: 18px; 
+                font-size: 20px; 
                 border-radius: 8px; 
                 padding: 10px; 
-                width: 150px;
+                font-weight: bold;                                  
             }
             QPushButton:pressed {
                 background-color: #cdd1cf; 
-                border: 2px solid #01240e;
-                color: #01240e;
+                border: 2px solid #11361e;
+                color: #11361e;
             }
         """)
-        self.button.setFixedWidth(300)
+        self.button.setFixedWidth(280)
         layout = QVBoxLayout(self)
         layout.addWidget(self.button)
         

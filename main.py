@@ -5,6 +5,7 @@ from components.line import Line
 from output import Output
 from mix import Mix
 from PyQt5.QtCore import Qt
+from controls import Controls
 
 class Mixer(QMainWindow):
     def __init__(self):
@@ -18,7 +19,7 @@ class Mixer(QMainWindow):
 
         self.mainLayout = QHBoxLayout(self.centralWidget)  # Main horizontal layout
         self.createLeftColumn()
-        self.addVerticalLine()  # Add the vertical line
+        # self.addVerticalLine()  # Add the vertical line
         self.createRightColumn()
     
     def createLeftColumn(self):
@@ -30,11 +31,21 @@ class Mixer(QMainWindow):
         self.image_uploader2 = ImageUploader()
         topRow.addWidget(self.image_uploader1)
         topRow.addWidget(self.image_uploader2)
-        leftColumn.addLayout(topRow)
+        # leftColumn.addLayout(topRow)
 
-        # Add a horizontal line
-        hLine = Line(horizontal=True, parent=self)
-        leftColumn.addWidget(hLine)
+        # Create a QWidget to hold the left column layout and set the border
+        topRowWidget = QWidget(self)
+        topRowWidget.setLayout(topRow)
+        topRowWidget.setObjectName("topRowWidget")
+        topRowWidget.setStyleSheet("""#topRowWidget {
+                                            border: 3px solid #11361e;
+                                            border-radius: 20px;
+                                        }""")
+        leftColumn.addWidget(topRowWidget)
+
+        # # Add a horizontal line
+        # hLine = Line(horizontal=True, parent=self)
+        # leftColumn.addWidget(hLine)
 
         # Create the bottom row
         bottomRow = QHBoxLayout()
@@ -42,18 +53,34 @@ class Mixer(QMainWindow):
         self.image_uploader4 = ImageUploader()
         bottomRow.addWidget(self.image_uploader3)
         bottomRow.addWidget(self.image_uploader4)
-        leftColumn.addLayout(bottomRow)
+        # leftColumn.addLayout(bottomRow)
+        
+        # Create a QWidget to hold the left column layout and set the border
+        bottomRowWidget = QWidget(self)
+        bottomRowWidget.setLayout(bottomRow)
+        bottomRowWidget.setObjectName("bottomRowWidget")
+        bottomRowWidget.setStyleSheet("""#bottomRowWidget {
+                                            border: 3px solid #11361e;
+                                            border-radius: 20px;
+                                            padding: 10px;
+                                        }""")
+        leftColumn.addWidget(bottomRowWidget)        
 
         # Add the left column to the main layout
-        self.mainLayout.addLayout(leftColumn, 3)  # Weight = 2 (for unequal columns)
-    
-    def addVerticalLine(self):
-        vLine = Line(horizontal=False, parent=self)  # Create a vertical line
-        self.mainLayout.addWidget(vLine)
+        leftColumnWidget = QWidget(self)
+        leftColumnWidget.setLayout(leftColumn)
+        # leftColumnWidget.setStyleSheet("""border: 3px solid #01240e;
+        #                                 border-radius: 20px;
+        #                                 padding: 10px;
+        #                                 margin: 10px;""")
+        self.mainLayout.addWidget(leftColumnWidget, 3)  # Weight = 3 for the left column
 
     def createRightColumn(self):
         rightColumn = QVBoxLayout()
 
+        self.radio = Controls()
+        rightColumn.addWidget(self.radio)
+        
         # Output ports
         self.port1 = Output()
         self.port2 = Output()
@@ -65,17 +92,28 @@ class Mixer(QMainWindow):
         rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)  # Center the button
         self.mix_button.clicked.connect(self.get_ft_components)
 
+        rightColumnWidget = QWidget()
+        rightColumnWidget.setLayout(rightColumn)
+        rightColumnWidget.setObjectName("RightColumnWidget")
+        rightColumnWidget.setStyleSheet("""#RightColumnWidget {
+                                            border: 3px solid #11361e;
+                                            border-radius: 20px;
+                                            padding: 10px;
+                                        }""")
         # Add the right column to the main layout
-        self.mainLayout.addLayout(rightColumn, 1)  # Weight = 1 (for unequal columns)
+        self.mainLayout.addWidget(rightColumnWidget, 1)
 
     def get_ft_components(self):
         img1 = self.image_uploader1.get_component()
         img2 = self.image_uploader2.get_component()
         img3 = self.image_uploader3.get_component()
         img4 = self.image_uploader4.get_component()
-        self.port1.set_data([img1, img2, img3, img4])
-        self.port2.set_data([img1, img2, img3, img4])
 
+        port = self.radio.get_option()
+        if port == "Port 1":
+            self.port1.set_data([img1, img2, img3, img4])
+        else:   
+            self.port2.set_data([img1, img2, img3, img4])
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

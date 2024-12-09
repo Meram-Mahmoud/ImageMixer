@@ -20,7 +20,8 @@ class Output(QWidget):
         # Original Image Section
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
-        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        self.original_image_label.setStyleSheet("""border-radius: 10px;
+                                                border: 2px solid #11361e;""")
         self.original_image_label.setFixedSize(self.width, self.height)
 
         layout.addWidget(self.original_image_label)

@@ -28,7 +28,7 @@ class ImageUploader(QWidget):
         # Original Image Section
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
-        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #01240e;")
+        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #11361e;")
         self.original_image_label.setFixedSize(self.width, self.height)  # Rectangle size
         pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
         self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio))  # Adjust size as needed
@@ -39,7 +39,6 @@ class ImageUploader(QWidget):
         #layout.addWidget(self.image_loader.image_label)
 
         layout.addSpacing(20)  # Space between original image and FT section
-
 
         ft_layout = QVBoxLayout()  # Vertical layout for ComboBox and FT image
         ft_layout.addWidget(self.image_ft.component_combo)  # Add FourierTransformViewer ComboBox
