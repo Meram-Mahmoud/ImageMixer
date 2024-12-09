@@ -50,8 +50,8 @@ class ImageUploader(QWidget):
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
             self.image=self.image_loader.upload_image()
             self.image_ft.setData(cv2.resize(self.image, (self.width, self.height)))
-            print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
-            print(self.image_ft.magnitude)
+            # print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
+            # print(self.image_ft.magnitude)
         elif event.button() == Qt.LeftButton:
             self.is_dragging = True
             self.last_pos = event.pos()  # Remember the mouse position
@@ -96,9 +96,11 @@ class ImageUploader(QWidget):
             #self.fft()
 
             self.image_ft.setData(self.image)
-            print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
-            print(self.image_ft.magnitude)
+            # print("doneeeeee in the imageUploader class , MAGNITUDE HERE:")
+            # print(self.image_ft.magnitude)
 
+    def get_component(self):
+        return self.image_ft.magnitude
 
 
 # if __name__ == "__main__":
