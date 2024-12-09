@@ -32,6 +32,7 @@ class FourierTransformViewer(QWidget):
                 border: 1px solid #888888;
                 border-radius: 5px;
                 padding: 5px;
+                font-size: 18px;
             }
         """)
 
@@ -54,8 +55,8 @@ class FourierTransformViewer(QWidget):
 
     def setData(self, original):
         self.image=original
-        print("setting the data before fourier, IMAGE:")
-        print(self.image)
+        # print("setting the data before fourier, IMAGE:")
+        # print(self.image)
         self.compute_fft(self.image)
 
     def compute_fft(self, image):
@@ -66,8 +67,8 @@ class FourierTransformViewer(QWidget):
         self.phase = np.angle(f_shift)
         self.real = np.real(f_shift)
         self.imaginary = np.imag(f_shift)
-        print("setting the data after fourier, MAGNITUDE:")
-        print(self.magnitude)
+        # print("setting the data after fourier, MAGNITUDE:")
+        # print(self.magnitude)
 
         self.fourier_image.emit([self.magnitude, self.phase, self.real, self.imaginary])
 
@@ -129,8 +130,8 @@ class FourierTransformViewer(QWidget):
             if region_type == 'inner':
                 # Crop the region inside the rectangle (inner region)
                 region = self.component[y1:y2, x1:x2]
-                print("Inner Region Data:")
-                print(region)
+                # print("Inner Region Data:")
+                # print(region)
             elif region_type == 'outer':
                 # Extract the outer region (everything except inside the rectangle)
                 outer_region = np.copy(self.component)  # Create a copy of the entire image
@@ -138,8 +139,8 @@ class FourierTransformViewer(QWidget):
                 # Set the area inside the rectangle to 0 (black or empty)
                 outer_region[y1:y2, x1:x2] = 0
 
-                print("Outer Region Data:")
-                print(outer_region)
+                # print("Outer Region Data:")
+                # print(outer_region)
                 region = outer_region  # Return the outer region data
 
             # Save or process the region as needed
