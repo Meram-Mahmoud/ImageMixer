@@ -121,7 +121,7 @@ class FourierTransformViewer(QWidget):
         self.ft_image_label.setPixmap(pixmap_component)
         self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
-    def get_region_data(self, rect, region_type='outer'):
+    def get_region_data(self, rect):
         """Extracts and saves data within the selected ROI or outside the selected ROI."""
         if self.image is not None and not rect.isNull():
             # Map QRect to image coordinates
@@ -130,58 +130,56 @@ class FourierTransformViewer(QWidget):
             y1 = int(rect.top() * self.component.shape[0] / self.ft_image_label.height())
             y2 = int(rect.bottom() * self.component.shape[0] / self.ft_image_label.height())
 
-            # Extract data based on region_type
-            if region_type == 'inner':
-                # Crop the region inside the rectangle (inner region)
-                inner_magnitude = self.magnitude[y1:y2, x1:x2]
-                inner_phase = self.phase[y1:y2, x1:x2]
-                inner_real = self.real[y1:y2, x1:x2]
-                inner_imaginary = self.imaginary[y1:y2, x1:x2]
+            # Crop the region inside the rectangle (inner region)
+            inner_magnitude = self.magnitude[y1:y2, x1:x2]
+            inner_phase = self.phase[y1:y2, x1:x2]
+            inner_real = self.real[y1:y2, x1:x2]
+            inner_imaginary = self.imaginary[y1:y2, x1:x2]
 
-                self.inner_components = {
-                "magnitude": inner_magnitude,
-                "phase": inner_phase,
-                "real": inner_real,
-                "imaginary": inner_imaginary
-                }
+            self.inner_components = {
+            "magnitude": inner_magnitude,
+            "phase": inner_phase,
+            "real": inner_real,
+            "imaginary": inner_imaginary
+            }
 
-                #ACCESSING AND PRINTING
-                # if "magnitude" in self.inner_components:
-                #     print("Inner Magnitude:")
-                #     print(self.inner_components["magnitude"])
-                # else:
-                #     print("Inner magnitude data not available.")
+            #ACCESSING AND PRINTING
+            # if "magnitude" in self.inner_components:
+            #     print("Inner Magnitude:")
+            #     print(self.inner_components["magnitude"])
+            # else:
+            #     print("Inner magnitude data not available.")
 
-            elif region_type == 'outer':
-                # Extract the outer region (everything except inside the rectangle)
-                outer_magnitude = np.copy(self.magnitude)  # Create a copy of the entire image
-                # Set the area inside the rectangle to 0 (black or empty)
-                outer_magnitude[y1:y2, x1:x2] = 0
 
-                outer_phase = np.copy(self.phase)  # Create a copy of the entire image
-                outer_phase[y1:y2, x1:x2] = 0
+            # Extract the outer region (everything except inside the rectangle)
+            outer_magnitude = np.copy(self.magnitude)  # Create a copy of the entire image
+            # Set the area inside the rectangle to 0 (black or empty)
+            outer_magnitude[y1:y2, x1:x2] = 0
 
-                outer_real = np.copy(self.real)  # Create a copy of the entire image
-                outer_real[y1:y2, x1:x2] = 0
+            outer_phase = np.copy(self.phase)  # Create a copy of the entire image
+            outer_phase[y1:y2, x1:x2] = 0
 
-                outer_imaginary = np.copy(self.imaginary)  # Create a copy of the entire image
-                outer_imaginary[y1:y2, x1:x2] = 0
+            outer_real = np.copy(self.real)  # Create a copy of the entire image
+            outer_real[y1:y2, x1:x2] = 0
 
-                self.outer_components = {
-                "magnitude": outer_magnitude,
-                "phase": outer_phase,
-                "real": outer_real,
-                "imaginary": outer_imaginary
-                }
+            outer_imaginary = np.copy(self.imaginary)  # Create a copy of the entire image
+            outer_imaginary[y1:y2, x1:x2] = 0
 
-                # print("Outer MAG:")
-                # print(self.outer_components["magnitude"])
-                # print("Outer PHASE:")
-                # print(self.outer_components["phase"])
-                # print("Outer REAL:")
-                # print(self.outer_components["real"])
-                # print("Outer IMAG:")
-                # print(self.outer_components["imaginary"])
+            self.outer_components = {
+            "magnitude": outer_magnitude,
+            "phase": outer_phase,
+            "real": outer_real,
+            "imaginary": outer_imaginary
+            }
+
+            # print("Outer MAG:")
+            # print(self.outer_components["magnitude"])
+            # print("Outer PHASE:")
+            # print(self.outer_components["phase"])
+            # print("Outer REAL:")
+            # print(self.outer_components["real"])
+            # print("Outer IMAG:")
+            # print(self.outer_components["imaginary"])
                 
 
     def add_slider(self):
