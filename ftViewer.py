@@ -18,6 +18,8 @@ class FourierTransformViewer(QWidget):
         self.real = None
         self.imaginary = None
         self.component=None
+        self.inner_components = {}
+        self.outer_components = {}
 
         # Fourier component display
         self.ft_image_label = ROISelectableLabel(self)
@@ -135,14 +137,21 @@ class FourierTransformViewer(QWidget):
                 inner_phase = self.phase[y1:y2, x1:x2]
                 inner_real = self.real[y1:y2, x1:x2]
                 inner_imaginary = self.imaginary[y1:y2, x1:x2]
-                print("Inner MAG:")
-                print(inner_magnitude)
-                print("Inner PHASE:")
-                print(inner_phase)
-                print("Inner REAL:")
-                print(inner_real)
-                print("Inner IMAG:")
-                print(inner_imaginary)
+
+                self.inner_components = {
+                "magnitude": inner_magnitude,
+                "phase": inner_phase,
+                "real": inner_real,
+                "imaginary": inner_imaginary
+                }
+
+                #ACCESSING AND PRINTING
+                # if "magnitude" in self.inner_components:
+                #     print("Inner Magnitude:")
+                #     print(self.inner_components["magnitude"])
+                # else:
+                #     print("Inner magnitude data not available.")
+
             elif region_type == 'outer':
                 # Extract the outer region (everything except inside the rectangle)
                 outer_magnitude = np.copy(self.magnitude)  # Create a copy of the entire image
@@ -158,18 +167,22 @@ class FourierTransformViewer(QWidget):
                 outer_imaginary = np.copy(self.imaginary)  # Create a copy of the entire image
                 outer_imaginary[y1:y2, x1:x2] = 0
 
-                print("Outer MAG:")
-                print(outer_magnitude)
-                print("Outer PHASE:")
-                print(outer_phase)
-                print("Outer REAL:")
-                print(outer_real)
-                print("Outer IMAG:")
-                print(outer_imaginary)
-                region = outer_magnitude  # Return the outer region data
+                self.outer_components = {
+                "magnitude": outer_magnitude,
+                "phase": outer_phase,
+                "real": outer_real,
+                "imaginary": outer_imaginary
+                }
 
-            # # Save or process the region as needed
-            # return outer_magnitude
+                # print("Outer MAG:")
+                # print(self.outer_components["magnitude"])
+                # print("Outer PHASE:")
+                # print(self.outer_components["phase"])
+                # print("Outer REAL:")
+                # print(self.outer_components["real"])
+                # print("Outer IMAG:")
+                # print(self.outer_components["imaginary"])
+                
 
     def add_slider(self):
         self.slider = QSlider(Qt.Horizontal)  # Horizontal slider
