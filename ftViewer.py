@@ -50,11 +50,7 @@ class FourierTransformViewer(QWidget):
         for instance in FourierTransformViewer.instances:
             if instance is not self:
                 instance.update_roi(rect)
-                # instance.get_region_data(rect, region_type='outer')
                 instance.get_region_data(rect)
-        # for instance in FourierTransformViewer.instances:
-        #     if instance.image is not None:
-        #         instance.get_region_data(rect, region_type='outer')
 
     def update_roi(self, rect: QRect):
         """Update the ROI of the current instance."""
@@ -138,11 +134,17 @@ class FourierTransformViewer(QWidget):
             y1 = int(rect.top() * self.component.shape[0] / self.ft_image_label.height())
             y2 = int(rect.bottom() * self.component.shape[0] / self.ft_image_label.height())
 
-            # Crop the region inside the rectangle (inner region)
-            inner_magnitude = self.magnitude[y1:y2, x1:x2]
-            inner_phase = self.phase[y1:y2, x1:x2]
-            inner_real = self.real[y1:y2, x1:x2]
-            inner_imaginary = self.imaginary[y1:y2, x1:x2]
+            # Create copies of the original arrays
+            inner_magnitude = np.zeros_like(self.magnitude)
+            inner_phase = np.zeros_like(self.phase)
+            inner_real = np.zeros_like(self.real)
+            inner_imaginary = np.zeros_like(self.imaginary)
+
+            # Retain the values within the rectangle and zero out everything else
+            inner_magnitude[y1:y2, x1:x2] = self.magnitude[y1:y2, x1:x2]
+            inner_phase[y1:y2, x1:x2] = self.phase[y1:y2, x1:x2]
+            inner_real[y1:y2, x1:x2] = self.real[y1:y2, x1:x2]
+            inner_imaginary[y1:y2, x1:x2] = self.imaginary[y1:y2, x1:x2]
 
             self.inner_components = {
             "magnitude": inner_magnitude,
@@ -153,8 +155,8 @@ class FourierTransformViewer(QWidget):
 
             #ACCESSING AND PRINTING
             # if "magnitude" in self.inner_components:
-            #     print("Inner Magnitude:")
-            #     print(self.inner_components["magnitude"])
+            print("Inner Magnitude:")
+            print(self.inner_components["magnitude"])
             # else:
             #     print("Inner magnitude data not available.")
 
