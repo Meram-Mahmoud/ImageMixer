@@ -14,7 +14,7 @@ class Mixer(QMainWindow):
         self.setGeometry(50, 50, 1800, 900)
 
         self.centralWidget = QWidget(self)
-        self.centralWidget.setStyleSheet("background-color: #cdd1cf;")
+        self.centralWidget.setStyleSheet("background-color: #11361e;")
         self.setCentralWidget(self.centralWidget)
 
         self.mainLayout = QHBoxLayout(self.centralWidget)  # Main horizontal layout
@@ -40,6 +40,7 @@ class Mixer(QMainWindow):
         topRowWidget.setStyleSheet("""#topRowWidget {
                                             border: 3px solid #11361e;
                                             border-radius: 20px;
+                                            background: #cdd1cf;
                                         }""")
         leftColumn.addWidget(topRowWidget)
 
@@ -63,6 +64,7 @@ class Mixer(QMainWindow):
                                             border: 3px solid #11361e;
                                             border-radius: 20px;
                                             padding: 10px;
+                                            background: #cdd1cf;
                                         }""")
         leftColumn.addWidget(bottomRowWidget)        
 
@@ -78,17 +80,17 @@ class Mixer(QMainWindow):
     def createRightColumn(self):
         rightColumn = QVBoxLayout()
 
-        self.radio = Controls()
-        rightColumn.addWidget(self.radio, 1)
+        self.controls = Controls()
+        rightColumn.addWidget(self.controls, 1)
         
         # Output ports
         self.port1 = Output()
         self.port2 = Output()
-        rightColumn.addWidget(self.port1, 4)
-        rightColumn.addWidget(self.port2, 4)
+        rightColumn.addWidget(self.port1, 5)
+        rightColumn.addWidget(self.port2, 5)
 
         self.mix_button = Mix()
-        rightColumn.addWidget(self.mix_button, 2)
+        rightColumn.addWidget(self.mix_button, 1)
         rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)  # Center the button
         self.mix_button.clicked.connect(self.get_ft_components)
 
@@ -99,6 +101,7 @@ class Mixer(QMainWindow):
                                             border: 3px solid #11361e;
                                             border-radius: 20px;
                                             padding: 10px;
+                                            background: #cdd1cf;
                                         }""")
         # Add the right column to the main layout
         rightColumnWidget.setFixedHeight(960)
@@ -106,16 +109,46 @@ class Mixer(QMainWindow):
         self.mainLayout.addWidget(rightColumnWidget, 1)
 
     def get_ft_components(self):
-        img1 = self.image_uploader1.get_component()
-        img2 = self.image_uploader2.get_component()
-        img3 = self.image_uploader3.get_component()
-        img4 = self.image_uploader4.get_component()
-
-        port = self.radio.get_option()
+        mode, img1, img2, img3, img4 = None, None, None, None, None
+        if self.controls.get_roi() == "Inner":
+            print("inner")
+            if self.controls.get_mode() == "Magnitude/Phase":
+                mode = "mp"
+                img1 = self.image_uploader1.get_component()[0]
+                img2 = self.image_uploader2.get_component()[0]
+                img3 = self.image_uploader3.get_component()[0]
+                img4 = self.image_uploader4.get_component()[0]
+            
+            else:
+                mode = "ri"
+                img1 = self.image_uploader1.get_component()[0]
+                img2 = self.image_uploader2.get_component()[0]
+                img3 = self.image_uploader3.get_component()[0]
+                img4 = self.image_uploader4.get_component()[0]
+        
+        else:
+            print("outer")
+            if self.controls.get_mode() == "Magnitude/Phase":
+                mode = "mp"
+                img1 = self.image_uploader1.get_component()[1]
+                img2 = self.image_uploader2.get_component()[1]
+                img3 = self.image_uploader3.get_component()[1]
+                img4 = self.image_uploader4.get_component()[1]
+            
+            else:
+                mode = "ri"
+                img1 = self.image_uploader1.get_component()[1]
+                img2 = self.image_uploader2.get_component()[1]
+                img3 = self.image_uploader3.get_component()[1]
+                img4 = self.image_uploader4.get_component()[1]
+        
+        print(mode)
+        self.image_uploader1.image_ft.set_mode(mode)
+        port = self.controls.get_option()
         if port == "Port 1":
-            self.port1.set_data([img1, img2, img3, img4])
+            self.port1.set_data([img1, img2, img3, img4], mode)
         else:   
-            self.port2.set_data([img1, img2, img3, img4])
+            self.port2.set_data([img1, img2, img3, img4], mode)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

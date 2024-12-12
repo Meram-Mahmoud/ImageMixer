@@ -31,7 +31,7 @@ class ImageUploader(QWidget):
         # Original Image Section
         self.original_image_label = QLabel(self)
         self.original_image_label.setAlignment(Qt.AlignCenter)
-        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #11361e;")
+        self.original_image_label.setStyleSheet("border-radius: 10px; border: 2px solid #11361e; background: #cdd1cf;")
         self.original_image_label.setFixedSize(self.width, self.height)
         pixmap = QPixmap("ImageMixer/icons/coloredUpload.png")
         self.original_image_label.setPixmap(pixmap.scaled(64, 64, Qt.KeepAspectRatio)) 
@@ -45,6 +45,7 @@ class ImageUploader(QWidget):
         # Container widget for the upper_row layout
         container_widget = QWidget(self)
         container_widget.setLayout(upper_row)
+        container_widget.setStyleSheet("background: #cdd1cf;")
         container_widget.setFixedWidth(570)  # Set the desired width
 
         # Add original image and transformed image to lower_row
@@ -105,7 +106,7 @@ class ImageUploader(QWidget):
             self.image_ft.setData(self.image)
 
     def get_component(self):
-        return self.image_ft.magnitude
+        return self.image_ft.get_roi()
 
 
 # if __name__ == "__main__":
