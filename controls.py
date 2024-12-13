@@ -15,11 +15,13 @@ logging.basicConfig(
 
 class Controls(QWidget):
     set_mode = pyqtSignal(str)
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.option = "Port 1"
-        self.selected_mode = "Magnitude/Phase"
         self.selected_roi = "Inner"
+        self.selected_mode = "Magnitude/Phase"
+
         self.layout = QVBoxLayout(self)
 
         logging.debug("Initializing Controls widget with default values.")
@@ -147,12 +149,10 @@ class Controls(QWidget):
         self.selected_mode = self.mode_combo.currentText()
         self.set_mode.emit(self.selected_mode)
         logging.debug(f"Mode updated: {self.selected_mode}")
-        print(self.selected_mode)
     
     def update_roi(self):
         self.selected_roi = self.roi_combo.currentText()
         logging.debug(f"ROI updated: {self.selected_roi}")
-        print(self.selected_roi)
     
     def get_option(self):
         logging.debug(f"Getting option: {self.option}")
@@ -160,7 +160,6 @@ class Controls(QWidget):
     
     def get_mode(self):
         logging.debug(f"Getting mode: {self.selected_mode}")
-        print(self.selected_mode)
         return self.selected_mode
 
     def get_roi(self):

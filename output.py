@@ -64,6 +64,7 @@ class Output(QWidget):
                                 self.output_image_phase = comp['phase']
                             else:
                                 self.output_image_phase += comp['phase']
+                                self.output_image_phase = (self.output_image_phase + np.pi) % (2 * np.pi) - np.pi
                         else: 
                             logging.warning("Unsupported item: %s", item)
             else: 
@@ -117,7 +118,7 @@ class Output(QWidget):
                 if self.output_image_mag is None:
                     self.output_image_mag = np.ones_like(self.output_image_phase)
                 if self.output_image_phase is None:
-                    self.output_image_phase = np.zeros_like(self.output_image_mag)
+                    self.output_image_phase = np.ones_like(self.output_image_mag)
 
                 complex_spectrum = self.output_image_mag * np.exp(1j * self.output_image_phase)
                 reconstructed_image = ifft2(ifftshift(complex_spectrum)).real
@@ -129,14 +130,9 @@ class Output(QWidget):
                     self.output_image_img = np.zeros_like(self.output_image_real)
 
                 complex_spectrum = self.output_image_real + 1j * self.output_image_img
-                reconstructed_image = ifft2(ifftshift(complex_spectrum)).real
+                reconstructed_image = np.abs(ifft2(ifftshift(complex_spectrum)))
             
             reconstructed_image = cv2.normalize(reconstructed_image, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
-            # reconstructed_image = 255 * (reconstructed_image - np.min(reconstructed_image)) / (np.max(reconstructed_image) - np.min(reconstructed_image))
-            # reconstructed_image = reconstructed_image.astype(np.uint8)
-            # _, binary_image = cv2.threshold(reconstructed_image, 127, 255, cv2.THRESH_BINARY)
-            # print(reconstructed_image.min(), reconstructed_image.max())
-
             self.display(reconstructed_image)
 
         except Exception as e:

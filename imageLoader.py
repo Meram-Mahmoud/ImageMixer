@@ -1,4 +1,5 @@
 import sys
+import logging
 from PyQt5.QtWidgets import QApplication, QLabel, QFileDialog, QHBoxLayout, QWidget, QComboBox, QVBoxLayout
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt, QEvent
@@ -6,10 +7,19 @@ import cv2
 from ftViewer import FourierTransformViewer
 from loader import ImageLoader
 
+# Configure logging
+logging.basicConfig(
+    filename="ImageMixer/logging/image_uploader.log",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 class ImageUploader(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+
+        logging.info("Initializing ImageUploader class.")
 
         self.width, self.height, self.radius = 250, 350, 15
 
@@ -59,11 +69,17 @@ class ImageUploader(QWidget):
         # Set the layout for the main window
         self.setLayout(main_column)
 
+        logging.info("ImageUploader UI setup complete.")
+
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton and event.type() == QEvent.MouseButtonDblClick:
+            logging.debug("Mouse double-clicked. Attempting to upload image.")
             self.image = self.image_loader.upload_image()
-            self.image_ft.setData(cv2.resize(self.image, (self.width, self.height)))
+            if self.image is not None:
+                logging.info("Image uploaded successfully. Setting data for Fourier Transform.")
+                self.image_ft.setData(cv2.resize(self.image, (self.width, self.height)))
         elif event.button() == Qt.LeftButton:
+            logging.debug("Mouse left button pressed. Entering dragging mode.")
             self.is_dragging = True
             self.last_pos = event.pos()  # Remember the mouse position
 
@@ -73,23 +89,27 @@ class ImageUploader(QWidget):
             dx = event.x() - self.last_pos.x()  # Horizontal movement (contrast)
             dy = event.y() - self.last_pos.y()  # Vertical movement (brightness)
             self.last_pos = event.pos()  # Update the last position
-            
+
+            logging.debug(f"Mouse moved. Adjusting contrast by {dx * 0.01} and brightness by {dy * 0.1}.")
+
             # Update contrast and brightness
             self.contrast += dx * 0.01  # Sensitivity for contrast
             self.brightness += dy * 0.1  # Sensitivity for brightness
-            
+
             # Apply the changes to the image
             self.image_loader.update_image()
 
     def mouseReleaseEvent(self, event):
         # Stop dragging when mouse button is released
         if event.button() == Qt.LeftButton:
+            logging.debug("Mouse left button released. Exiting dragging mode.")
             self.is_dragging = False
 
     def upload_image(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Images (*.png *.jpg *.bmp)")
-        
+
         if file_path:
+            logging.info(f"Image file selected: {file_path}")
             img_bgr = cv2.imread(file_path)
             img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
             self.image = cv2.resize(img_gray, (self.width, self.height))
@@ -103,7 +123,9 @@ class ImageUploader(QWidget):
             pixmap = self.image_loader.get_rounded_pixmap(pixmap, self.image_loader.image_label.size(), self.radius)
             self.image_loader.image_label.setPixmap(pixmap.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
+            logging.info("Image uploaded and displayed successfully.")
             self.image_ft.setData(self.image)
 
     def get_component(self):
+        logging.debug("Fetching component from Fourier Transform.")
         return self.image_ft.get_roi()

@@ -1,4 +1,5 @@
 import sys
+import logging
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QVBoxLayout, QHBoxLayout
 from imageLoader import ImageUploader
 from output import Output
@@ -6,9 +7,18 @@ from mix import Mix
 from PyQt5.QtCore import Qt
 from controls import Controls
 
+# Configure logging
+logging.basicConfig(
+    filename='ImageMixer/logging/mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
 class Mixer(QMainWindow):
     def __init__(self):
         super().__init__()
+        logging.info("Initializing Mixer application.")
+        
         self.setWindowTitle("Mixer")
         self.setGeometry(50, 50, 1800, 900)
 
@@ -16,12 +26,21 @@ class Mixer(QMainWindow):
         self.centralWidget.setStyleSheet("background-color: #11361e;")
         self.setCentralWidget(self.centralWidget)
 
-        self.mainLayout = QHBoxLayout(self.centralWidget)  # Main horizontal layout
+        self.mainLayout = QHBoxLayout(self.centralWidget)
         self.createLeftColumn()
-        # self.addVerticalLine()  # Add the vertical line
         self.createRightColumn()
-    
+        logging.debug("UI setup complete.")
+
+        self.change_mode()
+
+    def change_mode(self):
+        self.controls.set_mode.connect(self.image_uploader1.image_ft.update_fourier_options)
+        self.controls.set_mode.connect(self.image_uploader2.image_ft.update_fourier_options)
+        self.controls.set_mode.connect(self.image_uploader3.image_ft.update_fourier_options)
+        self.controls.set_mode.connect(self.image_uploader4.image_ft.update_fourier_options)
+
     def createLeftColumn(self):
+        logging.info("Setting up the left column.")
         leftColumn = QVBoxLayout()
 
         # Create the top row
@@ -30,59 +49,47 @@ class Mixer(QMainWindow):
         self.image_uploader2 = ImageUploader()
         topRow.addWidget(self.image_uploader1)
         topRow.addWidget(self.image_uploader2)
-        # leftColumn.addLayout(topRow)
 
-        # Create a QWidget to hold the left column layout and set the border
         topRowWidget = QWidget(self)
         topRowWidget.setLayout(topRow)
         topRowWidget.setObjectName("topRowWidget")
-        topRowWidget.setStyleSheet("""#topRowWidget {
-                                            border: 3px solid #11361e;
-                                            border-radius: 20px;
-                                            background: #cdd1cf;
-                                        }""")
+        topRowWidget.setStyleSheet("""
+            #topRowWidget {
+                border: 3px solid #11361e;
+                border-radius: 20px;
+                background: #cdd1cf;
+            }""")
         leftColumn.addWidget(topRowWidget)
 
-        # # Add a horizontal line
-        # hLine = Line(horizontal=True, parent=self)
-        # leftColumn.addWidget(hLine)
-
-        # Create the bottom row
         bottomRow = QHBoxLayout()
         self.image_uploader3 = ImageUploader()
         self.image_uploader4 = ImageUploader()
         bottomRow.addWidget(self.image_uploader3)
         bottomRow.addWidget(self.image_uploader4)
-        # leftColumn.addLayout(bottomRow)
-        
-        # Create a QWidget to hold the left column layout and set the border
+
         bottomRowWidget = QWidget(self)
         bottomRowWidget.setLayout(bottomRow)
         bottomRowWidget.setObjectName("bottomRowWidget")
-        bottomRowWidget.setStyleSheet("""#bottomRowWidget {
-                                            border: 3px solid #11361e;
-                                            border-radius: 20px;
-                                            padding: 10px;
-                                            background: #cdd1cf;
-                                        }""")
-        leftColumn.addWidget(bottomRowWidget)        
+        bottomRowWidget.setStyleSheet("""
+            #bottomRowWidget {
+                border: 3px solid #11361e;
+                border-radius: 20px;
+                padding: 10px;
+                background: #cdd1cf;
+            }""")
+        leftColumn.addWidget(bottomRowWidget)
 
-        # Add the left column to the main layout
         leftColumnWidget = QWidget(self)
         leftColumnWidget.setLayout(leftColumn)
-        # leftColumnWidget.setStyleSheet("""border: 3px solid #01240e;
-        #                                 border-radius: 20px;
-        #                                 padding: 10px;
-        #                                 margin: 10px;""")
-        self.mainLayout.addWidget(leftColumnWidget, 3)  # Weight = 3 for the left column
+        self.mainLayout.addWidget(leftColumnWidget, 3)
 
     def createRightColumn(self):
+        logging.info("Setting up the right column.")
         rightColumn = QVBoxLayout()
 
         self.controls = Controls()
         rightColumn.addWidget(self.controls, 1)
-        
-        # Output ports
+
         self.port1 = Output()
         self.port2 = Output()
         rightColumn.addWidget(self.port1, 5)
@@ -90,73 +97,72 @@ class Mixer(QMainWindow):
 
         self.mix_button = Mix()
         rightColumn.addWidget(self.mix_button, 1)
-        rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)  # Center the button
+        rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)
         self.mix_button.clicked.connect(self.get_ft_components)
 
         rightColumnWidget = QWidget()
         rightColumnWidget.setLayout(rightColumn)
         rightColumnWidget.setObjectName("RightColumnWidget")
-        rightColumnWidget.setStyleSheet("""#RightColumnWidget {
-                                            border: 3px solid #11361e;
-                                            border-radius: 20px;
-                                            padding: 10px;
-                                            background: #cdd1cf;
-                                        }""")
-        # Add the right column to the main layout
+        rightColumnWidget.setStyleSheet("""
+            #RightColumnWidget {
+                border: 3px solid #11361e;
+                border-radius: 20px;
+                padding: 10px;
+                background: #cdd1cf;
+            }""")
         rightColumnWidget.setFixedHeight(960)
 
         self.mainLayout.addWidget(rightColumnWidget, 1)
 
     def get_ft_components(self):
-        mode, img1, img2, img3, img4, components = None, None, None, None, None, None
-        if self.controls.get_roi() == "Inner":
-            print("inner")
-            if self.controls.get_mode() == "Magnitude/Phase":
-                mode = "mp"
+        logging.info("Collecting Fourier Transform components.")
+        try:
+            mode, img1, img2, img3, img4, components = None, None, None, None, None, None
+            roi = self.controls.get_roi()
+            logging.debug(f"ROI selected: {roi}")
+            if roi == "Inner":
+                if self.controls.get_mode() == "Magnitude/Phase":
+                    mode = "mp"
+                else:
+                    mode = "ri"
                 img1 = self.image_uploader1.get_component()[0]
                 img2 = self.image_uploader2.get_component()[0]
                 img3 = self.image_uploader3.get_component()[0]
                 img4 = self.image_uploader4.get_component()[0]
-            
             else:
-                mode = "ri"
-                img1 = self.image_uploader1.get_component()[0]
-                img2 = self.image_uploader2.get_component()[0]
-                img3 = self.image_uploader3.get_component()[0]
-                img4 = self.image_uploader4.get_component()[0]
-        
-        else:
-            print("outer")
-            if self.controls.get_mode() == "Magnitude/Phase":
-                mode = "mp"
-                img1 = self.image_uploader1.get_component()[1]
-                img2 = self.image_uploader2.get_component()[1]
-                img3 = self.image_uploader3.get_component()[1]
-                img4 = self.image_uploader4.get_component()[1]
-            
-            else:
-                mode = "ri"
+                if self.controls.get_mode() == "Magnitude/Phase":
+                    mode = "mp"
+                else:
+                    mode = "ri"
                 img1 = self.image_uploader1.get_component()[1]
                 img2 = self.image_uploader2.get_component()[1]
                 img3 = self.image_uploader3.get_component()[1]
                 img4 = self.image_uploader4.get_component()[1]
 
-        img_comp1 = self.image_uploader1.image_ft.get_component() # mag/phase/real/img
-        img_comp2 = self.image_uploader2.image_ft.get_component()
-        img_comp3 = self.image_uploader3.image_ft.get_component()
-        img_comp4 = self.image_uploader4.image_ft.get_component()
+            components = [
+                self.image_uploader1.image_ft.get_component(),
+                self.image_uploader2.image_ft.get_component(),
+                self.image_uploader3.image_ft.get_component(),
+                self.image_uploader4.image_ft.get_component()
+            ]
+            port = self.controls.get_option()
+            logging.debug(f"Port selected: {port}, Mode: {mode}")
 
-        components = [img_comp1, img_comp2, img_comp3, img_comp4]
-        # print(mode)
-
-        port = self.controls.get_option()
-        if port == "Port 1":
-            self.port1.set_data([img1, img2, img3, img4], mode, components)
-        else:   
-            self.port2.set_data([img1, img2, img3, img4], mode, components)
+            if port == "Port 1":
+                self.port1.set_data([img1, img2, img3, img4], mode, components)
+            else:
+                self.port2.set_data([img1, img2, img3, img4], mode, components)
+            
+            logging.info("Fourier Transform components successfully processed.")
+        except Exception as e:
+            logging.error(f"Error while processing Fourier Transform components: {e}")
 
 if __name__ == "__main__":
+    logging.info("Starting application.")
     app = QApplication(sys.argv)
     window = Mixer()
     window.show()
-    sys.exit(app.exec_())
+    try:
+        sys.exit(app.exec_())
+    except Exception as e:
+        logging.critical(f"Application crashed with exception: {e}")
