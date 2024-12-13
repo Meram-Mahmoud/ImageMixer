@@ -1,0 +1,13 @@
+2024-12-13 12:58:18,079 - INFO - Starting application.
+2024-12-13 12:58:18,094 - INFO - Initializing Mixer application.
+2024-12-13 12:58:18,095 - INFO - Setting up the left column.
+2024-12-13 12:58:18,705 - INFO - Setting up the right column.
+2024-12-13 12:58:18,738 - DEBUG - UI setup complete.
+2024-12-13 12:58:31,790 - INFO - Collecting Fourier Transform components.
+2024-12-13 12:58:31,790 - DEBUG - ROI selected: Inner
+2024-12-13 12:58:31,791 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 12:58:31,808 - INFO - Fourier Transform components successfully processed.
+2024-12-13 12:58:43,061 - INFO - Collecting Fourier Transform components.
+2024-12-13 12:58:43,061 - DEBUG - ROI selected: Inner
+2024-12-13 12:58:43,061 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 12:58:43,129 - INFO - Fourier Transform components successfully processed.

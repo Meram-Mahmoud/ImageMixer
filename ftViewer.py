@@ -23,7 +23,7 @@ class FourierTransformViewer(QWidget):
 
         # Inital values
         self.component= self.magnitude
-        self.selected = "Magnitude"
+        self.selected = None
         self.mode = 'mp'
         Controls.staticMetaObject.connectSlotsByName(self)
 
@@ -98,6 +98,9 @@ class FourierTransformViewer(QWidget):
             return
 
         self.display_component(self.component)
+
+    def get_component(self):
+        return self.selected
 
     def display_component(self, component):
         """Displays the selected Fourier component with rounded corners."""
@@ -223,7 +226,8 @@ class FourierTransformViewer(QWidget):
     # def update_slider_value(self):
     #     # Update the value label when the slider value changes
     #     self.slider_value_label.setText(f"{self.slider.value()}")        
-        
+    
+    # not used
     def set_mode(self, mode):
         self.mode = mode
 

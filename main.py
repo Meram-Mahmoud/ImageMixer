@@ -1,7 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QVBoxLayout, QHBoxLayout
 from imageLoader import ImageUploader
-from components.line import Line
 from output import Output
 from mix import Mix
 from PyQt5.QtCore import Qt
@@ -109,7 +108,7 @@ class Mixer(QMainWindow):
         self.mainLayout.addWidget(rightColumnWidget, 1)
 
     def get_ft_components(self):
-        mode, img1, img2, img3, img4 = None, None, None, None, None
+        mode, img1, img2, img3, img4, components = None, None, None, None, None, None
         if self.controls.get_roi() == "Inner":
             print("inner")
             if self.controls.get_mode() == "Magnitude/Phase":
@@ -141,14 +140,20 @@ class Mixer(QMainWindow):
                 img2 = self.image_uploader2.get_component()[1]
                 img3 = self.image_uploader3.get_component()[1]
                 img4 = self.image_uploader4.get_component()[1]
-        
-        print(mode)
-        self.image_uploader1.image_ft.set_mode(mode)
+
+        img_comp1 = self.image_uploader1.image_ft.get_component() # mag/phase/real/img
+        img_comp2 = self.image_uploader2.image_ft.get_component()
+        img_comp3 = self.image_uploader3.image_ft.get_component()
+        img_comp4 = self.image_uploader4.image_ft.get_component()
+
+        components = [img_comp1, img_comp2, img_comp3, img_comp4]
+        # print(mode)
+
         port = self.controls.get_option()
         if port == "Port 1":
-            self.port1.set_data([img1, img2, img3, img4], mode)
+            self.port1.set_data([img1, img2, img3, img4], mode, components)
         else:   
-            self.port2.set_data([img1, img2, img3, img4], mode)
+            self.port2.set_data([img1, img2, img3, img4], mode, components)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

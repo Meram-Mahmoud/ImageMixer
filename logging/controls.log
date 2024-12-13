@@ -1,0 +1,2469 @@
+2024-12-13 13:12:19,929 - INFO - Starting application.
+2024-12-13 13:12:19,945 - INFO - Initializing Mixer application.
+2024-12-13 13:12:19,945 - INFO - Setting up the left column.
+2024-12-13 13:12:20,345 - INFO - Setting up the right column.
+2024-12-13 13:12:20,354 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:12:20,354 - DEBUG - Setting up mode combo box.
+2024-12-13 13:12:20,354 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:12:20,354 - DEBUG - Setting up radio buttons.
+2024-12-13 13:12:20,362 - INFO - Output widget initialized
+2024-12-13 13:12:20,362 - INFO - Port initialized with original image label
+2024-12-13 13:12:20,362 - INFO - Output widget initialized
+2024-12-13 13:12:20,362 - INFO - Port initialized with original image label
+2024-12-13 13:12:20,373 - DEBUG - UI setup complete.
+2024-12-13 13:12:32,576 - DEBUG - ROI updated: Outer
+2024-12-13 13:12:33,973 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:12:36,332 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:12:36,332 - DEBUG - Getting ROI: Outer
+2024-12-13 13:12:36,332 - DEBUG - ROI selected: Outer
+2024-12-13 13:12:36,332 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:12:36,338 - DEBUG - Getting option: Port 2
+2024-12-13 13:12:36,339 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:12:36,339 - INFO - Setting data with mode: mp
+2024-12-13 13:12:36,339 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:12:36,342 - DEBUG - Performing inverse FFT
+2024-12-13 13:12:36,382 - DEBUG - Displaying image
+2024-12-13 13:12:36,382 - DEBUG - Generating rounded pixmap
+2024-12-13 13:12:36,389 - INFO - Image displayed successfully
+2024-12-13 13:12:36,391 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:17:44,641 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:17:44,641 - DEBUG - Setting up mode combo box.
+2024-12-13 13:17:44,641 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:17:44,641 - DEBUG - Setting up radio buttons.
+2024-12-13 13:17:44,652 - INFO - Output widget initialized
+2024-12-13 13:17:44,652 - INFO - Port initialized with original image label
+2024-12-13 13:17:44,652 - INFO - Output widget initialized
+2024-12-13 13:17:44,654 - INFO - Port initialized with original image label
+2024-12-13 13:17:51,587 - INFO - Starting application.
+2024-12-13 13:17:51,599 - INFO - Initializing Mixer application.
+2024-12-13 13:17:51,599 - INFO - Setting up the left column.
+2024-12-13 13:17:52,323 - INFO - Setting up the right column.
+2024-12-13 13:17:52,347 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:17:52,349 - DEBUG - Setting up mode combo box.
+2024-12-13 13:17:52,350 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:17:52,356 - DEBUG - Setting up radio buttons.
+2024-12-13 13:17:52,369 - INFO - Output widget initialized
+2024-12-13 13:17:52,369 - INFO - Port initialized with original image label
+2024-12-13 13:17:52,370 - INFO - Output widget initialized
+2024-12-13 13:17:52,371 - INFO - Port initialized with original image label
+2024-12-13 13:17:52,386 - DEBUG - UI setup complete.
+2024-12-13 13:18:07,156 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:18:07,156 - DEBUG - Getting ROI: Inner
+2024-12-13 13:18:07,156 - DEBUG - ROI selected: Inner
+2024-12-13 13:18:07,156 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:18:07,163 - DEBUG - Getting option: Port 1
+2024-12-13 13:18:07,163 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:18:07,163 - INFO - Setting data with mode: mp
+2024-12-13 13:18:07,163 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:18:07,167 - DEBUG - Performing inverse FFT
+2024-12-13 13:18:07,198 - DEBUG - Displaying image
+2024-12-13 13:18:07,198 - DEBUG - Generating rounded pixmap
+2024-12-13 13:18:07,198 - INFO - Image displayed successfully
+2024-12-13 13:18:07,211 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:18:51,021 - INFO - Starting application.
+2024-12-13 13:18:51,036 - INFO - Initializing Mixer application.
+2024-12-13 13:18:51,036 - INFO - Setting up the left column.
+2024-12-13 13:18:51,397 - INFO - Setting up the right column.
+2024-12-13 13:18:51,397 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:18:51,397 - DEBUG - Setting up mode combo box.
+2024-12-13 13:18:51,397 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:18:51,397 - DEBUG - Setting up radio buttons.
+2024-12-13 13:18:51,412 - INFO - Output widget initialized
+2024-12-13 13:18:51,412 - INFO - Port initialized with original image label
+2024-12-13 13:18:51,412 - INFO - Output widget initialized
+2024-12-13 13:18:51,412 - INFO - Port initialized with original image label
+2024-12-13 13:18:51,429 - DEBUG - UI setup complete.
+2024-12-13 13:19:05,012 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:19:05,012 - DEBUG - Getting ROI: Inner
+2024-12-13 13:19:05,012 - DEBUG - ROI selected: Inner
+2024-12-13 13:19:05,012 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:19:05,018 - DEBUG - Getting option: Port 1
+2024-12-13 13:19:05,018 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:19:05,018 - INFO - Setting data with mode: mp
+2024-12-13 13:19:05,020 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:19:05,022 - DEBUG - Performing inverse FFT
+2024-12-13 13:19:05,060 - DEBUG - Displaying image
+2024-12-13 13:19:05,063 - DEBUG - Generating rounded pixmap
+2024-12-13 13:19:05,066 - INFO - Image displayed successfully
+2024-12-13 13:19:05,066 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:19:13,579 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:19:13,582 - DEBUG - Getting ROI: Inner
+2024-12-13 13:19:13,583 - DEBUG - ROI selected: Inner
+2024-12-13 13:19:13,583 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:19:13,585 - DEBUG - Getting option: Port 1
+2024-12-13 13:19:13,585 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:19:13,585 - INFO - Setting data with mode: mp
+2024-12-13 13:19:13,585 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:19:13,590 - DEBUG - Performing inverse FFT
+2024-12-13 13:19:13,613 - DEBUG - Displaying image
+2024-12-13 13:19:13,613 - DEBUG - Generating rounded pixmap
+2024-12-13 13:19:13,630 - INFO - Image displayed successfully
+2024-12-13 13:19:13,632 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:19:35,028 - INFO - Starting application.
+2024-12-13 13:19:35,047 - INFO - Initializing Mixer application.
+2024-12-13 13:19:35,047 - INFO - Setting up the left column.
+2024-12-13 13:19:35,380 - INFO - Setting up the right column.
+2024-12-13 13:19:35,380 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:19:35,380 - DEBUG - Setting up mode combo box.
+2024-12-13 13:19:35,396 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:19:35,396 - DEBUG - Setting up radio buttons.
+2024-12-13 13:19:35,401 - INFO - Output widget initialized
+2024-12-13 13:19:35,401 - INFO - Port initialized with original image label
+2024-12-13 13:19:35,401 - INFO - Output widget initialized
+2024-12-13 13:19:35,404 - INFO - Port initialized with original image label
+2024-12-13 13:19:35,412 - DEBUG - UI setup complete.
+2024-12-13 13:19:46,846 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:19:46,846 - DEBUG - Getting ROI: Inner
+2024-12-13 13:19:46,846 - DEBUG - ROI selected: Inner
+2024-12-13 13:19:46,846 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:19:46,852 - DEBUG - Getting option: Port 1
+2024-12-13 13:19:46,852 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:19:46,852 - INFO - Setting data with mode: mp
+2024-12-13 13:19:46,852 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:19:46,856 - DEBUG - Performing inverse FFT
+2024-12-13 13:19:46,899 - DEBUG - Displaying image
+2024-12-13 13:19:46,899 - DEBUG - Generating rounded pixmap
+2024-12-13 13:19:46,899 - INFO - Image displayed successfully
+2024-12-13 13:19:46,899 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:19:58,748 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:19:58,748 - DEBUG - Getting ROI: Inner
+2024-12-13 13:19:58,751 - DEBUG - ROI selected: Inner
+2024-12-13 13:19:58,751 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:19:58,753 - DEBUG - Getting option: Port 1
+2024-12-13 13:19:58,753 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:19:58,753 - INFO - Setting data with mode: mp
+2024-12-13 13:19:58,753 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:19:58,759 - DEBUG - Performing inverse FFT
+2024-12-13 13:19:58,787 - DEBUG - Displaying image
+2024-12-13 13:19:58,796 - DEBUG - Generating rounded pixmap
+2024-12-13 13:19:58,796 - INFO - Image displayed successfully
+2024-12-13 13:19:58,802 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:20:07,062 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:20:08,767 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:20:08,767 - DEBUG - Getting ROI: Inner
+2024-12-13 13:20:08,770 - DEBUG - ROI selected: Inner
+2024-12-13 13:20:08,770 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:20:08,773 - DEBUG - Getting option: Port 2
+2024-12-13 13:20:08,773 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:20:08,773 - INFO - Setting data with mode: mp
+2024-12-13 13:20:08,775 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:20:08,775 - DEBUG - Performing inverse FFT
+2024-12-13 13:20:08,815 - DEBUG - Displaying image
+2024-12-13 13:20:08,818 - DEBUG - Generating rounded pixmap
+2024-12-13 13:20:08,818 - INFO - Image displayed successfully
+2024-12-13 13:20:08,818 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:20:42,664 - INFO - Starting application.
+2024-12-13 13:20:42,681 - INFO - Initializing Mixer application.
+2024-12-13 13:20:42,681 - INFO - Setting up the left column.
+2024-12-13 13:20:43,015 - INFO - Setting up the right column.
+2024-12-13 13:20:43,015 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:20:43,015 - DEBUG - Setting up mode combo box.
+2024-12-13 13:20:43,031 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:20:43,031 - DEBUG - Setting up radio buttons.
+2024-12-13 13:20:43,037 - INFO - Output widget initialized
+2024-12-13 13:20:43,037 - INFO - Port initialized with original image label
+2024-12-13 13:20:43,037 - INFO - Output widget initialized
+2024-12-13 13:20:43,039 - INFO - Port initialized with original image label
+2024-12-13 13:20:43,047 - DEBUG - UI setup complete.
+2024-12-13 13:20:53,056 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:20:53,056 - DEBUG - Getting ROI: Inner
+2024-12-13 13:20:53,058 - DEBUG - ROI selected: Inner
+2024-12-13 13:20:53,058 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:20:53,061 - DEBUG - Getting option: Port 1
+2024-12-13 13:20:53,061 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:20:53,063 - INFO - Setting data with mode: mp
+2024-12-13 13:20:53,063 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:20:53,064 - DEBUG - Performing inverse FFT
+2024-12-13 13:20:53,104 - DEBUG - Displaying image
+2024-12-13 13:20:53,107 - DEBUG - Generating rounded pixmap
+2024-12-13 13:20:53,107 - INFO - Image displayed successfully
+2024-12-13 13:20:53,107 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:21:07,445 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:21:08,666 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:21:08,668 - DEBUG - Getting ROI: Inner
+2024-12-13 13:21:08,668 - DEBUG - ROI selected: Inner
+2024-12-13 13:21:08,668 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:21:08,668 - DEBUG - Getting option: Port 2
+2024-12-13 13:21:08,668 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:21:08,673 - INFO - Setting data with mode: mp
+2024-12-13 13:21:08,673 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:21:08,674 - DEBUG - Performing inverse FFT
+2024-12-13 13:21:08,706 - DEBUG - Displaying image
+2024-12-13 13:21:08,706 - DEBUG - Generating rounded pixmap
+2024-12-13 13:21:08,714 - INFO - Image displayed successfully
+2024-12-13 13:21:08,714 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:21:37,266 - INFO - Starting application.
+2024-12-13 13:21:37,282 - INFO - Initializing Mixer application.
+2024-12-13 13:21:37,282 - INFO - Setting up the left column.
+2024-12-13 13:21:37,670 - INFO - Setting up the right column.
+2024-12-13 13:21:37,670 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:21:37,670 - DEBUG - Setting up mode combo box.
+2024-12-13 13:21:37,670 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:21:37,670 - DEBUG - Setting up radio buttons.
+2024-12-13 13:21:37,685 - INFO - Output widget initialized
+2024-12-13 13:21:37,685 - INFO - Port initialized with original image label
+2024-12-13 13:21:37,685 - INFO - Output widget initialized
+2024-12-13 13:21:37,685 - INFO - Port initialized with original image label
+2024-12-13 13:21:37,703 - DEBUG - UI setup complete.
+2024-12-13 13:21:47,364 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:21:47,364 - DEBUG - Getting ROI: Inner
+2024-12-13 13:21:47,367 - DEBUG - ROI selected: Inner
+2024-12-13 13:21:47,367 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:21:47,369 - DEBUG - Getting option: Port 1
+2024-12-13 13:21:47,369 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:21:47,369 - INFO - Setting data with mode: mp
+2024-12-13 13:21:47,369 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:21:47,374 - DEBUG - Performing inverse FFT
+2024-12-13 13:21:47,515 - ERROR - Error in ifft: OpenCV(4.10.0) :-1: error: (-5:Bad argument) in function 'normalize'
+> Overload resolution failed:
+>  - src data type = complex128 is not supported
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+2024-12-13 13:21:47,524 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:21:49,587 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:21:49,588 - DEBUG - Getting ROI: Inner
+2024-12-13 13:21:49,588 - DEBUG - ROI selected: Inner
+2024-12-13 13:21:49,588 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:21:49,589 - DEBUG - Getting option: Port 1
+2024-12-13 13:21:49,590 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:21:49,590 - INFO - Setting data with mode: mp
+2024-12-13 13:21:49,590 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:21:49,591 - DEBUG - Performing inverse FFT
+2024-12-13 13:21:49,597 - ERROR - Error in ifft: OpenCV(4.10.0) :-1: error: (-5:Bad argument) in function 'normalize'
+> Overload resolution failed:
+>  - src data type = complex128 is not supported
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+2024-12-13 13:21:49,605 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:25:52,398 - INFO - Starting application.
+2024-12-13 13:25:52,410 - INFO - Initializing Mixer application.
+2024-12-13 13:25:52,410 - INFO - Setting up the left column.
+2024-12-13 13:25:52,793 - INFO - Setting up the right column.
+2024-12-13 13:25:52,793 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:25:52,793 - DEBUG - Setting up mode combo box.
+2024-12-13 13:25:52,793 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:25:52,793 - DEBUG - Setting up radio buttons.
+2024-12-13 13:25:52,805 - INFO - Output widget initialized
+2024-12-13 13:25:52,805 - INFO - Port initialized with original image label
+2024-12-13 13:25:52,805 - INFO - Output widget initialized
+2024-12-13 13:25:52,805 - INFO - Port initialized with original image label
+2024-12-13 13:25:52,814 - DEBUG - UI setup complete.
+2024-12-13 13:26:10,232 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:26:10,232 - DEBUG - Getting ROI: Inner
+2024-12-13 13:26:10,232 - DEBUG - ROI selected: Inner
+2024-12-13 13:26:10,238 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:26:10,240 - DEBUG - Getting option: Port 1
+2024-12-13 13:26:10,240 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:26:10,240 - INFO - Setting data with mode: mp
+2024-12-13 13:26:10,240 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:26:10,244 - DEBUG - Performing inverse FFT
+2024-12-13 13:26:10,276 - DEBUG - Displaying image
+2024-12-13 13:26:10,276 - DEBUG - Generating rounded pixmap
+2024-12-13 13:26:10,276 - INFO - Image displayed successfully
+2024-12-13 13:26:10,276 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:26:16,212 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:26:17,315 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:26:17,315 - DEBUG - Getting ROI: Inner
+2024-12-13 13:26:17,320 - DEBUG - ROI selected: Inner
+2024-12-13 13:26:17,320 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:26:17,322 - DEBUG - Getting option: Port 2
+2024-12-13 13:26:17,323 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:26:17,323 - INFO - Setting data with mode: mp
+2024-12-13 13:26:17,325 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:26:17,326 - DEBUG - Performing inverse FFT
+2024-12-13 13:26:17,353 - DEBUG - Displaying image
+2024-12-13 13:26:17,387 - DEBUG - Generating rounded pixmap
+2024-12-13 13:26:17,395 - INFO - Image displayed successfully
+2024-12-13 13:26:17,395 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:26:21,903 - DEBUG - ROI updated: Outer
+2024-12-13 13:26:25,180 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:26:25,180 - DEBUG - Getting ROI: Outer
+2024-12-13 13:26:25,180 - DEBUG - ROI selected: Outer
+2024-12-13 13:26:25,186 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:26:25,187 - DEBUG - Getting option: Port 2
+2024-12-13 13:26:25,187 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:26:25,187 - INFO - Setting data with mode: mp
+2024-12-13 13:26:25,187 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:26:25,191 - DEBUG - Performing inverse FFT
+2024-12-13 13:26:25,220 - DEBUG - Displaying image
+2024-12-13 13:26:25,220 - DEBUG - Generating rounded pixmap
+2024-12-13 13:26:25,224 - INFO - Image displayed successfully
+2024-12-13 13:26:25,224 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:26:32,093 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:26:32,097 - DEBUG - Getting ROI: Outer
+2024-12-13 13:26:32,097 - DEBUG - ROI selected: Outer
+2024-12-13 13:26:32,097 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:26:32,100 - DEBUG - Getting option: Port 2
+2024-12-13 13:26:32,101 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:26:32,102 - INFO - Setting data with mode: mp
+2024-12-13 13:26:32,102 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:26:32,105 - DEBUG - Performing inverse FFT
+2024-12-13 13:26:32,142 - DEBUG - Displaying image
+2024-12-13 13:26:32,144 - DEBUG - Generating rounded pixmap
+2024-12-13 13:26:32,144 - INFO - Image displayed successfully
+2024-12-13 13:26:32,146 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:28:51,176 - INFO - Starting application.
+2024-12-13 13:28:51,185 - INFO - Initializing Mixer application.
+2024-12-13 13:28:51,185 - INFO - Setting up the left column.
+2024-12-13 13:28:51,538 - INFO - Setting up the right column.
+2024-12-13 13:28:51,538 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:28:51,538 - DEBUG - Setting up mode combo box.
+2024-12-13 13:28:51,538 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:28:51,538 - DEBUG - Setting up radio buttons.
+2024-12-13 13:28:51,549 - INFO - Output widget initialized
+2024-12-13 13:28:51,549 - INFO - Port initialized with original image label
+2024-12-13 13:28:51,549 - INFO - Output widget initialized
+2024-12-13 13:28:51,549 - INFO - Port initialized with original image label
+2024-12-13 13:28:51,556 - DEBUG - UI setup complete.
+2024-12-13 13:29:04,512 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:29:04,512 - DEBUG - Getting ROI: Inner
+2024-12-13 13:29:04,515 - DEBUG - ROI selected: Inner
+2024-12-13 13:29:04,515 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:29:04,515 - DEBUG - Getting option: Port 1
+2024-12-13 13:29:04,515 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:29:04,515 - INFO - Setting data with mode: mp
+2024-12-13 13:29:04,515 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:29:04,515 - DEBUG - Performing inverse FFT
+2024-12-13 13:29:04,546 - DEBUG - Displaying image
+2024-12-13 13:29:04,546 - DEBUG - Generating rounded pixmap
+2024-12-13 13:29:04,546 - INFO - Image displayed successfully
+2024-12-13 13:29:04,556 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:30:07,125 - INFO - Starting application.
+2024-12-13 13:30:07,150 - INFO - Initializing Mixer application.
+2024-12-13 13:30:07,157 - INFO - Setting up the left column.
+2024-12-13 13:30:07,540 - INFO - Setting up the right column.
+2024-12-13 13:30:07,540 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:30:07,540 - DEBUG - Setting up mode combo box.
+2024-12-13 13:30:07,540 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:30:07,540 - DEBUG - Setting up radio buttons.
+2024-12-13 13:30:07,549 - INFO - Output widget initialized
+2024-12-13 13:30:07,549 - INFO - Port initialized with original image label
+2024-12-13 13:30:07,549 - INFO - Output widget initialized
+2024-12-13 13:30:07,549 - INFO - Port initialized with original image label
+2024-12-13 13:30:07,566 - DEBUG - UI setup complete.
+2024-12-13 13:30:21,577 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:30:21,577 - DEBUG - Getting ROI: Inner
+2024-12-13 13:30:21,577 - DEBUG - ROI selected: Inner
+2024-12-13 13:30:21,577 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:30:21,582 - DEBUG - Getting option: Port 1
+2024-12-13 13:30:21,582 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:30:21,582 - INFO - Setting data with mode: mp
+2024-12-13 13:30:21,582 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:30:21,582 - DEBUG - Performing inverse FFT
+2024-12-13 13:30:21,621 - DEBUG - Displaying image
+2024-12-13 13:30:21,626 - DEBUG - Generating rounded pixmap
+2024-12-13 13:30:21,627 - INFO - Image displayed successfully
+2024-12-13 13:30:21,630 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:30:30,474 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:30:30,474 - DEBUG - Getting ROI: Inner
+2024-12-13 13:30:30,474 - DEBUG - ROI selected: Inner
+2024-12-13 13:30:30,474 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:30:30,479 - DEBUG - Getting option: Port 1
+2024-12-13 13:30:30,479 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:30:30,479 - INFO - Setting data with mode: mp
+2024-12-13 13:30:30,482 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:30:30,482 - DEBUG - Performing inverse FFT
+2024-12-13 13:30:30,512 - DEBUG - Displaying image
+2024-12-13 13:30:30,512 - DEBUG - Generating rounded pixmap
+2024-12-13 13:30:30,512 - INFO - Image displayed successfully
+2024-12-13 13:30:30,512 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:30:39,738 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:30:39,741 - DEBUG - Getting ROI: Inner
+2024-12-13 13:30:39,741 - DEBUG - ROI selected: Inner
+2024-12-13 13:30:39,741 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:30:39,744 - DEBUG - Getting option: Port 1
+2024-12-13 13:30:39,744 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:30:39,744 - INFO - Setting data with mode: mp
+2024-12-13 13:30:39,744 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:30:39,744 - DEBUG - Performing inverse FFT
+2024-12-13 13:30:39,800 - DEBUG - Displaying image
+2024-12-13 13:30:39,808 - DEBUG - Generating rounded pixmap
+2024-12-13 13:30:39,808 - INFO - Image displayed successfully
+2024-12-13 13:30:39,808 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:32:21,625 - INFO - Starting application.
+2024-12-13 13:32:21,653 - INFO - Initializing Mixer application.
+2024-12-13 13:32:21,657 - INFO - Setting up the left column.
+2024-12-13 13:32:22,292 - INFO - Setting up the right column.
+2024-12-13 13:32:22,292 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:32:22,292 - DEBUG - Setting up mode combo box.
+2024-12-13 13:32:22,300 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:32:22,300 - DEBUG - Setting up radio buttons.
+2024-12-13 13:32:22,310 - INFO - Output widget initialized
+2024-12-13 13:32:22,310 - INFO - Port initialized with original image label
+2024-12-13 13:32:22,310 - INFO - Output widget initialized
+2024-12-13 13:32:22,310 - INFO - Port initialized with original image label
+2024-12-13 13:32:22,318 - DEBUG - UI setup complete.
+2024-12-13 13:32:35,227 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:32:35,227 - DEBUG - Getting ROI: Inner
+2024-12-13 13:32:35,227 - DEBUG - ROI selected: Inner
+2024-12-13 13:32:35,227 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:32:35,227 - DEBUG - Getting option: Port 1
+2024-12-13 13:32:35,227 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:32:35,227 - INFO - Setting data with mode: mp
+2024-12-13 13:32:35,227 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:32:35,235 - DEBUG - Performing inverse FFT
+2024-12-13 13:32:35,301 - DEBUG - Displaying image
+2024-12-13 13:32:35,309 - DEBUG - Generating rounded pixmap
+2024-12-13 13:32:35,309 - INFO - Image displayed successfully
+2024-12-13 13:32:35,309 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:32:46,586 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:32:46,587 - DEBUG - Getting ROI: Inner
+2024-12-13 13:32:46,588 - DEBUG - ROI selected: Inner
+2024-12-13 13:32:46,589 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:32:46,590 - DEBUG - Getting option: Port 1
+2024-12-13 13:32:46,590 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:32:46,591 - INFO - Setting data with mode: mp
+2024-12-13 13:32:46,593 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:32:46,594 - DEBUG - Performing inverse FFT
+2024-12-13 13:32:46,627 - DEBUG - Displaying image
+2024-12-13 13:32:46,627 - DEBUG - Generating rounded pixmap
+2024-12-13 13:32:46,631 - INFO - Image displayed successfully
+2024-12-13 13:32:46,634 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:43:30,771 - INFO - Starting application.
+2024-12-13 13:43:30,778 - INFO - Initializing Mixer application.
+2024-12-13 13:43:30,778 - INFO - Setting up the left column.
+2024-12-13 13:43:31,128 - INFO - Setting up the right column.
+2024-12-13 13:43:31,128 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:43:31,128 - DEBUG - Setting up mode combo box.
+2024-12-13 13:43:31,128 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:43:31,128 - DEBUG - Setting up radio buttons.
+2024-12-13 13:43:31,139 - INFO - Output widget initialized
+2024-12-13 13:43:31,139 - INFO - Port initialized with original image label
+2024-12-13 13:43:31,139 - INFO - Output widget initialized
+2024-12-13 13:43:31,139 - INFO - Port initialized with original image label
+2024-12-13 13:43:31,148 - DEBUG - UI setup complete.
+2024-12-13 13:43:46,907 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:43:46,907 - DEBUG - Getting ROI: Inner
+2024-12-13 13:43:46,909 - DEBUG - ROI selected: Inner
+2024-12-13 13:43:46,909 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:43:46,912 - DEBUG - Getting option: Port 1
+2024-12-13 13:43:46,912 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:43:46,912 - INFO - Setting data with mode: mp
+2024-12-13 13:43:46,912 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:43:46,912 - DEBUG - Performing inverse FFT
+2024-12-13 13:43:46,945 - DEBUG - Displaying image
+2024-12-13 13:43:46,945 - DEBUG - Generating rounded pixmap
+2024-12-13 13:43:46,950 - INFO - Image displayed successfully
+2024-12-13 13:43:46,952 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:44:02,822 - INFO - Starting application.
+2024-12-13 13:44:02,840 - INFO - Initializing Mixer application.
+2024-12-13 13:44:02,842 - INFO - Setting up the left column.
+2024-12-13 13:44:03,908 - INFO - Setting up the right column.
+2024-12-13 13:44:03,918 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:44:03,918 - DEBUG - Setting up mode combo box.
+2024-12-13 13:44:03,925 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:44:03,930 - DEBUG - Setting up radio buttons.
+2024-12-13 13:44:03,941 - INFO - Output widget initialized
+2024-12-13 13:44:03,941 - INFO - Port initialized with original image label
+2024-12-13 13:44:03,941 - INFO - Output widget initialized
+2024-12-13 13:44:03,941 - INFO - Port initialized with original image label
+2024-12-13 13:44:03,960 - DEBUG - UI setup complete.
+2024-12-13 13:44:21,276 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:44:21,276 - DEBUG - Getting ROI: Inner
+2024-12-13 13:44:21,276 - DEBUG - ROI selected: Inner
+2024-12-13 13:44:21,280 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:44:21,282 - DEBUG - Getting option: Port 1
+2024-12-13 13:44:21,282 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:44:21,282 - INFO - Setting data with mode: mp
+2024-12-13 13:44:21,282 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:44:21,285 - DEBUG - Performing inverse FFT
+2024-12-13 13:44:21,309 - DEBUG - Displaying image
+2024-12-13 13:44:21,309 - DEBUG - Generating rounded pixmap
+2024-12-13 13:44:21,309 - INFO - Image displayed successfully
+2024-12-13 13:44:21,317 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:44:34,973 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:44:34,973 - DEBUG - Getting ROI: Inner
+2024-12-13 13:44:34,973 - DEBUG - ROI selected: Inner
+2024-12-13 13:44:34,973 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:44:34,973 - DEBUG - Getting option: Port 1
+2024-12-13 13:44:34,973 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:44:34,973 - INFO - Setting data with mode: mp
+2024-12-13 13:44:34,983 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:44:34,985 - DEBUG - Performing inverse FFT
+2024-12-13 13:44:35,012 - DEBUG - Displaying image
+2024-12-13 13:44:35,020 - DEBUG - Generating rounded pixmap
+2024-12-13 13:44:35,023 - INFO - Image displayed successfully
+2024-12-13 13:44:35,024 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:44:46,396 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:44:46,396 - DEBUG - Getting ROI: Inner
+2024-12-13 13:44:46,398 - DEBUG - ROI selected: Inner
+2024-12-13 13:44:46,399 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:44:46,400 - DEBUG - Getting option: Port 1
+2024-12-13 13:44:46,400 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:44:46,401 - INFO - Setting data with mode: mp
+2024-12-13 13:44:46,402 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:44:46,402 - DEBUG - Performing inverse FFT
+2024-12-13 13:44:46,426 - DEBUG - Displaying image
+2024-12-13 13:44:46,426 - DEBUG - Generating rounded pixmap
+2024-12-13 13:44:46,429 - INFO - Image displayed successfully
+2024-12-13 13:44:46,430 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:44:59,911 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:44:59,911 - DEBUG - Getting ROI: Inner
+2024-12-13 13:44:59,914 - DEBUG - ROI selected: Inner
+2024-12-13 13:44:59,914 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:44:59,916 - DEBUG - Getting option: Port 1
+2024-12-13 13:44:59,917 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:44:59,918 - INFO - Setting data with mode: mp
+2024-12-13 13:44:59,920 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:44:59,923 - DEBUG - Performing inverse FFT
+2024-12-13 13:44:59,948 - DEBUG - Displaying image
+2024-12-13 13:44:59,948 - DEBUG - Generating rounded pixmap
+2024-12-13 13:44:59,956 - INFO - Image displayed successfully
+2024-12-13 13:44:59,959 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:01,891 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:01,892 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:01,892 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:01,893 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:01,893 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:01,894 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:01,894 - INFO - Setting data with mode: mp
+2024-12-13 13:45:01,894 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:01,896 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:01,900 - DEBUG - Displaying image
+2024-12-13 13:45:01,900 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:01,910 - INFO - Image displayed successfully
+2024-12-13 13:45:01,912 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:02,696 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:02,696 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:02,697 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:02,697 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:02,698 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:02,699 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:02,699 - INFO - Setting data with mode: mp
+2024-12-13 13:45:02,700 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:02,700 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:02,707 - DEBUG - Displaying image
+2024-12-13 13:45:02,707 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:02,707 - INFO - Image displayed successfully
+2024-12-13 13:45:02,713 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:03,422 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:03,422 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:03,425 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:03,426 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:03,428 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:03,428 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:03,428 - INFO - Setting data with mode: mp
+2024-12-13 13:45:03,430 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:03,431 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:03,460 - DEBUG - Displaying image
+2024-12-13 13:45:03,460 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:03,463 - INFO - Image displayed successfully
+2024-12-13 13:45:03,463 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:04,027 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:04,027 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:04,027 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:04,032 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:04,032 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:04,032 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:04,035 - INFO - Setting data with mode: mp
+2024-12-13 13:45:04,035 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:04,035 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:04,061 - DEBUG - Displaying image
+2024-12-13 13:45:04,061 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:04,065 - INFO - Image displayed successfully
+2024-12-13 13:45:04,066 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:04,067 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:04,067 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:04,071 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:04,073 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:04,075 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:04,076 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:04,077 - INFO - Setting data with mode: mp
+2024-12-13 13:45:04,078 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:04,079 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:04,103 - DEBUG - Displaying image
+2024-12-13 13:45:04,103 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:04,105 - INFO - Image displayed successfully
+2024-12-13 13:45:04,107 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:04,407 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:04,407 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:04,407 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:04,407 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:04,407 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:04,407 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:04,407 - INFO - Setting data with mode: mp
+2024-12-13 13:45:04,407 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:04,407 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:04,446 - DEBUG - Displaying image
+2024-12-13 13:45:04,448 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:04,448 - INFO - Image displayed successfully
+2024-12-13 13:45:04,451 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:04,775 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:04,775 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:04,775 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:04,775 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:04,781 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:04,781 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:04,781 - INFO - Setting data with mode: mp
+2024-12-13 13:45:04,783 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:04,785 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:04,813 - DEBUG - Displaying image
+2024-12-13 13:45:04,813 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:04,813 - INFO - Image displayed successfully
+2024-12-13 13:45:04,813 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,118 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,118 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,118 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,122 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,122 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,122 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,122 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,122 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,128 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,142 - DEBUG - Displaying image
+2024-12-13 13:45:05,142 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,142 - INFO - Image displayed successfully
+2024-12-13 13:45:05,155 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,160 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,160 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,160 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,160 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,160 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,160 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,160 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,167 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,169 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,192 - DEBUG - Displaying image
+2024-12-13 13:45:05,194 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,195 - INFO - Image displayed successfully
+2024-12-13 13:45:05,195 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,537 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,537 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,537 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,537 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,537 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,537 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,537 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,537 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,552 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,577 - DEBUG - Displaying image
+2024-12-13 13:45:05,578 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,580 - INFO - Image displayed successfully
+2024-12-13 13:45:05,581 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,583 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,590 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,592 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,593 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,595 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,596 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,596 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,597 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,598 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,625 - DEBUG - Displaying image
+2024-12-13 13:45:05,627 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,629 - INFO - Image displayed successfully
+2024-12-13 13:45:05,631 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,922 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,922 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,922 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,922 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,922 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,922 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,922 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,922 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,939 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,960 - DEBUG - Displaying image
+2024-12-13 13:45:05,960 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,964 - INFO - Image displayed successfully
+2024-12-13 13:45:05,966 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:05,966 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:05,966 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:05,973 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:05,973 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:05,975 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:05,976 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:05,977 - INFO - Setting data with mode: mp
+2024-12-13 13:45:05,978 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:05,979 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:05,992 - DEBUG - Displaying image
+2024-12-13 13:45:05,992 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:05,996 - INFO - Image displayed successfully
+2024-12-13 13:45:05,998 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:06,341 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:06,341 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:06,344 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:06,344 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:06,346 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:06,346 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:06,347 - INFO - Setting data with mode: mp
+2024-12-13 13:45:06,348 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:06,348 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:06,378 - DEBUG - Displaying image
+2024-12-13 13:45:06,378 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:06,378 - INFO - Image displayed successfully
+2024-12-13 13:45:06,378 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:06,711 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:06,711 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:06,711 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:06,711 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:06,717 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:06,717 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:06,717 - INFO - Setting data with mode: mp
+2024-12-13 13:45:06,719 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:06,720 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:06,743 - DEBUG - Displaying image
+2024-12-13 13:45:06,743 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:06,754 - INFO - Image displayed successfully
+2024-12-13 13:45:06,757 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,040 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,040 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,040 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,040 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,040 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,040 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,040 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,056 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,057 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,077 - DEBUG - Displaying image
+2024-12-13 13:45:07,077 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,083 - INFO - Image displayed successfully
+2024-12-13 13:45:07,084 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,084 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,089 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,089 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,089 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,095 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,096 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,097 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,098 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,099 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,123 - DEBUG - Displaying image
+2024-12-13 13:45:07,128 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,129 - INFO - Image displayed successfully
+2024-12-13 13:45:07,129 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,413 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,413 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,422 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,422 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,422 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,422 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,422 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,428 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,429 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,451 - DEBUG - Displaying image
+2024-12-13 13:45:07,452 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,454 - INFO - Image displayed successfully
+2024-12-13 13:45:07,454 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,461 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,461 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,463 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,463 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,463 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,463 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,463 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,463 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,469 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,490 - DEBUG - Displaying image
+2024-12-13 13:45:07,490 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,494 - INFO - Image displayed successfully
+2024-12-13 13:45:07,494 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,818 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,818 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,822 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,822 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,822 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,822 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,822 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,827 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,828 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,844 - DEBUG - Displaying image
+2024-12-13 13:45:07,852 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,852 - INFO - Image displayed successfully
+2024-12-13 13:45:07,855 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:07,860 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:07,860 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:07,860 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:07,864 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:07,865 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:07,865 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:07,865 - INFO - Setting data with mode: mp
+2024-12-13 13:45:07,865 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:07,869 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:07,894 - DEBUG - Displaying image
+2024-12-13 13:45:07,895 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:07,895 - INFO - Image displayed successfully
+2024-12-13 13:45:07,895 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:08,218 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:08,218 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:08,218 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:08,218 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:08,218 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:08,218 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:08,218 - INFO - Setting data with mode: mp
+2024-12-13 13:45:08,218 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:08,228 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:08,252 - DEBUG - Displaying image
+2024-12-13 13:45:08,254 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:08,256 - INFO - Image displayed successfully
+2024-12-13 13:45:08,256 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:08,262 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:08,262 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:08,264 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:08,265 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:08,265 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:08,265 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:08,265 - INFO - Setting data with mode: mp
+2024-12-13 13:45:08,265 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:08,270 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:08,290 - DEBUG - Displaying image
+2024-12-13 13:45:08,292 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:08,292 - INFO - Image displayed successfully
+2024-12-13 13:45:08,294 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:08,642 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:08,642 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:08,642 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:08,642 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:08,642 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:08,642 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:08,648 - INFO - Setting data with mode: mp
+2024-12-13 13:45:08,649 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:08,651 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:08,674 - DEBUG - Displaying image
+2024-12-13 13:45:08,674 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:08,676 - INFO - Image displayed successfully
+2024-12-13 13:45:08,678 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:08,679 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:08,679 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:08,684 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:08,685 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:08,687 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:08,689 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:08,690 - INFO - Setting data with mode: mp
+2024-12-13 13:45:08,692 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:08,694 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:08,708 - DEBUG - Displaying image
+2024-12-13 13:45:08,708 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:08,718 - INFO - Image displayed successfully
+2024-12-13 13:45:08,720 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:09,262 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:09,262 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:09,266 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:09,266 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:09,268 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:09,269 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:09,269 - INFO - Setting data with mode: mp
+2024-12-13 13:45:09,271 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:09,274 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:09,296 - DEBUG - Displaying image
+2024-12-13 13:45:09,296 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:09,296 - INFO - Image displayed successfully
+2024-12-13 13:45:09,296 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:09,848 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:09,848 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:09,848 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:09,848 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:09,854 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:09,856 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:09,856 - INFO - Setting data with mode: mp
+2024-12-13 13:45:09,856 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:09,859 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:09,889 - DEBUG - Displaying image
+2024-12-13 13:45:09,909 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:09,909 - INFO - Image displayed successfully
+2024-12-13 13:45:09,909 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:10,352 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:10,352 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:10,355 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:10,356 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:10,358 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:10,358 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:10,358 - INFO - Setting data with mode: mp
+2024-12-13 13:45:10,360 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:10,362 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:10,392 - DEBUG - Displaying image
+2024-12-13 13:45:10,392 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:10,397 - INFO - Image displayed successfully
+2024-12-13 13:45:10,397 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:14,171 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:45:16,714 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:16,714 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:16,717 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:16,718 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:16,720 - DEBUG - Getting option: Port 2
+2024-12-13 13:45:16,720 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:45:16,721 - INFO - Setting data with mode: mp
+2024-12-13 13:45:16,721 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:16,724 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:16,749 - DEBUG - Displaying image
+2024-12-13 13:45:16,749 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:16,755 - INFO - Image displayed successfully
+2024-12-13 13:45:16,758 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:19,168 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:19,168 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:19,168 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:19,168 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:19,173 - DEBUG - Getting option: Port 2
+2024-12-13 13:45:19,173 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:45:19,173 - INFO - Setting data with mode: mp
+2024-12-13 13:45:19,173 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:19,176 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:19,201 - DEBUG - Displaying image
+2024-12-13 13:45:19,205 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:19,207 - INFO - Image displayed successfully
+2024-12-13 13:45:19,207 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:45:21,238 - DEBUG - Radio button toggled: Port 1
+2024-12-13 13:45:22,671 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:45:22,671 - DEBUG - Getting ROI: Inner
+2024-12-13 13:45:22,671 - DEBUG - ROI selected: Inner
+2024-12-13 13:45:22,671 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:45:22,677 - DEBUG - Getting option: Port 1
+2024-12-13 13:45:22,678 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:45:22,678 - INFO - Setting data with mode: mp
+2024-12-13 13:45:22,680 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:45:22,682 - DEBUG - Performing inverse FFT
+2024-12-13 13:45:22,711 - DEBUG - Displaying image
+2024-12-13 13:45:22,713 - DEBUG - Generating rounded pixmap
+2024-12-13 13:45:22,713 - INFO - Image displayed successfully
+2024-12-13 13:45:22,713 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:50:01,308 - INFO - Starting application.
+2024-12-13 13:50:01,320 - INFO - Initializing Mixer application.
+2024-12-13 13:50:01,320 - INFO - Setting up the left column.
+2024-12-13 13:50:01,663 - INFO - Setting up the right column.
+2024-12-13 13:50:01,663 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:50:01,663 - DEBUG - Setting up mode combo box.
+2024-12-13 13:50:01,678 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:50:01,678 - DEBUG - Setting up radio buttons.
+2024-12-13 13:50:01,684 - INFO - Output widget initialized
+2024-12-13 13:50:01,684 - INFO - Port initialized with original image label
+2024-12-13 13:50:01,684 - INFO - Output widget initialized
+2024-12-13 13:50:01,684 - INFO - Port initialized with original image label
+2024-12-13 13:50:01,696 - DEBUG - UI setup complete.
+2024-12-13 13:50:14,364 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:50:14,364 - DEBUG - Getting ROI: Inner
+2024-12-13 13:50:14,364 - DEBUG - ROI selected: Inner
+2024-12-13 13:50:14,364 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:50:14,372 - DEBUG - Getting option: Port 1
+2024-12-13 13:50:14,372 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:50:14,372 - INFO - Setting data with mode: mp
+2024-12-13 13:50:14,372 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:50:14,376 - DEBUG - Performing inverse FFT
+2024-12-13 13:50:14,399 - DEBUG - Displaying image
+2024-12-13 13:50:14,408 - DEBUG - Generating rounded pixmap
+2024-12-13 13:50:14,411 - INFO - Image displayed successfully
+2024-12-13 13:50:14,413 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:50:22,577 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:50:22,578 - DEBUG - Getting ROI: Inner
+2024-12-13 13:50:22,579 - DEBUG - ROI selected: Inner
+2024-12-13 13:50:22,579 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:50:22,579 - DEBUG - Getting option: Port 1
+2024-12-13 13:50:22,581 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:50:22,581 - INFO - Setting data with mode: mp
+2024-12-13 13:50:22,584 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:50:22,585 - DEBUG - Performing inverse FFT
+2024-12-13 13:50:22,605 - DEBUG - Displaying image
+2024-12-13 13:50:22,606 - DEBUG - Generating rounded pixmap
+2024-12-13 13:50:22,607 - INFO - Image displayed successfully
+2024-12-13 13:50:22,607 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:51:43,458 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:51:44,530 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:51:44,530 - DEBUG - Getting ROI: Inner
+2024-12-13 13:51:44,530 - DEBUG - ROI selected: Inner
+2024-12-13 13:51:44,530 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:51:44,534 - DEBUG - Getting option: Port 2
+2024-12-13 13:51:44,534 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:51:44,534 - INFO - Setting data with mode: mp
+2024-12-13 13:51:44,537 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:51:44,538 - DEBUG - Performing inverse FFT
+2024-12-13 13:51:44,564 - DEBUG - Displaying image
+2024-12-13 13:51:44,564 - DEBUG - Generating rounded pixmap
+2024-12-13 13:51:44,569 - INFO - Image displayed successfully
+2024-12-13 13:51:44,572 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:51:54,066 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:51:54,066 - DEBUG - Getting ROI: Inner
+2024-12-13 13:51:54,069 - DEBUG - ROI selected: Inner
+2024-12-13 13:51:54,070 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:51:54,070 - DEBUG - Getting option: Port 2
+2024-12-13 13:51:54,070 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:51:54,070 - INFO - Setting data with mode: mp
+2024-12-13 13:51:54,070 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:51:54,070 - DEBUG - Performing inverse FFT
+2024-12-13 13:51:54,101 - DEBUG - Displaying image
+2024-12-13 13:51:54,109 - DEBUG - Generating rounded pixmap
+2024-12-13 13:51:54,114 - INFO - Image displayed successfully
+2024-12-13 13:51:54,115 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:52:08,816 - INFO - Starting application.
+2024-12-13 13:52:08,834 - INFO - Initializing Mixer application.
+2024-12-13 13:52:08,834 - INFO - Setting up the left column.
+2024-12-13 13:52:09,764 - INFO - Setting up the right column.
+2024-12-13 13:52:09,764 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:52:09,768 - DEBUG - Setting up mode combo box.
+2024-12-13 13:52:09,769 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:52:09,772 - DEBUG - Setting up radio buttons.
+2024-12-13 13:52:09,779 - INFO - Output widget initialized
+2024-12-13 13:52:09,782 - INFO - Port initialized with original image label
+2024-12-13 13:52:09,782 - INFO - Output widget initialized
+2024-12-13 13:52:09,783 - INFO - Port initialized with original image label
+2024-12-13 13:52:09,799 - DEBUG - UI setup complete.
+2024-12-13 13:52:21,278 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:52:21,278 - DEBUG - Getting ROI: Inner
+2024-12-13 13:52:21,278 - DEBUG - ROI selected: Inner
+2024-12-13 13:52:21,278 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:52:21,278 - DEBUG - Getting option: Port 1
+2024-12-13 13:52:21,278 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:52:21,278 - INFO - Setting data with mode: mp
+2024-12-13 13:52:21,278 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:52:21,287 - DEBUG - Performing inverse FFT
+2024-12-13 13:52:21,318 - DEBUG - Displaying image
+2024-12-13 13:52:21,318 - DEBUG - Generating rounded pixmap
+2024-12-13 13:52:21,318 - INFO - Image displayed successfully
+2024-12-13 13:52:21,318 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:52:33,813 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:52:37,342 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:52:37,342 - DEBUG - Getting ROI: Inner
+2024-12-13 13:52:37,345 - DEBUG - ROI selected: Inner
+2024-12-13 13:52:37,345 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:52:37,347 - DEBUG - Getting option: Port 2
+2024-12-13 13:52:37,347 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:52:37,347 - INFO - Setting data with mode: mp
+2024-12-13 13:52:37,350 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:52:37,350 - DEBUG - Performing inverse FFT
+2024-12-13 13:52:37,372 - DEBUG - Displaying image
+2024-12-13 13:52:37,381 - DEBUG - Generating rounded pixmap
+2024-12-13 13:52:37,385 - INFO - Image displayed successfully
+2024-12-13 13:52:37,387 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:52:45,419 - DEBUG - ROI updated: Outer
+2024-12-13 13:52:46,117 - DEBUG - Radio button toggled: Port 1
+2024-12-13 13:52:47,637 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:52:47,637 - DEBUG - Getting ROI: Outer
+2024-12-13 13:52:47,637 - DEBUG - ROI selected: Outer
+2024-12-13 13:52:47,640 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:52:47,642 - DEBUG - Getting option: Port 1
+2024-12-13 13:52:47,642 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:52:47,642 - INFO - Setting data with mode: mp
+2024-12-13 13:52:47,646 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:52:47,647 - DEBUG - Performing inverse FFT
+2024-12-13 13:52:47,670 - DEBUG - Displaying image
+2024-12-13 13:52:47,670 - DEBUG - Generating rounded pixmap
+2024-12-13 13:52:47,670 - INFO - Image displayed successfully
+2024-12-13 13:52:47,670 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:52:57,121 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:52:57,123 - DEBUG - Getting ROI: Outer
+2024-12-13 13:52:57,123 - DEBUG - ROI selected: Outer
+2024-12-13 13:52:57,125 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:52:57,126 - DEBUG - Getting option: Port 1
+2024-12-13 13:52:57,126 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:52:57,128 - INFO - Setting data with mode: mp
+2024-12-13 13:52:57,131 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:52:57,132 - DEBUG - Performing inverse FFT
+2024-12-13 13:52:57,155 - DEBUG - Displaying image
+2024-12-13 13:52:57,164 - DEBUG - Generating rounded pixmap
+2024-12-13 13:52:57,165 - INFO - Image displayed successfully
+2024-12-13 13:52:57,165 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:53:02,753 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:53:04,058 - DEBUG - Radio button toggled: Port 1
+2024-12-13 13:53:07,584 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:53:09,528 - DEBUG - ROI updated: Inner
+2024-12-13 13:53:11,098 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:53:11,098 - DEBUG - Getting ROI: Inner
+2024-12-13 13:53:11,098 - DEBUG - ROI selected: Inner
+2024-12-13 13:53:11,098 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:53:11,098 - DEBUG - Getting option: Port 2
+2024-12-13 13:53:11,098 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:53:11,098 - INFO - Setting data with mode: mp
+2024-12-13 13:53:11,098 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:53:11,108 - DEBUG - Performing inverse FFT
+2024-12-13 13:53:11,136 - DEBUG - Displaying image
+2024-12-13 13:53:11,136 - DEBUG - Generating rounded pixmap
+2024-12-13 13:53:11,136 - INFO - Image displayed successfully
+2024-12-13 13:53:11,136 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:53:20,024 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:53:20,024 - DEBUG - Getting ROI: Inner
+2024-12-13 13:53:20,024 - DEBUG - ROI selected: Inner
+2024-12-13 13:53:20,024 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:53:20,029 - DEBUG - Getting option: Port 2
+2024-12-13 13:53:20,029 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:53:20,031 - INFO - Setting data with mode: mp
+2024-12-13 13:53:20,034 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:53:20,036 - DEBUG - Performing inverse FFT
+2024-12-13 13:53:20,053 - DEBUG - Displaying image
+2024-12-13 13:53:20,053 - DEBUG - Generating rounded pixmap
+2024-12-13 13:53:20,067 - INFO - Image displayed successfully
+2024-12-13 13:53:20,067 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:53:24,144 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:53:24,144 - DEBUG - Getting ROI: Inner
+2024-12-13 13:53:24,146 - DEBUG - ROI selected: Inner
+2024-12-13 13:53:24,148 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:53:24,148 - DEBUG - Getting option: Port 2
+2024-12-13 13:53:24,148 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:53:24,148 - INFO - Setting data with mode: mp
+2024-12-13 13:53:24,152 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:53:24,153 - DEBUG - Performing inverse FFT
+2024-12-13 13:53:24,180 - DEBUG - Displaying image
+2024-12-13 13:53:24,182 - DEBUG - Generating rounded pixmap
+2024-12-13 13:53:24,182 - INFO - Image displayed successfully
+2024-12-13 13:53:24,186 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:53:24,730 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:53:24,731 - DEBUG - Getting ROI: Inner
+2024-12-13 13:53:24,732 - DEBUG - ROI selected: Inner
+2024-12-13 13:53:24,732 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:53:24,733 - DEBUG - Getting option: Port 2
+2024-12-13 13:53:24,733 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:53:24,734 - INFO - Setting data with mode: mp
+2024-12-13 13:53:24,734 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:53:24,735 - DEBUG - Performing inverse FFT
+2024-12-13 13:53:24,756 - DEBUG - Displaying image
+2024-12-13 13:53:24,756 - DEBUG - Generating rounded pixmap
+2024-12-13 13:53:24,756 - INFO - Image displayed successfully
+2024-12-13 13:53:24,761 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:53:38,451 - INFO - Starting application.
+2024-12-13 13:53:38,465 - INFO - Initializing Mixer application.
+2024-12-13 13:53:38,467 - INFO - Setting up the left column.
+2024-12-13 13:53:39,104 - INFO - Setting up the right column.
+2024-12-13 13:53:39,104 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:53:39,104 - DEBUG - Setting up mode combo box.
+2024-12-13 13:53:39,104 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:53:39,123 - DEBUG - Setting up radio buttons.
+2024-12-13 13:53:39,133 - INFO - Output widget initialized
+2024-12-13 13:53:39,133 - INFO - Port initialized with original image label
+2024-12-13 13:53:39,136 - INFO - Output widget initialized
+2024-12-13 13:53:39,136 - INFO - Port initialized with original image label
+2024-12-13 13:53:39,154 - DEBUG - UI setup complete.
+2024-12-13 13:53:59,563 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:53:59,563 - DEBUG - Getting ROI: Inner
+2024-12-13 13:53:59,563 - DEBUG - ROI selected: Inner
+2024-12-13 13:53:59,563 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:53:59,570 - DEBUG - Getting option: Port 1
+2024-12-13 13:53:59,570 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 13:53:59,570 - INFO - Setting data with mode: mp
+2024-12-13 13:53:59,570 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:53:59,573 - DEBUG - Performing inverse FFT
+2024-12-13 13:53:59,602 - DEBUG - Displaying image
+2024-12-13 13:53:59,602 - DEBUG - Generating rounded pixmap
+2024-12-13 13:53:59,602 - INFO - Image displayed successfully
+2024-12-13 13:53:59,602 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:54:05,887 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:54:22,595 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:54:22,595 - DEBUG - Getting ROI: Inner
+2024-12-13 13:54:22,599 - DEBUG - ROI selected: Inner
+2024-12-13 13:54:22,599 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 13:54:22,601 - DEBUG - Getting option: Port 2
+2024-12-13 13:54:22,602 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 13:54:22,603 - INFO - Setting data with mode: mp
+2024-12-13 13:54:22,603 - DEBUG - Adding image components with mode: mp
+2024-12-13 13:54:22,604 - DEBUG - Performing inverse FFT
+2024-12-13 13:54:22,635 - DEBUG - Displaying image
+2024-12-13 13:54:22,636 - DEBUG - Generating rounded pixmap
+2024-12-13 13:54:22,638 - INFO - Image displayed successfully
+2024-12-13 13:54:22,638 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:59:27,606 - INFO - Starting application.
+2024-12-13 13:59:27,613 - INFO - Initializing Mixer application.
+2024-12-13 13:59:27,613 - INFO - Setting up the left column.
+2024-12-13 13:59:28,105 - INFO - Setting up the right column.
+2024-12-13 13:59:28,105 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 13:59:28,105 - DEBUG - Setting up mode combo box.
+2024-12-13 13:59:28,105 - DEBUG - Setting up ROI combo box.
+2024-12-13 13:59:28,105 - DEBUG - Setting up radio buttons.
+2024-12-13 13:59:28,125 - INFO - Output widget initialized
+2024-12-13 13:59:28,125 - INFO - Port initialized with original image label
+2024-12-13 13:59:28,125 - INFO - Output widget initialized
+2024-12-13 13:59:28,125 - INFO - Port initialized with original image label
+2024-12-13 13:59:28,142 - DEBUG - UI setup complete.
+2024-12-13 13:59:39,523 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 13:59:49,980 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:59:49,980 - DEBUG - Getting ROI: Inner
+2024-12-13 13:59:49,985 - DEBUG - ROI selected: Inner
+2024-12-13 13:59:49,985 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 13:59:49,988 - DEBUG - Getting option: Port 1
+2024-12-13 13:59:49,988 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 13:59:49,988 - INFO - Setting data with mode: ri
+2024-12-13 13:59:49,991 - DEBUG - Adding image components with mode: ri
+2024-12-13 13:59:49,992 - DEBUG - Performing inverse FFT
+2024-12-13 13:59:50,024 - DEBUG - Displaying image
+2024-12-13 13:59:50,024 - DEBUG - Generating rounded pixmap
+2024-12-13 13:59:50,024 - INFO - Image displayed successfully
+2024-12-13 13:59:50,024 - INFO - Fourier Transform components successfully processed.
+2024-12-13 13:59:54,919 - DEBUG - Radio button toggled: Port 2
+2024-12-13 13:59:57,181 - DEBUG - ROI updated: Outer
+2024-12-13 13:59:59,684 - INFO - Collecting Fourier Transform components.
+2024-12-13 13:59:59,684 - DEBUG - Getting ROI: Outer
+2024-12-13 13:59:59,684 - DEBUG - ROI selected: Outer
+2024-12-13 13:59:59,684 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 13:59:59,691 - DEBUG - Getting option: Port 2
+2024-12-13 13:59:59,691 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 13:59:59,693 - INFO - Setting data with mode: ri
+2024-12-13 13:59:59,693 - DEBUG - Adding image components with mode: ri
+2024-12-13 13:59:59,696 - DEBUG - Performing inverse FFT
+2024-12-13 13:59:59,707 - DEBUG - Displaying image
+2024-12-13 13:59:59,710 - DEBUG - Generating rounded pixmap
+2024-12-13 13:59:59,713 - INFO - Image displayed successfully
+2024-12-13 13:59:59,714 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:00:57,011 - DEBUG - ROI updated: Inner
+2024-12-13 14:00:59,183 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:00:59,183 - DEBUG - Getting ROI: Inner
+2024-12-13 14:00:59,188 - DEBUG - ROI selected: Inner
+2024-12-13 14:00:59,188 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 14:00:59,191 - DEBUG - Getting option: Port 2
+2024-12-13 14:00:59,191 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 14:00:59,193 - INFO - Setting data with mode: ri
+2024-12-13 14:00:59,194 - DEBUG - Adding image components with mode: ri
+2024-12-13 14:00:59,194 - DEBUG - Performing inverse FFT
+2024-12-13 14:00:59,194 - DEBUG - Displaying image
+2024-12-13 14:00:59,194 - DEBUG - Generating rounded pixmap
+2024-12-13 14:00:59,210 - INFO - Image displayed successfully
+2024-12-13 14:00:59,213 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:11:35,736 - INFO - Starting application.
+2024-12-13 14:11:35,749 - INFO - Initializing Mixer application.
+2024-12-13 14:11:35,750 - INFO - Setting up the left column.
+2024-12-13 14:11:36,333 - INFO - Setting up the right column.
+2024-12-13 14:11:36,333 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:11:36,333 - DEBUG - Setting up mode combo box.
+2024-12-13 14:11:36,333 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:11:36,333 - DEBUG - Setting up radio buttons.
+2024-12-13 14:11:36,343 - INFO - Output widget initialized
+2024-12-13 14:11:36,348 - INFO - Port initialized with original image label
+2024-12-13 14:11:36,352 - INFO - Output widget initialized
+2024-12-13 14:11:36,354 - INFO - Port initialized with original image label
+2024-12-13 14:11:36,378 - DEBUG - UI setup complete.
+2024-12-13 14:11:54,042 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:11:54,042 - DEBUG - Getting ROI: Inner
+2024-12-13 14:11:54,042 - DEBUG - ROI selected: Inner
+2024-12-13 14:11:54,042 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:11:54,042 - DEBUG - Getting option: Port 1
+2024-12-13 14:11:54,042 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:11:54,042 - INFO - Setting data with mode: mp
+2024-12-13 14:11:54,050 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:11:54,051 - DEBUG - Performing inverse FFT
+2024-12-13 14:11:54,076 - DEBUG - Displaying image
+2024-12-13 14:11:54,083 - DEBUG - Generating rounded pixmap
+2024-12-13 14:11:54,085 - INFO - Image displayed successfully
+2024-12-13 14:11:54,085 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:12:11,340 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:12:11,340 - DEBUG - Getting ROI: Inner
+2024-12-13 14:12:11,340 - DEBUG - ROI selected: Inner
+2024-12-13 14:12:11,340 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:12:11,347 - DEBUG - Getting option: Port 1
+2024-12-13 14:12:11,347 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:12:11,347 - INFO - Setting data with mode: mp
+2024-12-13 14:12:11,351 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:12:11,353 - DEBUG - Performing inverse FFT
+2024-12-13 14:12:11,375 - DEBUG - Displaying image
+2024-12-13 14:12:11,381 - DEBUG - Generating rounded pixmap
+2024-12-13 14:12:11,383 - INFO - Image displayed successfully
+2024-12-13 14:12:11,386 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:15:00,653 - INFO - Starting application.
+2024-12-13 14:15:00,666 - INFO - Initializing Mixer application.
+2024-12-13 14:15:00,666 - INFO - Setting up the left column.
+2024-12-13 14:15:01,087 - INFO - Setting up the right column.
+2024-12-13 14:15:01,087 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:15:01,087 - DEBUG - Setting up mode combo box.
+2024-12-13 14:15:01,089 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:15:01,089 - DEBUG - Setting up radio buttons.
+2024-12-13 14:15:01,095 - INFO - Output widget initialized
+2024-12-13 14:15:01,095 - INFO - Port initialized with original image label
+2024-12-13 14:15:01,095 - INFO - Output widget initialized
+2024-12-13 14:15:01,095 - INFO - Port initialized with original image label
+2024-12-13 14:15:01,110 - DEBUG - UI setup complete.
+2024-12-13 14:15:14,642 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:15:14,642 - DEBUG - Getting ROI: Inner
+2024-12-13 14:15:14,642 - DEBUG - ROI selected: Inner
+2024-12-13 14:15:14,642 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:15:14,642 - DEBUG - Getting option: Port 1
+2024-12-13 14:15:14,642 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:15:14,642 - INFO - Setting data with mode: mp
+2024-12-13 14:15:14,642 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:15:14,654 - DEBUG - Performing inverse FFT
+2024-12-13 14:15:14,739 - DEBUG - Displaying image
+2024-12-13 14:15:14,739 - DEBUG - Generating rounded pixmap
+2024-12-13 14:15:14,739 - INFO - Image displayed successfully
+2024-12-13 14:15:14,747 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:15:25,531 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:15:25,531 - DEBUG - Getting ROI: Inner
+2024-12-13 14:15:25,531 - DEBUG - ROI selected: Inner
+2024-12-13 14:15:25,531 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:15:25,540 - DEBUG - Getting option: Port 1
+2024-12-13 14:15:25,540 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:15:25,540 - INFO - Setting data with mode: mp
+2024-12-13 14:15:25,544 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:15:25,545 - DEBUG - Performing inverse FFT
+2024-12-13 14:15:25,577 - DEBUG - Displaying image
+2024-12-13 14:15:25,579 - DEBUG - Generating rounded pixmap
+2024-12-13 14:15:25,579 - INFO - Image displayed successfully
+2024-12-13 14:15:25,579 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:15:26,848 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:15:26,848 - DEBUG - Getting ROI: Inner
+2024-12-13 14:15:26,848 - DEBUG - ROI selected: Inner
+2024-12-13 14:15:26,854 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:15:26,856 - DEBUG - Getting option: Port 1
+2024-12-13 14:15:26,856 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:15:26,856 - INFO - Setting data with mode: mp
+2024-12-13 14:15:26,856 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:15:26,860 - DEBUG - Performing inverse FFT
+2024-12-13 14:15:26,889 - DEBUG - Displaying image
+2024-12-13 14:15:26,894 - DEBUG - Generating rounded pixmap
+2024-12-13 14:15:26,894 - INFO - Image displayed successfully
+2024-12-13 14:15:26,894 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:15:53,030 - INFO - Starting application.
+2024-12-13 14:15:53,039 - INFO - Initializing Mixer application.
+2024-12-13 14:15:53,039 - INFO - Setting up the left column.
+2024-12-13 14:15:53,379 - INFO - Setting up the right column.
+2024-12-13 14:15:53,379 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:15:53,379 - DEBUG - Setting up mode combo box.
+2024-12-13 14:15:53,379 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:15:53,387 - DEBUG - Setting up radio buttons.
+2024-12-13 14:15:53,391 - INFO - Output widget initialized
+2024-12-13 14:15:53,391 - INFO - Port initialized with original image label
+2024-12-13 14:15:53,391 - INFO - Output widget initialized
+2024-12-13 14:15:53,391 - INFO - Port initialized with original image label
+2024-12-13 14:15:53,406 - DEBUG - UI setup complete.
+2024-12-13 14:16:04,737 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:16:04,737 - DEBUG - Getting ROI: Inner
+2024-12-13 14:16:04,737 - DEBUG - ROI selected: Inner
+2024-12-13 14:16:04,737 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:16:04,744 - DEBUG - Getting option: Port 1
+2024-12-13 14:16:04,745 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:16:04,745 - INFO - Setting data with mode: mp
+2024-12-13 14:16:04,745 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:16:04,745 - DEBUG - Performing inverse FFT
+2024-12-13 14:16:04,777 - DEBUG - Displaying image
+2024-12-13 14:16:04,777 - DEBUG - Generating rounded pixmap
+2024-12-13 14:16:04,777 - INFO - Image displayed successfully
+2024-12-13 14:16:04,777 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:16:25,354 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:16:25,354 - DEBUG - Getting ROI: Inner
+2024-12-13 14:16:25,354 - DEBUG - ROI selected: Inner
+2024-12-13 14:16:25,360 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:16:25,360 - DEBUG - Getting option: Port 1
+2024-12-13 14:16:25,360 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:16:25,360 - INFO - Setting data with mode: mp
+2024-12-13 14:16:25,366 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:16:25,367 - DEBUG - Performing inverse FFT
+2024-12-13 14:16:25,396 - DEBUG - Displaying image
+2024-12-13 14:16:25,396 - DEBUG - Generating rounded pixmap
+2024-12-13 14:16:25,396 - INFO - Image displayed successfully
+2024-12-13 14:16:25,396 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:16:27,912 - DEBUG - Radio button toggled: Port 2
+2024-12-13 14:16:29,337 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:16:29,337 - DEBUG - Getting ROI: Inner
+2024-12-13 14:16:29,337 - DEBUG - ROI selected: Inner
+2024-12-13 14:16:29,337 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:16:29,337 - DEBUG - Getting option: Port 2
+2024-12-13 14:16:29,337 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 14:16:29,337 - INFO - Setting data with mode: mp
+2024-12-13 14:16:29,337 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:16:29,337 - DEBUG - Performing inverse FFT
+2024-12-13 14:16:29,378 - DEBUG - Displaying image
+2024-12-13 14:16:29,380 - DEBUG - Generating rounded pixmap
+2024-12-13 14:16:29,380 - INFO - Image displayed successfully
+2024-12-13 14:16:29,380 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:17:09,467 - INFO - Starting application.
+2024-12-13 14:17:09,476 - INFO - Initializing Mixer application.
+2024-12-13 14:17:09,476 - INFO - Setting up the left column.
+2024-12-13 14:17:09,990 - INFO - Setting up the right column.
+2024-12-13 14:17:09,990 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:17:09,990 - DEBUG - Setting up mode combo box.
+2024-12-13 14:17:09,990 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:17:09,990 - DEBUG - Setting up radio buttons.
+2024-12-13 14:17:10,008 - INFO - Output widget initialized
+2024-12-13 14:17:10,008 - INFO - Port initialized with original image label
+2024-12-13 14:17:10,008 - INFO - Output widget initialized
+2024-12-13 14:17:10,008 - INFO - Port initialized with original image label
+2024-12-13 14:17:10,023 - DEBUG - UI setup complete.
+2024-12-13 14:17:23,058 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:17:23,058 - DEBUG - Getting ROI: Inner
+2024-12-13 14:17:23,058 - DEBUG - ROI selected: Inner
+2024-12-13 14:17:23,058 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:17:23,058 - DEBUG - Getting option: Port 1
+2024-12-13 14:17:23,058 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:17:23,058 - INFO - Setting data with mode: mp
+2024-12-13 14:17:23,058 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:17:23,068 - DEBUG - Performing inverse FFT
+2024-12-13 14:17:23,097 - ERROR - Error in ifft: 'tuple' object has no attribute 'astype'
+2024-12-13 14:17:23,102 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:17:58,583 - INFO - Starting application.
+2024-12-13 14:17:58,591 - INFO - Initializing Mixer application.
+2024-12-13 14:17:58,596 - INFO - Setting up the left column.
+2024-12-13 14:17:58,945 - INFO - Setting up the right column.
+2024-12-13 14:17:58,945 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:17:58,945 - DEBUG - Setting up mode combo box.
+2024-12-13 14:17:58,945 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:17:58,945 - DEBUG - Setting up radio buttons.
+2024-12-13 14:17:58,958 - INFO - Output widget initialized
+2024-12-13 14:17:58,958 - INFO - Port initialized with original image label
+2024-12-13 14:17:58,958 - INFO - Output widget initialized
+2024-12-13 14:17:58,958 - INFO - Port initialized with original image label
+2024-12-13 14:17:58,966 - DEBUG - UI setup complete.
+2024-12-13 14:18:13,545 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:18:13,545 - DEBUG - Getting ROI: Inner
+2024-12-13 14:18:13,550 - DEBUG - ROI selected: Inner
+2024-12-13 14:18:13,550 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:18:13,553 - DEBUG - Getting option: Port 1
+2024-12-13 14:18:13,553 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:18:13,553 - INFO - Setting data with mode: mp
+2024-12-13 14:18:13,553 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:18:13,558 - DEBUG - Performing inverse FFT
+2024-12-13 14:18:13,583 - DEBUG - Displaying image
+2024-12-13 14:18:13,592 - DEBUG - Generating rounded pixmap
+2024-12-13 14:18:13,592 - INFO - Image displayed successfully
+2024-12-13 14:18:13,592 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:18:20,358 - DEBUG - Radio button toggled: Port 2
+2024-12-13 14:18:24,094 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:18:24,094 - DEBUG - Getting ROI: Inner
+2024-12-13 14:18:24,100 - DEBUG - ROI selected: Inner
+2024-12-13 14:18:24,100 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:18:24,102 - DEBUG - Getting option: Port 2
+2024-12-13 14:18:24,103 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 14:18:24,103 - INFO - Setting data with mode: mp
+2024-12-13 14:18:24,105 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:18:24,107 - DEBUG - Performing inverse FFT
+2024-12-13 14:18:24,132 - DEBUG - Displaying image
+2024-12-13 14:18:24,132 - DEBUG - Generating rounded pixmap
+2024-12-13 14:18:24,132 - INFO - Image displayed successfully
+2024-12-13 14:18:24,132 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:19:33,336 - INFO - Starting application.
+2024-12-13 14:19:33,343 - INFO - Initializing Mixer application.
+2024-12-13 14:19:33,343 - INFO - Setting up the left column.
+2024-12-13 14:19:33,777 - INFO - Setting up the right column.
+2024-12-13 14:19:33,777 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:19:33,777 - DEBUG - Setting up mode combo box.
+2024-12-13 14:19:33,783 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:19:33,783 - DEBUG - Setting up radio buttons.
+2024-12-13 14:19:33,788 - INFO - Output widget initialized
+2024-12-13 14:19:33,788 - INFO - Port initialized with original image label
+2024-12-13 14:19:33,790 - INFO - Output widget initialized
+2024-12-13 14:19:33,790 - INFO - Port initialized with original image label
+2024-12-13 14:19:33,795 - DEBUG - UI setup complete.
+2024-12-13 14:19:51,194 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:19:51,194 - DEBUG - Getting ROI: Inner
+2024-12-13 14:19:51,197 - DEBUG - ROI selected: Inner
+2024-12-13 14:19:51,197 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:19:51,200 - DEBUG - Getting option: Port 1
+2024-12-13 14:19:51,200 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:19:51,200 - INFO - Setting data with mode: mp
+2024-12-13 14:19:51,200 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:19:51,200 - DEBUG - Performing inverse FFT
+2024-12-13 14:19:51,230 - DEBUG - Displaying image
+2024-12-13 14:19:51,230 - DEBUG - Generating rounded pixmap
+2024-12-13 14:19:51,230 - INFO - Image displayed successfully
+2024-12-13 14:19:51,236 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:20:03,593 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:20:03,593 - DEBUG - Getting ROI: Inner
+2024-12-13 14:20:03,593 - DEBUG - ROI selected: Inner
+2024-12-13 14:20:03,593 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:20:03,597 - DEBUG - Getting option: Port 1
+2024-12-13 14:20:03,597 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:20:03,597 - INFO - Setting data with mode: mp
+2024-12-13 14:20:03,597 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:20:03,597 - DEBUG - Performing inverse FFT
+2024-12-13 14:20:03,628 - DEBUG - Displaying image
+2024-12-13 14:20:03,631 - DEBUG - Generating rounded pixmap
+2024-12-13 14:20:03,634 - INFO - Image displayed successfully
+2024-12-13 14:20:03,634 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:22:54,540 - INFO - Starting application.
+2024-12-13 14:22:54,551 - INFO - Initializing Mixer application.
+2024-12-13 14:22:54,551 - INFO - Setting up the left column.
+2024-12-13 14:22:54,853 - INFO - Setting up the right column.
+2024-12-13 14:22:54,853 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:22:54,853 - DEBUG - Setting up mode combo box.
+2024-12-13 14:22:54,868 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:22:54,868 - DEBUG - Setting up radio buttons.
+2024-12-13 14:22:54,873 - INFO - Output widget initialized
+2024-12-13 14:22:54,873 - INFO - Port initialized with original image label
+2024-12-13 14:22:54,873 - INFO - Output widget initialized
+2024-12-13 14:22:54,875 - INFO - Port initialized with original image label
+2024-12-13 14:22:54,880 - DEBUG - UI setup complete.
+2024-12-13 14:23:06,683 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:23:06,683 - DEBUG - Getting ROI: Inner
+2024-12-13 14:23:06,683 - DEBUG - ROI selected: Inner
+2024-12-13 14:23:06,683 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:23:06,689 - DEBUG - Getting option: Port 1
+2024-12-13 14:23:06,689 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:23:06,689 - INFO - Setting data with mode: mp
+2024-12-13 14:23:06,689 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:23:06,693 - DEBUG - Performing inverse FFT
+2024-12-13 14:23:06,763 - DEBUG - Displaying image
+2024-12-13 14:23:06,766 - DEBUG - Generating rounded pixmap
+2024-12-13 14:23:06,766 - INFO - Image displayed successfully
+2024-12-13 14:23:06,766 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:24:10,742 - INFO - Starting application.
+2024-12-13 14:24:10,752 - INFO - Initializing Mixer application.
+2024-12-13 14:24:10,752 - INFO - Setting up the left column.
+2024-12-13 14:24:11,091 - INFO - Setting up the right column.
+2024-12-13 14:24:11,111 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:24:11,114 - DEBUG - Setting up mode combo box.
+2024-12-13 14:24:11,114 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:24:11,126 - DEBUG - Setting up radio buttons.
+2024-12-13 14:24:11,166 - INFO - Output widget initialized
+2024-12-13 14:24:11,166 - INFO - Port initialized with original image label
+2024-12-13 14:24:11,185 - INFO - Output widget initialized
+2024-12-13 14:24:11,193 - INFO - Port initialized with original image label
+2024-12-13 14:24:11,218 - DEBUG - UI setup complete.
+2024-12-13 14:24:27,224 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:24:27,224 - DEBUG - Getting ROI: Inner
+2024-12-13 14:24:27,224 - DEBUG - ROI selected: Inner
+2024-12-13 14:24:27,224 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:24:27,229 - DEBUG - Getting option: Port 1
+2024-12-13 14:24:27,229 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:24:27,231 - INFO - Setting data with mode: mp
+2024-12-13 14:24:27,234 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:24:27,234 - DEBUG - Performing inverse FFT
+2024-12-13 14:24:27,262 - DEBUG - Displaying image
+2024-12-13 14:24:27,264 - DEBUG - Generating rounded pixmap
+2024-12-13 14:24:27,265 - INFO - Image displayed successfully
+2024-12-13 14:24:27,267 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:27:41,734 - INFO - Starting application.
+2024-12-13 14:27:41,741 - INFO - Initializing Mixer application.
+2024-12-13 14:27:41,749 - INFO - Setting up the left column.
+2024-12-13 14:27:42,083 - INFO - Setting up the right column.
+2024-12-13 14:27:42,083 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:27:42,083 - DEBUG - Setting up mode combo box.
+2024-12-13 14:27:42,083 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:27:42,083 - DEBUG - Setting up radio buttons.
+2024-12-13 14:27:42,100 - INFO - Output widget initialized
+2024-12-13 14:27:42,100 - INFO - Port initialized with original image label
+2024-12-13 14:27:42,100 - INFO - Output widget initialized
+2024-12-13 14:27:42,100 - INFO - Port initialized with original image label
+2024-12-13 14:27:42,118 - DEBUG - UI setup complete.
+2024-12-13 14:28:27,543 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:28:27,543 - DEBUG - Getting ROI: Inner
+2024-12-13 14:28:27,543 - DEBUG - ROI selected: Inner
+2024-12-13 14:28:27,543 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:28:27,543 - DEBUG - Getting option: Port 1
+2024-12-13 14:28:27,543 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:28:27,543 - INFO - Setting data with mode: mp
+2024-12-13 14:28:27,552 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:28:27,553 - DEBUG - Performing inverse FFT
+2024-12-13 14:28:27,574 - DEBUG - Displaying image
+2024-12-13 14:28:27,586 - DEBUG - Generating rounded pixmap
+2024-12-13 14:28:27,586 - INFO - Image displayed successfully
+2024-12-13 14:28:27,592 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:29:53,764 - INFO - Starting application.
+2024-12-13 14:29:53,771 - INFO - Initializing Mixer application.
+2024-12-13 14:29:53,777 - INFO - Setting up the left column.
+2024-12-13 14:29:54,187 - INFO - Setting up the right column.
+2024-12-13 14:29:54,195 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:29:54,195 - DEBUG - Setting up mode combo box.
+2024-12-13 14:29:54,195 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:29:54,195 - DEBUG - Setting up radio buttons.
+2024-12-13 14:29:54,203 - INFO - Output widget initialized
+2024-12-13 14:29:54,203 - INFO - Port initialized with original image label
+2024-12-13 14:29:54,203 - INFO - Output widget initialized
+2024-12-13 14:29:54,203 - INFO - Port initialized with original image label
+2024-12-13 14:29:54,220 - DEBUG - UI setup complete.
+2024-12-13 14:30:09,106 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:30:09,107 - DEBUG - Getting ROI: Inner
+2024-12-13 14:30:09,108 - DEBUG - ROI selected: Inner
+2024-12-13 14:30:09,108 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:30:09,111 - DEBUG - Getting option: Port 1
+2024-12-13 14:30:09,111 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:30:09,111 - INFO - Setting data with mode: mp
+2024-12-13 14:30:09,111 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:30:09,115 - DEBUG - Performing inverse FFT
+2024-12-13 14:30:09,139 - DEBUG - Displaying image
+2024-12-13 14:30:09,139 - DEBUG - Generating rounded pixmap
+2024-12-13 14:30:09,146 - INFO - Image displayed successfully
+2024-12-13 14:30:09,146 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:30:25,796 - INFO - Starting application.
+2024-12-13 14:30:25,805 - INFO - Initializing Mixer application.
+2024-12-13 14:30:25,805 - INFO - Setting up the left column.
+2024-12-13 14:30:26,423 - INFO - Setting up the right column.
+2024-12-13 14:30:26,428 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:30:26,429 - DEBUG - Setting up mode combo box.
+2024-12-13 14:30:26,430 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:30:26,432 - DEBUG - Setting up radio buttons.
+2024-12-13 14:30:26,438 - INFO - Output widget initialized
+2024-12-13 14:30:26,441 - INFO - Port initialized with original image label
+2024-12-13 14:30:26,441 - INFO - Output widget initialized
+2024-12-13 14:30:26,442 - INFO - Port initialized with original image label
+2024-12-13 14:30:26,463 - DEBUG - UI setup complete.
+2024-12-13 14:30:40,938 - INFO - Starting application.
+2024-12-13 14:30:40,958 - INFO - Initializing Mixer application.
+2024-12-13 14:30:40,958 - INFO - Setting up the left column.
+2024-12-13 14:30:41,338 - INFO - Setting up the right column.
+2024-12-13 14:30:41,338 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:30:41,338 - DEBUG - Setting up mode combo box.
+2024-12-13 14:30:41,338 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:30:41,338 - DEBUG - Setting up radio buttons.
+2024-12-13 14:30:41,346 - INFO - Output widget initialized
+2024-12-13 14:30:41,346 - INFO - Port initialized with original image label
+2024-12-13 14:30:41,346 - INFO - Output widget initialized
+2024-12-13 14:30:41,346 - INFO - Port initialized with original image label
+2024-12-13 14:30:41,363 - DEBUG - UI setup complete.
+2024-12-13 14:30:55,490 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:30:55,490 - DEBUG - Getting ROI: Inner
+2024-12-13 14:30:55,490 - DEBUG - ROI selected: Inner
+2024-12-13 14:30:55,490 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:30:55,495 - DEBUG - Getting option: Port 1
+2024-12-13 14:30:55,495 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:30:55,497 - INFO - Setting data with mode: mp
+2024-12-13 14:30:55,498 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:30:55,498 - DEBUG - Performing inverse FFT
+2024-12-13 14:30:55,529 - DEBUG - Displaying image
+2024-12-13 14:30:55,529 - DEBUG - Generating rounded pixmap
+2024-12-13 14:30:55,529 - INFO - Image displayed successfully
+2024-12-13 14:30:55,536 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:31:02,816 - DEBUG - Radio button toggled: Port 2
+2024-12-13 14:31:05,404 - DEBUG - ROI updated: Outer
+2024-12-13 14:31:05,773 - DEBUG - Radio button toggled: Port 1
+2024-12-13 14:31:07,083 - DEBUG - Radio button toggled: Port 2
+2024-12-13 14:31:09,500 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:31:09,500 - DEBUG - Getting ROI: Outer
+2024-12-13 14:31:09,504 - DEBUG - ROI selected: Outer
+2024-12-13 14:31:09,505 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:31:09,506 - DEBUG - Getting option: Port 2
+2024-12-13 14:31:09,506 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 14:31:09,506 - INFO - Setting data with mode: mp
+2024-12-13 14:31:09,506 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:31:09,506 - DEBUG - Performing inverse FFT
+2024-12-13 14:31:09,542 - DEBUG - Displaying image
+2024-12-13 14:31:09,544 - DEBUG - Generating rounded pixmap
+2024-12-13 14:31:09,544 - INFO - Image displayed successfully
+2024-12-13 14:31:09,544 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:31:51,210 - INFO - Starting application.
+2024-12-13 14:31:51,229 - INFO - Initializing Mixer application.
+2024-12-13 14:31:51,230 - INFO - Setting up the left column.
+2024-12-13 14:31:52,009 - INFO - Setting up the right column.
+2024-12-13 14:31:52,009 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:31:52,009 - DEBUG - Setting up mode combo box.
+2024-12-13 14:31:52,009 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:31:52,017 - DEBUG - Setting up radio buttons.
+2024-12-13 14:31:52,024 - INFO - Output widget initialized
+2024-12-13 14:31:52,024 - INFO - Port initialized with original image label
+2024-12-13 14:31:52,024 - INFO - Output widget initialized
+2024-12-13 14:31:52,024 - INFO - Port initialized with original image label
+2024-12-13 14:31:52,048 - DEBUG - UI setup complete.
+2024-12-13 14:32:04,417 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:04,417 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:04,417 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:04,423 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:04,424 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:04,424 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:04,424 - INFO - Setting data with mode: mp
+2024-12-13 14:32:04,424 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:04,424 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:04,457 - DEBUG - Displaying image
+2024-12-13 14:32:04,464 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:04,465 - INFO - Image displayed successfully
+2024-12-13 14:32:04,465 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:14,684 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:14,684 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:14,688 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:14,690 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:14,691 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:14,692 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:14,693 - INFO - Setting data with mode: mp
+2024-12-13 14:32:14,693 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:14,693 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:14,729 - DEBUG - Displaying image
+2024-12-13 14:32:14,729 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:14,729 - INFO - Image displayed successfully
+2024-12-13 14:32:14,729 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:24,058 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:24,058 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:24,058 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:24,058 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:24,064 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:24,064 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:24,066 - INFO - Setting data with mode: mp
+2024-12-13 14:32:24,070 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:24,070 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:24,098 - DEBUG - Displaying image
+2024-12-13 14:32:24,107 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:24,107 - INFO - Image displayed successfully
+2024-12-13 14:32:24,107 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:26,934 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:26,934 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:26,934 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:26,940 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:26,941 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:26,941 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:26,943 - INFO - Setting data with mode: mp
+2024-12-13 14:32:26,944 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:26,945 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:26,980 - DEBUG - Displaying image
+2024-12-13 14:32:26,980 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:26,980 - INFO - Image displayed successfully
+2024-12-13 14:32:26,980 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:27,609 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:27,609 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:27,609 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:27,609 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:27,609 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:27,609 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:27,617 - INFO - Setting data with mode: mp
+2024-12-13 14:32:27,618 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:27,618 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:27,644 - DEBUG - Displaying image
+2024-12-13 14:32:27,644 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:27,644 - INFO - Image displayed successfully
+2024-12-13 14:32:27,644 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:32,925 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:32,925 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:32,927 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:32,927 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:32,927 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:32,927 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:32,927 - INFO - Setting data with mode: mp
+2024-12-13 14:32:32,927 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:32,935 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:32,963 - DEBUG - Displaying image
+2024-12-13 14:32:32,963 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:32,963 - INFO - Image displayed successfully
+2024-12-13 14:32:32,963 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:32:38,051 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:32:38,051 - DEBUG - Getting ROI: Inner
+2024-12-13 14:32:38,051 - DEBUG - ROI selected: Inner
+2024-12-13 14:32:38,054 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 14:32:38,057 - DEBUG - Getting option: Port 1
+2024-12-13 14:32:38,058 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 14:32:38,058 - INFO - Setting data with mode: mp
+2024-12-13 14:32:38,062 - DEBUG - Adding image components with mode: mp
+2024-12-13 14:32:38,062 - DEBUG - Performing inverse FFT
+2024-12-13 14:32:38,096 - DEBUG - Displaying image
+2024-12-13 14:32:38,096 - DEBUG - Generating rounded pixmap
+2024-12-13 14:32:38,096 - INFO - Image displayed successfully
+2024-12-13 14:32:38,096 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:33:01,669 - INFO - Starting application.
+2024-12-13 14:33:01,680 - INFO - Initializing Mixer application.
+2024-12-13 14:33:01,681 - INFO - Setting up the left column.
+2024-12-13 14:33:02,057 - INFO - Setting up the right column.
+2024-12-13 14:33:02,057 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 14:33:02,057 - DEBUG - Setting up mode combo box.
+2024-12-13 14:33:02,065 - DEBUG - Setting up ROI combo box.
+2024-12-13 14:33:02,065 - DEBUG - Setting up radio buttons.
+2024-12-13 14:33:02,074 - INFO - Output widget initialized
+2024-12-13 14:33:02,074 - INFO - Port initialized with original image label
+2024-12-13 14:33:02,074 - INFO - Output widget initialized
+2024-12-13 14:33:02,074 - INFO - Port initialized with original image label
+2024-12-13 14:33:02,090 - DEBUG - UI setup complete.
+2024-12-13 14:33:18,145 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 14:33:19,353 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:33:19,355 - DEBUG - Getting ROI: Inner
+2024-12-13 14:33:19,355 - DEBUG - ROI selected: Inner
+2024-12-13 14:33:19,358 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 14:33:19,360 - DEBUG - Getting option: Port 1
+2024-12-13 14:33:19,360 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 14:33:19,360 - INFO - Setting data with mode: ri
+2024-12-13 14:33:19,360 - DEBUG - Adding image components with mode: ri
+2024-12-13 14:33:19,365 - DEBUG - Performing inverse FFT
+2024-12-13 14:33:19,377 - DEBUG - Displaying image
+2024-12-13 14:33:19,381 - DEBUG - Generating rounded pixmap
+2024-12-13 14:33:19,383 - INFO - Image displayed successfully
+2024-12-13 14:33:19,384 - INFO - Fourier Transform components successfully processed.
+2024-12-13 14:33:21,642 - DEBUG - Radio button toggled: Port 2
+2024-12-13 14:33:23,416 - DEBUG - ROI updated: Outer
+2024-12-13 14:33:25,353 - INFO - Collecting Fourier Transform components.
+2024-12-13 14:33:25,353 - DEBUG - Getting ROI: Outer
+2024-12-13 14:33:25,356 - DEBUG - ROI selected: Outer
+2024-12-13 14:33:25,357 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 14:33:25,358 - DEBUG - Getting option: Port 2
+2024-12-13 14:33:25,358 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 14:33:25,358 - INFO - Setting data with mode: ri
+2024-12-13 14:33:25,358 - DEBUG - Adding image components with mode: ri
+2024-12-13 14:33:25,358 - DEBUG - Performing inverse FFT
+2024-12-13 14:33:25,369 - DEBUG - Displaying image
+2024-12-13 14:33:25,375 - DEBUG - Generating rounded pixmap
+2024-12-13 14:33:25,375 - INFO - Image displayed successfully
+2024-12-13 14:33:25,375 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:52:40,402 - INFO - Starting application.
+2024-12-13 15:52:40,750 - INFO - Initializing Mixer application.
+2024-12-13 15:52:40,750 - INFO - Setting up the left column.
+2024-12-13 15:52:41,868 - INFO - Setting up the right column.
+2024-12-13 15:52:41,868 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 15:52:41,868 - DEBUG - Setting up mode combo box.
+2024-12-13 15:52:41,868 - DEBUG - Setting up ROI combo box.
+2024-12-13 15:52:41,884 - DEBUG - Setting up radio buttons.
+2024-12-13 15:52:41,884 - INFO - Output widget initialized
+2024-12-13 15:52:41,884 - INFO - Port initialized with original image label
+2024-12-13 15:52:41,889 - INFO - Output widget initialized
+2024-12-13 15:52:41,890 - INFO - Port initialized with original image label
+2024-12-13 15:52:41,891 - DEBUG - UI setup complete.
+2024-12-13 15:52:53,858 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:52:53,858 - DEBUG - Getting ROI: Inner
+2024-12-13 15:52:53,858 - DEBUG - ROI selected: Inner
+2024-12-13 15:52:53,858 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 15:52:53,866 - DEBUG - Getting option: Port 1
+2024-12-13 15:52:53,867 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 15:52:53,867 - INFO - Setting data with mode: mp
+2024-12-13 15:52:53,869 - DEBUG - Adding image components with mode: mp
+2024-12-13 15:52:53,871 - DEBUG - Performing inverse FFT
+2024-12-13 15:52:53,892 - DEBUG - Displaying image
+2024-12-13 15:52:53,902 - DEBUG - Generating rounded pixmap
+2024-12-13 15:52:53,905 - INFO - Image displayed successfully
+2024-12-13 15:52:53,906 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:53:04,282 - DEBUG - Radio button toggled: Port 2
+2024-12-13 15:53:05,637 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:53:05,637 - DEBUG - Getting ROI: Inner
+2024-12-13 15:53:05,637 - DEBUG - ROI selected: Inner
+2024-12-13 15:53:05,637 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 15:53:05,637 - DEBUG - Getting option: Port 2
+2024-12-13 15:53:05,637 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 15:53:05,637 - INFO - Setting data with mode: mp
+2024-12-13 15:53:05,637 - DEBUG - Adding image components with mode: mp
+2024-12-13 15:53:05,637 - DEBUG - Performing inverse FFT
+2024-12-13 15:53:05,675 - DEBUG - Displaying image
+2024-12-13 15:53:05,675 - DEBUG - Generating rounded pixmap
+2024-12-13 15:53:05,675 - INFO - Image displayed successfully
+2024-12-13 15:53:05,675 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:54:33,393 - INFO - Starting application.
+2024-12-13 15:54:33,408 - INFO - Initializing Mixer application.
+2024-12-13 15:54:33,408 - INFO - Setting up the left column.
+2024-12-13 15:54:33,836 - INFO - Setting up the right column.
+2024-12-13 15:54:33,836 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 15:54:33,836 - DEBUG - Setting up mode combo box.
+2024-12-13 15:54:33,836 - DEBUG - Setting up ROI combo box.
+2024-12-13 15:54:33,836 - DEBUG - Setting up radio buttons.
+2024-12-13 15:54:33,856 - INFO - Output widget initialized
+2024-12-13 15:54:33,856 - INFO - Port initialized with original image label
+2024-12-13 15:54:33,856 - INFO - Output widget initialized
+2024-12-13 15:54:33,856 - INFO - Port initialized with original image label
+2024-12-13 15:54:33,872 - DEBUG - UI setup complete.
+2024-12-13 15:54:47,760 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:54:47,760 - DEBUG - Getting ROI: Inner
+2024-12-13 15:54:47,760 - DEBUG - ROI selected: Inner
+2024-12-13 15:54:47,760 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 15:54:47,760 - DEBUG - Getting option: Port 1
+2024-12-13 15:54:47,760 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 15:54:47,760 - INFO - Setting data with mode: mp
+2024-12-13 15:54:47,760 - DEBUG - Adding image components with mode: mp
+2024-12-13 15:54:47,769 - WARNING - Unsupported item: Real
+2024-12-13 15:54:47,771 - DEBUG - Performing inverse FFT
+2024-12-13 15:54:47,772 - ERROR - Error in ifft: not enough values to unpack (expected 2, got 0)
+2024-12-13 15:54:47,773 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:54:54,336 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 15:54:55,587 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:54:55,587 - DEBUG - Getting ROI: Inner
+2024-12-13 15:54:55,587 - DEBUG - ROI selected: Inner
+2024-12-13 15:54:55,587 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:54:55,594 - DEBUG - Getting option: Port 1
+2024-12-13 15:54:55,594 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 15:54:55,594 - INFO - Setting data with mode: ri
+2024-12-13 15:54:55,596 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:54:55,598 - DEBUG - Performing inverse FFT
+2024-12-13 15:54:55,610 - DEBUG - Displaying image
+2024-12-13 15:54:55,614 - DEBUG - Generating rounded pixmap
+2024-12-13 15:54:55,614 - INFO - Image displayed successfully
+2024-12-13 15:54:55,614 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:55:22,316 - DEBUG - Radio button toggled: Port 2
+2024-12-13 15:55:29,746 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:55:29,746 - DEBUG - Getting ROI: Inner
+2024-12-13 15:55:29,746 - DEBUG - ROI selected: Inner
+2024-12-13 15:55:29,746 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:55:29,754 - DEBUG - Getting option: Port 2
+2024-12-13 15:55:29,754 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 15:55:29,754 - INFO - Setting data with mode: ri
+2024-12-13 15:55:29,754 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:55:29,758 - DEBUG - Performing inverse FFT
+2024-12-13 15:55:29,770 - DEBUG - Displaying image
+2024-12-13 15:55:29,771 - DEBUG - Generating rounded pixmap
+2024-12-13 15:55:29,774 - INFO - Image displayed successfully
+2024-12-13 15:55:29,774 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:55:39,578 - DEBUG - Radio button toggled: Port 1
+2024-12-13 15:55:44,039 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:55:44,039 - DEBUG - Getting ROI: Inner
+2024-12-13 15:55:44,045 - DEBUG - ROI selected: Inner
+2024-12-13 15:55:44,045 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:55:44,047 - DEBUG - Getting option: Port 1
+2024-12-13 15:55:44,047 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 15:55:44,047 - INFO - Setting data with mode: ri
+2024-12-13 15:55:44,052 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:55:44,054 - DEBUG - Performing inverse FFT
+2024-12-13 15:55:44,062 - DEBUG - Displaying image
+2024-12-13 15:55:44,062 - DEBUG - Generating rounded pixmap
+2024-12-13 15:55:44,062 - INFO - Image displayed successfully
+2024-12-13 15:55:44,062 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:55:57,239 - DEBUG - Radio button toggled: Port 2
+2024-12-13 15:55:58,534 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:55:58,534 - DEBUG - Getting ROI: Inner
+2024-12-13 15:55:58,534 - DEBUG - ROI selected: Inner
+2024-12-13 15:55:58,534 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:55:58,534 - DEBUG - Getting option: Port 2
+2024-12-13 15:55:58,534 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 15:55:58,534 - INFO - Setting data with mode: ri
+2024-12-13 15:55:58,534 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:55:58,546 - DEBUG - Performing inverse FFT
+2024-12-13 15:55:58,554 - DEBUG - Displaying image
+2024-12-13 15:55:58,561 - DEBUG - Generating rounded pixmap
+2024-12-13 15:55:58,562 - INFO - Image displayed successfully
+2024-12-13 15:55:58,562 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:57:42,220 - INFO - Starting application.
+2024-12-13 15:57:42,234 - INFO - Initializing Mixer application.
+2024-12-13 15:57:42,236 - INFO - Setting up the left column.
+2024-12-13 15:57:42,577 - INFO - Setting up the right column.
+2024-12-13 15:57:42,577 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 15:57:42,577 - DEBUG - Setting up mode combo box.
+2024-12-13 15:57:42,577 - DEBUG - Setting up ROI combo box.
+2024-12-13 15:57:42,577 - DEBUG - Setting up radio buttons.
+2024-12-13 15:57:42,577 - INFO - Output widget initialized
+2024-12-13 15:57:42,577 - INFO - Port initialized with original image label
+2024-12-13 15:57:42,577 - INFO - Output widget initialized
+2024-12-13 15:57:42,587 - INFO - Port initialized with original image label
+2024-12-13 15:57:42,590 - DEBUG - UI setup complete.
+2024-12-13 15:57:58,853 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:57:58,853 - DEBUG - Getting ROI: Inner
+2024-12-13 15:57:58,853 - DEBUG - ROI selected: Inner
+2024-12-13 15:57:58,859 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 15:57:58,859 - DEBUG - Getting option: Port 1
+2024-12-13 15:57:58,859 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 15:57:58,859 - INFO - Setting data with mode: mp
+2024-12-13 15:57:58,859 - DEBUG - Adding image components with mode: mp
+2024-12-13 15:57:58,864 - WARNING - Unsupported item: Imaginary
+2024-12-13 15:57:58,865 - DEBUG - Performing inverse FFT
+2024-12-13 15:57:58,867 - ERROR - Error in ifft: not enough values to unpack (expected 2, got 0)
+2024-12-13 15:57:58,867 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:58:02,845 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 15:58:04,090 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:58:04,090 - DEBUG - Getting ROI: Inner
+2024-12-13 15:58:04,090 - DEBUG - ROI selected: Inner
+2024-12-13 15:58:04,090 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:58:04,090 - DEBUG - Getting option: Port 1
+2024-12-13 15:58:04,090 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 15:58:04,090 - INFO - Setting data with mode: ri
+2024-12-13 15:58:04,090 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:58:04,102 - DEBUG - Performing inverse FFT
+2024-12-13 15:58:04,114 - DEBUG - Displaying image
+2024-12-13 15:58:04,114 - DEBUG - Generating rounded pixmap
+2024-12-13 15:58:04,114 - INFO - Image displayed successfully
+2024-12-13 15:58:04,121 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:58:14,730 - DEBUG - Radio button toggled: Port 2
+2024-12-13 15:58:15,918 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:58:15,918 - DEBUG - Getting ROI: Inner
+2024-12-13 15:58:15,923 - DEBUG - ROI selected: Inner
+2024-12-13 15:58:15,923 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:58:15,923 - DEBUG - Getting option: Port 2
+2024-12-13 15:58:15,923 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 15:58:15,923 - INFO - Setting data with mode: ri
+2024-12-13 15:58:15,923 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:58:15,923 - DEBUG - Performing inverse FFT
+2024-12-13 15:58:15,945 - DEBUG - Displaying image
+2024-12-13 15:58:15,945 - DEBUG - Generating rounded pixmap
+2024-12-13 15:58:15,945 - INFO - Image displayed successfully
+2024-12-13 15:58:15,945 - INFO - Fourier Transform components successfully processed.
+2024-12-13 15:58:44,483 - INFO - Collecting Fourier Transform components.
+2024-12-13 15:58:44,483 - DEBUG - Getting ROI: Inner
+2024-12-13 15:58:44,483 - DEBUG - ROI selected: Inner
+2024-12-13 15:58:44,490 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 15:58:44,490 - DEBUG - Getting option: Port 2
+2024-12-13 15:58:44,490 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 15:58:44,490 - INFO - Setting data with mode: ri
+2024-12-13 15:58:44,495 - DEBUG - Adding image components with mode: ri
+2024-12-13 15:58:44,497 - DEBUG - Performing inverse FFT
+2024-12-13 15:58:44,509 - DEBUG - Displaying image
+2024-12-13 15:58:44,509 - DEBUG - Generating rounded pixmap
+2024-12-13 15:58:44,513 - INFO - Image displayed successfully
+2024-12-13 15:58:44,513 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:11:05,175 - INFO - Starting application.
+2024-12-13 16:11:05,195 - INFO - Initializing Mixer application.
+2024-12-13 16:11:05,196 - INFO - Setting up the left column.
+2024-12-13 16:11:05,910 - INFO - Setting up the right column.
+2024-12-13 16:11:05,920 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 16:11:05,926 - DEBUG - Setting up mode combo box.
+2024-12-13 16:11:05,950 - DEBUG - Setting up ROI combo box.
+2024-12-13 16:11:05,988 - DEBUG - Setting up radio buttons.
+2024-12-13 16:11:06,037 - INFO - Output widget initialized
+2024-12-13 16:11:06,038 - INFO - Port initialized with original image label
+2024-12-13 16:11:06,038 - INFO - Output widget initialized
+2024-12-13 16:11:06,038 - INFO - Port initialized with original image label
+2024-12-13 16:11:06,054 - DEBUG - UI setup complete.
+2024-12-13 16:11:17,040 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:11:17,040 - DEBUG - Getting ROI: Inner
+2024-12-13 16:11:17,040 - DEBUG - ROI selected: Inner
+2024-12-13 16:11:17,040 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:11:17,046 - DEBUG - Getting option: Port 1
+2024-12-13 16:11:17,046 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:11:17,046 - INFO - Setting data with mode: mp
+2024-12-13 16:11:17,046 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:11:17,046 - DEBUG - Performing inverse FFT
+2024-12-13 16:11:17,059 - DEBUG - Displaying image
+2024-12-13 16:11:17,059 - DEBUG - Generating rounded pixmap
+2024-12-13 16:11:17,059 - INFO - Image displayed successfully
+2024-12-13 16:11:17,065 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:26:59,707 - INFO - Starting application.
+2024-12-13 16:26:59,769 - INFO - Initializing Mixer application.
+2024-12-13 16:26:59,775 - INFO - Setting up the left column.
+2024-12-13 16:27:00,528 - INFO - Setting up the right column.
+2024-12-13 16:27:00,528 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 16:27:00,528 - DEBUG - Setting up mode combo box.
+2024-12-13 16:27:00,528 - DEBUG - Setting up ROI combo box.
+2024-12-13 16:27:00,528 - DEBUG - Setting up radio buttons.
+2024-12-13 16:27:00,538 - INFO - Output widget initialized
+2024-12-13 16:27:00,538 - INFO - Port initialized with original image label
+2024-12-13 16:27:00,538 - INFO - Output widget initialized
+2024-12-13 16:27:00,538 - INFO - Port initialized with original image label
+2024-12-13 16:27:00,555 - DEBUG - UI setup complete.
+2024-12-13 16:27:16,356 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:27:16,356 - DEBUG - Getting ROI: Inner
+2024-12-13 16:27:16,356 - DEBUG - ROI selected: Inner
+2024-12-13 16:27:16,356 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:27:16,356 - DEBUG - Getting option: Port 1
+2024-12-13 16:27:16,356 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:27:16,356 - INFO - Setting data with mode: mp
+2024-12-13 16:27:16,356 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:27:16,356 - DEBUG - Performing inverse FFT
+2024-12-13 16:27:16,394 - DEBUG - Displaying image
+2024-12-13 16:27:16,394 - DEBUG - Generating rounded pixmap
+2024-12-13 16:27:16,394 - INFO - Image displayed successfully
+2024-12-13 16:27:16,394 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:27:35,739 - DEBUG - Radio button toggled: Port 2
+2024-12-13 16:27:37,529 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:27:37,529 - DEBUG - Getting ROI: Inner
+2024-12-13 16:27:37,529 - DEBUG - ROI selected: Inner
+2024-12-13 16:27:37,533 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:27:37,535 - DEBUG - Getting option: Port 2
+2024-12-13 16:27:37,535 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 16:27:37,535 - INFO - Setting data with mode: mp
+2024-12-13 16:27:37,535 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:27:37,539 - DEBUG - Performing inverse FFT
+2024-12-13 16:27:37,561 - DEBUG - Displaying image
+2024-12-13 16:27:37,569 - DEBUG - Generating rounded pixmap
+2024-12-13 16:27:37,573 - INFO - Image displayed successfully
+2024-12-13 16:27:37,573 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:47:16,553 - INFO - Starting application.
+2024-12-13 16:47:16,571 - INFO - Initializing Mixer application.
+2024-12-13 16:47:16,571 - INFO - Setting up the left column.
+2024-12-13 16:47:16,911 - INFO - Setting up the right column.
+2024-12-13 16:47:16,911 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 16:47:16,911 - DEBUG - Setting up mode combo box.
+2024-12-13 16:47:16,911 - DEBUG - Setting up ROI combo box.
+2024-12-13 16:47:16,911 - DEBUG - Setting up radio buttons.
+2024-12-13 16:47:16,922 - INFO - Output widget initialized
+2024-12-13 16:47:16,922 - INFO - Port initialized with original image label
+2024-12-13 16:47:16,922 - INFO - Output widget initialized
+2024-12-13 16:47:16,926 - INFO - Port initialized with original image label
+2024-12-13 16:47:16,940 - DEBUG - UI setup complete.
+2024-12-13 16:47:32,310 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:47:32,310 - DEBUG - Getting ROI: Inner
+2024-12-13 16:47:32,310 - DEBUG - ROI selected: Inner
+2024-12-13 16:47:32,310 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:47:32,310 - DEBUG - Getting option: Port 1
+2024-12-13 16:47:32,310 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:47:32,310 - INFO - Setting data with mode: mp
+2024-12-13 16:47:32,310 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:47:32,319 - DEBUG - Performing inverse FFT
+2024-12-13 16:47:32,350 - DEBUG - Displaying image
+2024-12-13 16:47:32,350 - DEBUG - Generating rounded pixmap
+2024-12-13 16:47:32,353 - INFO - Image displayed successfully
+2024-12-13 16:47:32,353 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:47:39,586 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:47:39,586 - DEBUG - Getting ROI: Inner
+2024-12-13 16:47:39,586 - DEBUG - ROI selected: Inner
+2024-12-13 16:47:39,586 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:47:39,591 - DEBUG - Getting option: Port 1
+2024-12-13 16:47:39,593 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:47:39,593 - INFO - Setting data with mode: mp
+2024-12-13 16:47:39,595 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:47:39,596 - DEBUG - Performing inverse FFT
+2024-12-13 16:47:39,624 - DEBUG - Displaying image
+2024-12-13 16:47:39,627 - DEBUG - Generating rounded pixmap
+2024-12-13 16:47:39,627 - INFO - Image displayed successfully
+2024-12-13 16:47:39,631 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:47:42,533 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:47:42,533 - DEBUG - Getting ROI: Inner
+2024-12-13 16:47:42,533 - DEBUG - ROI selected: Inner
+2024-12-13 16:47:42,533 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:47:42,533 - DEBUG - Getting option: Port 1
+2024-12-13 16:47:42,533 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:47:42,533 - INFO - Setting data with mode: mp
+2024-12-13 16:47:42,533 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:47:42,543 - DEBUG - Performing inverse FFT
+2024-12-13 16:47:42,565 - DEBUG - Displaying image
+2024-12-13 16:47:42,565 - DEBUG - Generating rounded pixmap
+2024-12-13 16:47:42,565 - INFO - Image displayed successfully
+2024-12-13 16:47:42,565 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:47:55,379 - INFO - Starting application.
+2024-12-13 16:47:55,395 - INFO - Initializing Mixer application.
+2024-12-13 16:47:55,395 - INFO - Setting up the left column.
+2024-12-13 16:47:55,744 - INFO - Setting up the right column.
+2024-12-13 16:47:55,744 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 16:47:55,744 - DEBUG - Setting up mode combo box.
+2024-12-13 16:47:55,744 - DEBUG - Setting up ROI combo box.
+2024-12-13 16:47:55,760 - DEBUG - Setting up radio buttons.
+2024-12-13 16:47:55,763 - INFO - Output widget initialized
+2024-12-13 16:47:55,763 - INFO - Port initialized with original image label
+2024-12-13 16:47:55,763 - INFO - Output widget initialized
+2024-12-13 16:47:55,767 - INFO - Port initialized with original image label
+2024-12-13 16:47:55,779 - DEBUG - UI setup complete.
+2024-12-13 16:48:08,282 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:48:08,282 - DEBUG - Getting ROI: Inner
+2024-12-13 16:48:08,282 - DEBUG - ROI selected: Inner
+2024-12-13 16:48:08,282 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:48:08,288 - DEBUG - Getting option: Port 1
+2024-12-13 16:48:08,288 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:48:08,288 - INFO - Setting data with mode: mp
+2024-12-13 16:48:08,288 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:48:08,293 - DEBUG - Performing inverse FFT
+2024-12-13 16:48:08,315 - DEBUG - Displaying image
+2024-12-13 16:48:08,315 - DEBUG - Generating rounded pixmap
+2024-12-13 16:48:08,327 - INFO - Image displayed successfully
+2024-12-13 16:48:08,331 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:48:15,942 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:48:15,942 - DEBUG - Getting ROI: Inner
+2024-12-13 16:48:15,942 - DEBUG - ROI selected: Inner
+2024-12-13 16:48:15,942 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 16:48:15,947 - DEBUG - Getting option: Port 1
+2024-12-13 16:48:15,948 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 16:48:15,948 - INFO - Setting data with mode: mp
+2024-12-13 16:48:15,951 - DEBUG - Adding image components with mode: mp
+2024-12-13 16:48:15,953 - DEBUG - Performing inverse FFT
+2024-12-13 16:48:15,983 - DEBUG - Displaying image
+2024-12-13 16:48:15,983 - DEBUG - Generating rounded pixmap
+2024-12-13 16:48:15,983 - INFO - Image displayed successfully
+2024-12-13 16:48:15,983 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:48:36,117 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 16:48:41,126 - DEBUG - Radio button toggled: Port 2
+2024-12-13 16:48:42,729 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:48:42,729 - DEBUG - Getting ROI: Inner
+2024-12-13 16:48:42,729 - DEBUG - ROI selected: Inner
+2024-12-13 16:48:42,729 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 16:48:42,734 - DEBUG - Getting option: Port 2
+2024-12-13 16:48:42,734 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 16:48:42,734 - INFO - Setting data with mode: ri
+2024-12-13 16:48:42,736 - DEBUG - Adding image components with mode: ri
+2024-12-13 16:48:42,738 - DEBUG - Performing inverse FFT
+2024-12-13 16:48:42,750 - DEBUG - Displaying image
+2024-12-13 16:48:42,750 - DEBUG - Generating rounded pixmap
+2024-12-13 16:48:42,754 - INFO - Image displayed successfully
+2024-12-13 16:48:42,754 - INFO - Fourier Transform components successfully processed.
+2024-12-13 16:49:00,564 - INFO - Collecting Fourier Transform components.
+2024-12-13 16:49:00,564 - DEBUG - Getting ROI: Inner
+2024-12-13 16:49:00,564 - DEBUG - ROI selected: Inner
+2024-12-13 16:49:00,564 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 16:49:00,570 - DEBUG - Getting option: Port 2
+2024-12-13 16:49:00,570 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 16:49:00,570 - INFO - Setting data with mode: ri
+2024-12-13 16:49:00,574 - DEBUG - Adding image components with mode: ri
+2024-12-13 16:49:00,575 - DEBUG - Performing inverse FFT
+2024-12-13 16:49:00,586 - DEBUG - Displaying image
+2024-12-13 16:49:00,586 - DEBUG - Generating rounded pixmap
+2024-12-13 16:49:00,591 - INFO - Image displayed successfully
+2024-12-13 16:49:00,593 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:01:24,949 - INFO - Starting application.
+2024-12-13 17:01:24,956 - INFO - Initializing Mixer application.
+2024-12-13 17:01:24,956 - INFO - Setting up the left column.
+2024-12-13 17:01:25,457 - INFO - Setting up the right column.
+2024-12-13 17:01:25,457 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:01:25,457 - DEBUG - Setting up mode combo box.
+2024-12-13 17:01:25,474 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:01:25,474 - DEBUG - Setting up radio buttons.
+2024-12-13 17:01:25,478 - INFO - Output widget initialized
+2024-12-13 17:01:25,478 - INFO - Port initialized with original image label
+2024-12-13 17:01:25,478 - INFO - Output widget initialized
+2024-12-13 17:01:25,478 - INFO - Port initialized with original image label
+2024-12-13 17:01:25,500 - DEBUG - UI setup complete.
+2024-12-13 17:01:38,623 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:01:38,626 - DEBUG - Getting ROI: Inner
+2024-12-13 17:01:38,626 - DEBUG - ROI selected: Inner
+2024-12-13 17:01:38,626 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:01:38,629 - DEBUG - Getting option: Port 1
+2024-12-13 17:01:38,630 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:01:38,630 - INFO - Setting data with mode: mp
+2024-12-13 17:01:38,630 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:01:38,633 - DEBUG - Performing inverse FFT
+2024-12-13 17:01:38,659 - DEBUG - Displaying image
+2024-12-13 17:01:38,662 - DEBUG - Generating rounded pixmap
+2024-12-13 17:01:38,665 - INFO - Image displayed successfully
+2024-12-13 17:01:38,665 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:02:08,390 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:02:10,167 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:02:10,167 - DEBUG - Getting ROI: Inner
+2024-12-13 17:02:10,167 - DEBUG - ROI selected: Inner
+2024-12-13 17:02:10,167 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:02:10,167 - DEBUG - Getting option: Port 2
+2024-12-13 17:02:10,167 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 17:02:10,174 - INFO - Setting data with mode: mp
+2024-12-13 17:02:10,174 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:02:10,176 - DEBUG - Performing inverse FFT
+2024-12-13 17:02:10,198 - DEBUG - Displaying image
+2024-12-13 17:02:10,198 - DEBUG - Generating rounded pixmap
+2024-12-13 17:02:10,206 - INFO - Image displayed successfully
+2024-12-13 17:02:10,209 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:02:58,334 - INFO - Starting application.
+2024-12-13 17:02:58,344 - INFO - Initializing Mixer application.
+2024-12-13 17:02:58,344 - INFO - Setting up the left column.
+2024-12-13 17:02:58,733 - INFO - Setting up the right column.
+2024-12-13 17:02:58,733 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:02:58,733 - DEBUG - Setting up mode combo box.
+2024-12-13 17:02:58,733 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:02:58,748 - DEBUG - Setting up radio buttons.
+2024-12-13 17:02:58,754 - INFO - Output widget initialized
+2024-12-13 17:02:58,754 - INFO - Port initialized with original image label
+2024-12-13 17:02:58,754 - INFO - Output widget initialized
+2024-12-13 17:02:58,754 - INFO - Port initialized with original image label
+2024-12-13 17:02:58,760 - DEBUG - UI setup complete.
+2024-12-13 17:03:22,066 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:03:22,066 - DEBUG - Getting ROI: Inner
+2024-12-13 17:03:22,066 - DEBUG - ROI selected: Inner
+2024-12-13 17:03:22,066 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:03:22,066 - DEBUG - Getting option: Port 1
+2024-12-13 17:03:22,066 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:03:22,066 - INFO - Setting data with mode: mp
+2024-12-13 17:03:22,077 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:03:22,077 - DEBUG - Performing inverse FFT
+2024-12-13 17:03:22,106 - DEBUG - Displaying image
+2024-12-13 17:03:22,109 - DEBUG - Generating rounded pixmap
+2024-12-13 17:03:22,110 - INFO - Image displayed successfully
+2024-12-13 17:03:22,110 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:03:26,834 - DEBUG - ROI updated: Outer
+2024-12-13 17:03:27,611 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:03:30,669 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:03:30,669 - DEBUG - Getting ROI: Outer
+2024-12-13 17:03:30,669 - DEBUG - ROI selected: Outer
+2024-12-13 17:03:30,669 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:03:30,675 - DEBUG - Getting option: Port 2
+2024-12-13 17:03:30,675 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 17:03:30,675 - INFO - Setting data with mode: mp
+2024-12-13 17:03:30,675 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:03:30,675 - DEBUG - Performing inverse FFT
+2024-12-13 17:03:30,700 - DEBUG - Displaying image
+2024-12-13 17:03:30,700 - DEBUG - Generating rounded pixmap
+2024-12-13 17:03:30,700 - INFO - Image displayed successfully
+2024-12-13 17:03:30,700 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:10:46,055 - INFO - Starting application.
+2024-12-13 17:10:46,068 - INFO - Initializing Mixer application.
+2024-12-13 17:10:46,069 - INFO - Setting up the left column.
+2024-12-13 17:10:46,380 - INFO - Setting up the right column.
+2024-12-13 17:10:46,380 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:10:46,380 - DEBUG - Setting up mode combo box.
+2024-12-13 17:10:46,395 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:10:46,395 - DEBUG - Setting up radio buttons.
+2024-12-13 17:10:46,395 - INFO - Output widget initialized
+2024-12-13 17:10:46,395 - INFO - Port initialized with original image label
+2024-12-13 17:10:46,395 - INFO - Output widget initialized
+2024-12-13 17:10:46,402 - INFO - Port initialized with original image label
+2024-12-13 17:10:46,412 - DEBUG - UI setup complete.
+2024-12-13 17:11:02,098 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:11:02,101 - DEBUG - Getting ROI: Inner
+2024-12-13 17:11:02,101 - DEBUG - ROI selected: Inner
+2024-12-13 17:11:02,101 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:11:02,101 - DEBUG - Getting option: Port 1
+2024-12-13 17:11:02,101 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:11:02,101 - INFO - Setting data with mode: mp
+2024-12-13 17:11:02,101 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:11:02,108 - DEBUG - Performing inverse FFT
+2024-12-13 17:11:02,135 - DEBUG - Displaying image
+2024-12-13 17:11:02,137 - DEBUG - Generating rounded pixmap
+2024-12-13 17:11:02,137 - INFO - Image displayed successfully
+2024-12-13 17:11:02,137 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:11:12,456 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:11:12,456 - DEBUG - Getting ROI: Inner
+2024-12-13 17:11:12,456 - DEBUG - ROI selected: Inner
+2024-12-13 17:11:12,456 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:11:12,456 - DEBUG - Getting option: Port 1
+2024-12-13 17:11:12,456 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:11:12,456 - INFO - Setting data with mode: mp
+2024-12-13 17:11:12,467 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:11:12,468 - DEBUG - Performing inverse FFT
+2024-12-13 17:11:12,493 - DEBUG - Displaying image
+2024-12-13 17:11:12,493 - DEBUG - Generating rounded pixmap
+2024-12-13 17:11:12,502 - INFO - Image displayed successfully
+2024-12-13 17:11:12,502 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:11:15,999 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:11:17,609 - DEBUG - ROI updated: Outer
+2024-12-13 17:11:20,072 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:11:20,073 - DEBUG - Getting ROI: Outer
+2024-12-13 17:11:20,075 - DEBUG - ROI selected: Outer
+2024-12-13 17:11:20,076 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:11:20,078 - DEBUG - Getting option: Port 2
+2024-12-13 17:11:20,079 - DEBUG - Port selected: Port 2, Mode: mp
+2024-12-13 17:11:20,081 - INFO - Setting data with mode: mp
+2024-12-13 17:11:20,082 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:11:20,084 - DEBUG - Performing inverse FFT
+2024-12-13 17:11:20,112 - DEBUG - Displaying image
+2024-12-13 17:11:20,122 - DEBUG - Generating rounded pixmap
+2024-12-13 17:11:20,122 - INFO - Image displayed successfully
+2024-12-13 17:11:20,122 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:11:36,332 - INFO - Starting application.
+2024-12-13 17:11:36,338 - INFO - Initializing Mixer application.
+2024-12-13 17:11:36,344 - INFO - Setting up the left column.
+2024-12-13 17:11:36,680 - INFO - Setting up the right column.
+2024-12-13 17:11:36,680 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:11:36,680 - DEBUG - Setting up mode combo box.
+2024-12-13 17:11:36,680 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:11:36,695 - DEBUG - Setting up radio buttons.
+2024-12-13 17:11:36,702 - INFO - Output widget initialized
+2024-12-13 17:11:36,703 - INFO - Port initialized with original image label
+2024-12-13 17:11:36,703 - INFO - Output widget initialized
+2024-12-13 17:11:36,703 - INFO - Port initialized with original image label
+2024-12-13 17:11:36,703 - DEBUG - UI setup complete.
+2024-12-13 17:11:52,300 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:11:52,300 - DEBUG - Getting ROI: Inner
+2024-12-13 17:11:52,300 - DEBUG - ROI selected: Inner
+2024-12-13 17:11:52,300 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:11:52,300 - DEBUG - Getting option: Port 1
+2024-12-13 17:11:52,300 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:11:52,300 - INFO - Setting data with mode: mp
+2024-12-13 17:11:52,300 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:11:52,300 - DEBUG - Performing inverse FFT
+2024-12-13 17:11:52,341 - DEBUG - Displaying image
+2024-12-13 17:11:52,343 - DEBUG - Generating rounded pixmap
+2024-12-13 17:11:52,343 - INFO - Image displayed successfully
+2024-12-13 17:11:52,343 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:12:30,353 - INFO - Starting application.
+2024-12-13 17:12:30,361 - INFO - Initializing Mixer application.
+2024-12-13 17:12:30,361 - INFO - Setting up the left column.
+2024-12-13 17:12:30,971 - INFO - Setting up the right column.
+2024-12-13 17:12:30,971 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:12:30,971 - DEBUG - Setting up mode combo box.
+2024-12-13 17:12:30,971 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:12:30,971 - DEBUG - Setting up radio buttons.
+2024-12-13 17:12:30,998 - INFO - Output widget initialized
+2024-12-13 17:12:30,998 - INFO - Port initialized with original image label
+2024-12-13 17:12:30,998 - INFO - Output widget initialized
+2024-12-13 17:12:31,002 - INFO - Port initialized with original image label
+2024-12-13 17:12:31,026 - DEBUG - UI setup complete.
+2024-12-13 17:12:45,740 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:12:45,740 - DEBUG - Getting ROI: Inner
+2024-12-13 17:12:45,740 - DEBUG - ROI selected: Inner
+2024-12-13 17:12:45,740 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:12:45,746 - DEBUG - Getting option: Port 1
+2024-12-13 17:12:45,747 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:12:45,747 - INFO - Setting data with mode: mp
+2024-12-13 17:12:45,747 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:12:45,751 - DEBUG - Performing inverse FFT
+2024-12-13 17:12:45,777 - DEBUG - Displaying image
+2024-12-13 17:12:45,777 - DEBUG - Generating rounded pixmap
+2024-12-13 17:12:45,791 - INFO - Image displayed successfully
+2024-12-13 17:12:45,793 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:12:52,267 - INFO - Starting application.
+2024-12-13 17:12:52,279 - INFO - Initializing Mixer application.
+2024-12-13 17:12:52,279 - INFO - Setting up the left column.
+2024-12-13 17:12:52,666 - INFO - Setting up the right column.
+2024-12-13 17:12:52,667 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:12:52,669 - DEBUG - Setting up mode combo box.
+2024-12-13 17:12:52,669 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:12:52,669 - DEBUG - Setting up radio buttons.
+2024-12-13 17:12:52,677 - INFO - Output widget initialized
+2024-12-13 17:12:52,677 - INFO - Port initialized with original image label
+2024-12-13 17:12:52,677 - INFO - Output widget initialized
+2024-12-13 17:12:52,677 - INFO - Port initialized with original image label
+2024-12-13 17:12:52,697 - DEBUG - UI setup complete.
+2024-12-13 17:13:14,411 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:13:14,411 - DEBUG - Getting ROI: Inner
+2024-12-13 17:13:14,411 - DEBUG - ROI selected: Inner
+2024-12-13 17:13:14,411 - DEBUG - Getting mode: Magnitude/Phase
+2024-12-13 17:13:14,417 - DEBUG - Getting option: Port 1
+2024-12-13 17:13:14,417 - DEBUG - Port selected: Port 1, Mode: mp
+2024-12-13 17:13:14,417 - INFO - Setting data with mode: mp
+2024-12-13 17:13:14,417 - DEBUG - Adding image components with mode: mp
+2024-12-13 17:13:14,421 - WARNING - Unsupported item: Real
+2024-12-13 17:13:14,423 - WARNING - Unsupported item: Imaginary
+2024-12-13 17:13:14,423 - DEBUG - Performing inverse FFT
+2024-12-13 17:13:14,426 - ERROR - Error in ifft: not enough values to unpack (expected 2, got 0)
+2024-12-13 17:13:14,427 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:13:17,737 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 17:13:19,424 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:13:19,424 - DEBUG - Getting ROI: Inner
+2024-12-13 17:13:19,424 - DEBUG - ROI selected: Inner
+2024-12-13 17:13:19,424 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:13:19,430 - DEBUG - Getting option: Port 1
+2024-12-13 17:13:19,430 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 17:13:19,430 - INFO - Setting data with mode: ri
+2024-12-13 17:13:19,432 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:13:19,434 - DEBUG - Performing inverse FFT
+2024-12-13 17:13:19,442 - DEBUG - Displaying image
+2024-12-13 17:13:19,442 - DEBUG - Generating rounded pixmap
+2024-12-13 17:13:19,449 - INFO - Image displayed successfully
+2024-12-13 17:13:19,449 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:13:29,602 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:13:31,574 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:13:31,574 - DEBUG - Getting ROI: Inner
+2024-12-13 17:13:31,574 - DEBUG - ROI selected: Inner
+2024-12-13 17:13:31,574 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:13:31,579 - DEBUG - Getting option: Port 2
+2024-12-13 17:13:31,579 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 17:13:31,579 - INFO - Setting data with mode: ri
+2024-12-13 17:13:31,581 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:13:31,583 - DEBUG - Performing inverse FFT
+2024-12-13 17:13:31,595 - DEBUG - Displaying image
+2024-12-13 17:13:31,595 - DEBUG - Generating rounded pixmap
+2024-12-13 17:13:31,595 - INFO - Image displayed successfully
+2024-12-13 17:13:31,595 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:13:39,601 - DEBUG - Radio button toggled: Port 1
+2024-12-13 17:13:50,791 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:13:50,791 - DEBUG - Getting ROI: Inner
+2024-12-13 17:13:50,791 - DEBUG - ROI selected: Inner
+2024-12-13 17:13:50,791 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:13:50,797 - DEBUG - Getting option: Port 1
+2024-12-13 17:13:50,797 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 17:13:50,797 - INFO - Setting data with mode: ri
+2024-12-13 17:13:50,801 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:13:50,803 - DEBUG - Performing inverse FFT
+2024-12-13 17:13:50,812 - DEBUG - Displaying image
+2024-12-13 17:13:50,812 - DEBUG - Generating rounded pixmap
+2024-12-13 17:13:50,812 - INFO - Image displayed successfully
+2024-12-13 17:13:50,820 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:14:11,615 - INFO - Starting application.
+2024-12-13 17:14:11,628 - INFO - Initializing Mixer application.
+2024-12-13 17:14:11,629 - INFO - Setting up the left column.
+2024-12-13 17:14:11,953 - INFO - Setting up the right column.
+2024-12-13 17:14:11,953 - DEBUG - Initializing Controls widget with default values.
+2024-12-13 17:14:11,953 - DEBUG - Setting up mode combo box.
+2024-12-13 17:14:11,953 - DEBUG - Setting up ROI combo box.
+2024-12-13 17:14:11,953 - DEBUG - Setting up radio buttons.
+2024-12-13 17:14:11,972 - INFO - Output widget initialized
+2024-12-13 17:14:11,972 - INFO - Port initialized with original image label
+2024-12-13 17:14:11,972 - INFO - Output widget initialized
+2024-12-13 17:14:11,972 - INFO - Port initialized with original image label
+2024-12-13 17:14:11,988 - DEBUG - UI setup complete.
+2024-12-13 17:14:29,171 - DEBUG - Mode updated: Real/Imaginary
+2024-12-13 17:14:31,174 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:14:31,174 - DEBUG - Getting ROI: Inner
+2024-12-13 17:14:31,174 - DEBUG - ROI selected: Inner
+2024-12-13 17:14:31,174 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:14:31,180 - DEBUG - Getting option: Port 1
+2024-12-13 17:14:31,180 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 17:14:31,180 - INFO - Setting data with mode: ri
+2024-12-13 17:14:31,180 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:14:31,184 - DEBUG - Performing inverse FFT
+2024-12-13 17:14:31,194 - DEBUG - Displaying image
+2024-12-13 17:14:31,194 - DEBUG - Generating rounded pixmap
+2024-12-13 17:14:31,201 - INFO - Image displayed successfully
+2024-12-13 17:14:31,201 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:14:44,193 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:14:45,975 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:14:45,975 - DEBUG - Getting ROI: Inner
+2024-12-13 17:14:45,978 - DEBUG - ROI selected: Inner
+2024-12-13 17:14:45,978 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:14:45,980 - DEBUG - Getting option: Port 2
+2024-12-13 17:14:45,980 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 17:14:45,980 - INFO - Setting data with mode: ri
+2024-12-13 17:14:45,982 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:14:45,984 - DEBUG - Performing inverse FFT
+2024-12-13 17:14:45,991 - DEBUG - Displaying image
+2024-12-13 17:14:45,991 - DEBUG - Generating rounded pixmap
+2024-12-13 17:14:46,001 - INFO - Image displayed successfully
+2024-12-13 17:14:46,002 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:14:58,386 - DEBUG - Radio button toggled: Port 1
+2024-12-13 17:15:01,821 - DEBUG - ROI updated: Outer
+2024-12-13 17:15:03,730 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:15:03,730 - DEBUG - Getting ROI: Outer
+2024-12-13 17:15:03,730 - DEBUG - ROI selected: Outer
+2024-12-13 17:15:03,730 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:15:03,730 - DEBUG - Getting option: Port 1
+2024-12-13 17:15:03,730 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 17:15:03,739 - INFO - Setting data with mode: ri
+2024-12-13 17:15:03,742 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:15:03,742 - DEBUG - Performing inverse FFT
+2024-12-13 17:15:03,752 - DEBUG - Displaying image
+2024-12-13 17:15:03,759 - DEBUG - Generating rounded pixmap
+2024-12-13 17:15:03,759 - INFO - Image displayed successfully
+2024-12-13 17:15:03,762 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:15:14,850 - DEBUG - Radio button toggled: Port 2
+2024-12-13 17:15:16,777 - DEBUG - ROI updated: Inner
+2024-12-13 17:15:18,340 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:15:18,340 - DEBUG - Getting ROI: Inner
+2024-12-13 17:15:18,340 - DEBUG - ROI selected: Inner
+2024-12-13 17:15:18,344 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:15:18,344 - DEBUG - Getting option: Port 2
+2024-12-13 17:15:18,344 - DEBUG - Port selected: Port 2, Mode: ri
+2024-12-13 17:15:18,347 - INFO - Setting data with mode: ri
+2024-12-13 17:15:18,351 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:15:18,351 - DEBUG - Performing inverse FFT
+2024-12-13 17:15:18,363 - DEBUG - Displaying image
+2024-12-13 17:15:18,368 - DEBUG - Generating rounded pixmap
+2024-12-13 17:15:18,369 - INFO - Image displayed successfully
+2024-12-13 17:15:18,369 - INFO - Fourier Transform components successfully processed.
+2024-12-13 17:15:28,111 - DEBUG - ROI updated: Outer
+2024-12-13 17:15:29,642 - DEBUG - Radio button toggled: Port 1
+2024-12-13 17:15:31,145 - INFO - Collecting Fourier Transform components.
+2024-12-13 17:15:31,145 - DEBUG - Getting ROI: Outer
+2024-12-13 17:15:31,145 - DEBUG - ROI selected: Outer
+2024-12-13 17:15:31,145 - DEBUG - Getting mode: Real/Imaginary
+2024-12-13 17:15:31,145 - DEBUG - Getting option: Port 1
+2024-12-13 17:15:31,145 - DEBUG - Port selected: Port 1, Mode: ri
+2024-12-13 17:15:31,145 - INFO - Setting data with mode: ri
+2024-12-13 17:15:31,156 - DEBUG - Adding image components with mode: ri
+2024-12-13 17:15:31,157 - DEBUG - Performing inverse FFT
+2024-12-13 17:15:31,165 - DEBUG - Displaying image
+2024-12-13 17:15:31,165 - DEBUG - Generating rounded pixmap
+2024-12-13 17:15:31,175 - INFO - Image displayed successfully
+2024-12-13 17:15:31,176 - INFO - Fourier Transform components successfully processed.

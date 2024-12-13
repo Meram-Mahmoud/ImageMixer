@@ -107,12 +107,3 @@ class ImageUploader(QWidget):
 
     def get_component(self):
         return self.image_ft.get_roi()
-
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = ImageUploader()
-#     window.setWindowTitle("Image Upload and Fourier Transform")
-#     window.resize(850, 850)  # Resize window to fit both images
-#     window.show()
-#     sys.exit(app.exec_())

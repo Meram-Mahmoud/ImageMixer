@@ -1,6 +1,18 @@
 from PyQt5.QtWidgets import QComboBox, QHBoxLayout, QVBoxLayout, QRadioButton, QWidget, QLabel, QButtonGroup
 from PyQt5.QtCore import pyqtSignal
 
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("ImageMixer/logging/controls.log"),
+        logging.StreamHandler()
+    ]
+)
+
 class Controls(QWidget):
     set_mode = pyqtSignal(str)
     def __init__(self, parent=None):
@@ -10,11 +22,13 @@ class Controls(QWidget):
         self.selected_roi = "Inner"
         self.layout = QVBoxLayout(self)
 
+        logging.debug("Initializing Controls widget with default values.")
         self.mode()
         self.roi()
         self.radio()
     
     def mode(self):
+        logging.debug("Setting up mode combo box.")
         row = QHBoxLayout()
 
         label = QLabel("Mode:")
@@ -49,6 +63,7 @@ class Controls(QWidget):
         self.mode_combo.currentIndexChanged.connect(self.update_mode)
 
     def roi(self):
+        logging.debug("Setting up ROI combo box.")
         row = QHBoxLayout()
 
         label = QLabel("ROI:")
@@ -83,6 +98,7 @@ class Controls(QWidget):
         self.roi_combo.currentIndexChanged.connect(self.update_roi)
 
     def radio(self):
+        logging.debug("Setting up radio buttons.")
         row = QHBoxLayout()
         label = QLabel("View:")
         label.setStyleSheet("""color: #11361e;
@@ -122,26 +138,31 @@ class Controls(QWidget):
         self.radio2.toggled.connect(self.on_radio_button_toggled)
 
     def on_radio_button_toggled(self):
-        # Check which radio button is checked and update the label
         selected_button = self.sender()
         if selected_button.isChecked():
             self.option = selected_button.text()
+            logging.debug(f"Radio button toggled: {self.option}")
 
     def update_mode(self):
         self.selected_mode = self.mode_combo.currentText()
         self.set_mode.emit(self.selected_mode)
+        logging.debug(f"Mode updated: {self.selected_mode}")
         print(self.selected_mode)
     
     def update_roi(self):
         self.selected_roi = self.roi_combo.currentText()
+        logging.debug(f"ROI updated: {self.selected_roi}")
         print(self.selected_roi)
     
     def get_option(self):
+        logging.debug(f"Getting option: {self.option}")
         return self.option
     
     def get_mode(self):
+        logging.debug(f"Getting mode: {self.selected_mode}")
         print(self.selected_mode)
         return self.selected_mode
 
     def get_roi(self):
+        logging.debug(f"Getting ROI: {self.selected_roi}")
         return self.selected_roi
