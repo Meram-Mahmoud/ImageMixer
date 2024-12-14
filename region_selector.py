@@ -78,13 +78,13 @@ class ROISelectableLabel(QLabel):
             painter = QPainter(self)
 
             # Draw the rectangle
-            painter.setPen(QPen(QColor(255, 0, 0), 2, Qt.SolidLine))
-            painter.setBrush(QColor(255, 0, 0, 50))  # Semi-transparent red
+            painter.setPen(QPen(QColor(64, 199, 140), 2, Qt.SolidLine))
+            painter.setBrush(QColor(64, 199, 140, 50))  # Semi-transparent red
             painter.drawRect(self.rect)
 
             # Draw resizing handles
             for rect in self.get_handles().values():
-                painter.setBrush(QColor(255, 0, 0))  # Red handles
+                painter.setBrush(QColor(64, 199, 140))  # Red handles
                 painter.setPen(Qt.NoPen)
                 painter.drawRect(rect)
 
