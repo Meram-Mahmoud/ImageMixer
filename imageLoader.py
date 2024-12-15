@@ -9,9 +9,9 @@ from loader import ImageLoader
 
 # Configure logging
 logging.basicConfig(
-    filename="ImageMixer/logging/image_uploader.log",
-    level=logging.DEBUG,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
 class ImageUploader(QWidget):

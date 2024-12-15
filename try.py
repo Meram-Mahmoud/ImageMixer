@@ -22,10 +22,18 @@ magnitude2 = np.abs(fft_image2)
 phase2 = np.angle(fft_image2)
 
 # Step 3: Reconstruct the image using the magnitude and a random phase
-new_phase = np.random.uniform(0, 2 * np.pi, image1.shape)
-new_mag = np.ones_like(phase1)
-reconstructed_fft = magnitude2 * np.exp(1j * phase1)
-reconstructed_image = np.abs(ifft2(reconstructed_fft))
+
+new_phase = 1*phase1+1*phase2
+new_mag = 1*magnitude1+1*magnitude2
+new_phase = np.where(new_phase< -np.pi, 
+                    new_phase+ np.pi, 
+                    new_phase)
+new_phase = np.where(new_phase> np.pi, 
+                    new_phase- np.pi, 
+                    new_phase)
+
+reconstructed_fft = new_mag/2 * np.exp(1j * new_phase)
+reconstructed_image = np.abs(ifft2(ifftshift(reconstructed_fft)))
 
 # Plot the original and the reconstructed image using magnitude only
 plt.figure(figsize=(10, 5))

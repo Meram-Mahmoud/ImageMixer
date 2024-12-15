@@ -8,12 +8,9 @@ from scipy.fft import ifft2, ifftshift
 
 # Configure logging
 logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("ImageMixer/logging/output_widget.log"),
-        logging.StreamHandler()
-    ]
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
 class Output(QWidget):
@@ -50,23 +47,34 @@ class Output(QWidget):
         
     def add_image_components(self):
         logging.debug("Adding image components with mode: %s", self.mode)
+        self.num_mag = 0
+        self.num_phase = 0
         try:
             if self.mode == 'mp':
                 for comp, item in zip(self.components, self.selected_comp):
                     if 'magnitude' in comp and 'phase' in comp:
                         if item == "Magnitude":
+                            self.num_mag += 1
                             if self.output_image_mag is None:
                                 self.output_image_mag = comp['magnitude']
                             else:
                                 self.output_image_mag += comp['magnitude']
                         elif item == "Phase":
+                            self.num_phase += 1
                             if self.output_image_phase is None:
                                 self.output_image_phase = comp['phase']
                             else:
                                 self.output_image_phase += comp['phase']
-                                self.output_image_phase = (self.output_image_phase + np.pi) % (2 * np.pi) - np.pi
+                                self.output_image_phase = np.where(self.output_image_phase < -np.pi, 
+                                                                self.output_image_phase + np.pi, 
+                                                                self.output_image_phase)
+                                self.output_image_phase = np.where(self.output_image_phase > np.pi, 
+                                                                self.output_image_phase - np.pi, 
+                                                                self.output_image_phase)
                         else: 
                             logging.warning("Unsupported item: %s", item)
+                logging.debug(f"num_mag = {self.num_mag}, num_phase = {self.num_phase}")
+            
             else: 
                 for comp, item in zip(self.components, self.selected_comp):
                     if 'real' in comp and 'imaginary' in comp:
@@ -116,23 +124,23 @@ class Output(QWidget):
         try:
             if self.mode == 'mp':  # Magnitude-Phase mode
                 if self.output_image_mag is None:
+                    self.num_mag += 1
                     self.output_image_mag = np.ones_like(self.output_image_phase)
                 if self.output_image_phase is None:
+                    self.num_phase += 1
                     self.output_image_phase = np.ones_like(self.output_image_mag)
-
-                complex_spectrum = self.output_image_mag * np.exp(1j * self.output_image_phase)
-                reconstructed_image = ifft2(ifftshift(complex_spectrum)).real
+                complex_spectrum = np.exp(self.output_image_mag) * np.exp(1j *self.output_image_phase)
 
             elif self.mode == 'ri':  # Real-Imaginary mode
                 if self.output_image_real is None:
                     self.output_image_real = np.zeros_like(self.output_image_img)
                 if self.output_image_img is None:
                     self.output_image_img = np.zeros_like(self.output_image_real)
-
                 complex_spectrum = self.output_image_real + 1j * self.output_image_img
-                reconstructed_image = np.abs(ifft2(ifftshift(complex_spectrum)))
             
+            reconstructed_image = np.abs(ifft2(ifftshift(complex_spectrum)))            
             reconstructed_image = cv2.normalize(reconstructed_image, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+
             self.display(reconstructed_image)
 
         except Exception as e:

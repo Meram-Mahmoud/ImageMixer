@@ -5,12 +5,9 @@ import logging
 
 # Configure logging
 logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("ImageMixer/logging/controls.log"),
-        logging.StreamHandler()
-    ]
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
 class Controls(QWidget):

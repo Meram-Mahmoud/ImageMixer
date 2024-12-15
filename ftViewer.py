@@ -9,9 +9,9 @@ from controls import Controls
 
 # Configure logging
 logging.basicConfig(
-    filename="ImageMixer/logging/fourier_transform_viewer.log",
-    level=logging.DEBUG,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
 class FourierTransformViewer(QWidget):
@@ -96,8 +96,6 @@ class FourierTransformViewer(QWidget):
         self.old_real = np.real(f_shift)
         self.old_imaginary = np.imag(f_shift)
 
-        self.fourier_image.emit([self.magnitude, self.phase, self.real, self.imaginary])
-
     def update_ft_view(self):
         logging.debug("Updating Fourier Transform view.")
         self.selected = self.component_combo.currentText()
@@ -143,7 +141,7 @@ class FourierTransformViewer(QWidget):
 
     def get_region_data(self, rect):
         logging.debug("Extracting region data for ROI: %s", rect)
-        if self.image is not None and not rect.isNull():
+        if self.image is not None and not rect.isNull() and self.component is not None:
             x1 = int(rect.left() * self.component.shape[1] / self.ft_image_label.width())
             x2 = int(rect.right() * self.component.shape[1] / self.ft_image_label.width())
             y1 = int(rect.top() * self.component.shape[0] / self.ft_image_label.height())

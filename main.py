@@ -9,7 +9,7 @@ from controls import Controls
 
 # Configure logging
 logging.basicConfig(
-    filename='ImageMixer/logging/mixer.log', 
+    filename='ImageMixer/Mixer.log', 
     level=logging.DEBUG, 
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
