@@ -17,7 +17,7 @@ class Output(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.width, self.height, self.radius = 250, 350, 15
+        self.width, self.height, self.radius = 200, 300, 15
 
         self.output_image_real = None
         self.output_image_img = None

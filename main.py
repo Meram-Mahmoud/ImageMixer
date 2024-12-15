@@ -55,9 +55,10 @@ class Mixer(QMainWindow):
         topRowWidget.setObjectName("topRowWidget")
         topRowWidget.setStyleSheet("""
             #topRowWidget {
-                border: 3px solid #11361e;
+                border: 7px solid #02210c;
                 border-radius: 20px;
                 background: #cdd1cf;
+                padding: 10px;
             }""")
         leftColumn.addWidget(topRowWidget)
 
@@ -72,7 +73,7 @@ class Mixer(QMainWindow):
         bottomRowWidget.setObjectName("bottomRowWidget")
         bottomRowWidget.setStyleSheet("""
             #bottomRowWidget {
-                border: 3px solid #11361e;
+                border: 7px solid #02210c;
                 border-radius: 20px;
                 padding: 10px;
                 background: #cdd1cf;
@@ -88,16 +89,19 @@ class Mixer(QMainWindow):
         rightColumn = QVBoxLayout()
 
         self.controls = Controls()
-        rightColumn.addWidget(self.controls, 1)
+        rightColumn.addWidget(self.controls)
 
         self.port1 = Output()
         self.port2 = Output()
-        rightColumn.addWidget(self.port1, 5)
-        rightColumn.addWidget(self.port2, 5)
+        rightColumn.addWidget(self.port1)
+        rightColumn.addWidget(self.port2)
+
+        # self.port1.finished.connect(self.on_processing_finished)
 
         self.mix_button = Mix()
-        rightColumn.addWidget(self.mix_button, 1)
+        rightColumn.addWidget(self.mix_button)
         rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)
+
         self.mix_button.clicked.connect(self.get_ft_components)
 
         rightColumnWidget = QWidget()
@@ -105,7 +109,7 @@ class Mixer(QMainWindow):
         rightColumnWidget.setObjectName("RightColumnWidget")
         rightColumnWidget.setStyleSheet("""
             #RightColumnWidget {
-                border: 3px solid #11361e;
+                border: 7px solid #02210c;
                 border-radius: 20px;
                 padding: 10px;
                 background: #cdd1cf;
