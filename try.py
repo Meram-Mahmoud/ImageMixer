@@ -1,56 +1,58 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.fft import fft2, ifft2, ifftshift
+import threading
+import time
 
-# Load the original image
-image1 = plt.imread('ImageMixer/images/FB_IMG_1579124180609.jpg')  # Replace with your image path
-if image1.ndim == 3:
-    image1 = np.mean(image1, axis=2)  # Convert to grayscale if the image is colored
+class DataProcessingThread(threading.Thread):
+    def __init__(self, data_queue, stop_event):
+        """
+        Initialize the thread.
+        :param data_queue: Queue to hold incoming data for processing.
+        :param stop_event: Event to signal the thread to stop.
+        """
+        super().__init__()
+        self.data_queue = data_queue
+        self.stop_event = stop_event
 
-image2 = plt.imread('ImageMixer/images/IMG_20200410_220644_467.jpg')  # Replace with your image path
-if image2.ndim == 3:
-    image2 = np.mean(image2, axis=2)  # Convert to grayscale if the image is colored
+    def process_data(self, data):
+        """
+        Simulate data processing (e.g., HRV/FHR analysis).
+        :param data: The input data to process.
+        """
+        # Example: Simulate data filtering and analysis
+        time.sleep(0.5)  # Simulate processing time
+        result = f"Processed: {data}"
+        return result
 
-# Step 1: Perform the Fourier Transform
-fft_image1 = fft2(image1)
-fft_image2 = fft2(image2)
+    def run(self):
+        """Thread's activity: process data in the queue until stopped."""
+        print("Thread started.")
+        while not self.stop_event.is_set():
+            if not self.data_queue.empty():
+                data = self.data_queue.get()
+                result = self.process_data(data)
+                print(result)  # You can save or send the result elsewhere
+            else:
+                time.sleep(0.1)  # Avoid busy waiting
+        print("Thread stopped.")
 
-# Step 2: Extract the magnitude and discard the phase
-magnitude1 = np.abs(fft_image1)
-phase1 = np.angle(fft_image1)
-magnitude2 = np.abs(fft_image2)
-phase2 = np.angle(fft_image2)
+# Example usage
+if __name__ == "__main__":
+    from queue import Queue
 
-# Step 3: Reconstruct the image using the magnitude and a random phase
+    # Create a queue to hold data and an event to signal stopping
+    data_queue = Queue()
+    stop_event = threading.Event()
 
-new_phase = 1*phase1+1*phase2
-new_mag = 1*magnitude1+1*magnitude2
-new_phase = np.where(new_phase< -np.pi, 
-                    new_phase+ np.pi, 
-                    new_phase)
-new_phase = np.where(new_phase> np.pi, 
-                    new_phase- np.pi, 
-                    new_phase)
+    # Create and start the thread
+    thread = DataProcessingThread(data_queue, stop_event)
+    thread.start()
 
-reconstructed_fft = new_mag/2 * np.exp(1j * new_phase)
-reconstructed_image = np.abs(ifft2(ifftshift(reconstructed_fft)))
+    # Simulate adding data to the queue
+    for i in range(10):
+        data_queue.put(f"Data {i}")
+        time.sleep(0.2)  # Simulate real-time data arrival
 
-# Plot the original and the reconstructed image using magnitude only
-plt.figure(figsize=(10, 5))
+    # Signal the thread to stop and wait for it to finish
+    stop_event.set()
+    thread.join()
 
-plt.subplot(1, 3, 1)
-plt.title("Original Image")
-plt.imshow(image1, cmap='gray')
-plt.axis('off')
-
-plt.subplot(1, 3, 2)
-plt.title("Original Image")
-plt.imshow(image2, cmap='gray')
-plt.axis('off')
-
-plt.subplot(1, 3, 3)
-plt.title("Reconstructed Image (Magnitude Only)")
-plt.imshow(reconstructed_image, cmap='gray')
-plt.axis('off')
-
-plt.show()
+    print("Main program finished.")

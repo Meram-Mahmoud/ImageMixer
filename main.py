@@ -6,6 +6,8 @@ from output import Output
 from mix import Mix
 from PyQt5.QtCore import Qt
 from controls import Controls
+import threading
+import time
 
 # Configure logging
 logging.basicConfig(
@@ -43,7 +45,6 @@ class Mixer(QMainWindow):
         logging.info("Setting up the left column.")
         leftColumn = QVBoxLayout()
 
-        # Create the top row
         topRow = QHBoxLayout()
         self.image_uploader1 = ImageUploader()
         self.image_uploader2 = ImageUploader()
@@ -96,13 +97,11 @@ class Mixer(QMainWindow):
         rightColumn.addWidget(self.port1)
         rightColumn.addWidget(self.port2)
 
-        # self.port1.finished.connect(self.on_processing_finished)
-
         self.mix_button = Mix()
         rightColumn.addWidget(self.mix_button)
         rightColumn.setAlignment(self.mix_button, Qt.AlignmentFlag.AlignCenter)
 
-        self.mix_button.clicked.connect(self.get_ft_components)
+        self.mix_button.clicked.connect(self.check_thread)
 
         rightColumnWidget = QWidget()
         rightColumnWidget.setLayout(rightColumn)
@@ -117,6 +116,15 @@ class Mixer(QMainWindow):
         rightColumnWidget.setFixedHeight(960)
 
         self.mainLayout.addWidget(rightColumnWidget, 1)
+
+    # Threading
+    def check_thread(self):
+        logging.debug("in threaing function")
+        self.thread_processing = threading.Thread(target=self.get_ft_components)
+        self.thread_bar = threading.Thread(target=self.mix_button.update_progress)
+        self.thread_processing.start()
+        self.thread_bar.start()
+
 
     def get_ft_components(self):
         logging.info("Collecting Fourier Transform components.")
@@ -151,6 +159,8 @@ class Mixer(QMainWindow):
             ]
             port = self.controls.get_option()
             logging.debug(f"Port selected: {port}, Mode: {mode}")
+            
+            time.sleep(2)
 
             if port == "Port 1":
                 self.port1.set_data([img1, img2, img3, img4], mode, components)
