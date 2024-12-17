@@ -11,6 +11,7 @@ logging.basicConfig(
 )
 
 class Mix(QWidget):
+    flag = pyqtSignal(object)
     def __init__(self, parent=None):
         super().__init__(parent)
         self.btn()
@@ -60,7 +61,10 @@ class Mix(QWidget):
         layout.addWidget(self.progress_bar, 2)
 
     def update_progress(self):
+        # print("in progress bar")
         for i in range(101):
+            # if stop_flag.is_set():
+            #     break
             self.progress_bar.setValue(i*20)
             time.sleep(0.35)
             logging.debug(f"Progress updated to: {i*20}%")

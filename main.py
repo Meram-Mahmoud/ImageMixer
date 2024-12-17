@@ -33,6 +33,10 @@ class Mixer(QMainWindow):
         self.createRightColumn()
         logging.debug("UI setup complete.")
 
+        self.stop_flag = threading.Event()
+        self.thread_bar = None
+        self.thread_processing = None
+
         self.change_mode()
 
     def change_mode(self):
@@ -125,6 +129,25 @@ class Mixer(QMainWindow):
         self.thread_processing.start()
         self.thread_bar.start()
 
+    # def check_thread(self):
+    #     logging.debug("Checking threads...")
+
+    #     if self.thread_processing and self.thread_processing.is_alive():
+    #         logging.debug("Stopping previous processing thread...")
+    #         self.stop_flag.set()
+
+    #     if self.thread_bar and self.thread_bar.is_alive():
+    #         logging.debug("Stopping previous progress thread...")
+    #         self.stop_flag.set()
+
+    #     # Reset the stop flag for new thread
+    #     self.stop_flag.clear()
+
+    #     # Start new thread using the imported function
+    #     self.thread_bar = threading.Thread(target=self.mix_button.update_progress, args=(self.stop_flag,))
+    #     self.thread_processing = threading.Thread(target=self.get_ft_components)
+    #     self.thread_bar.start()
+    #     self.thread_processing.start()
 
     def get_ft_components(self):
         logging.info("Collecting Fourier Transform components.")
