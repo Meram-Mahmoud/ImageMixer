@@ -125,29 +125,9 @@ class Mixer(QMainWindow):
     def check_thread(self):
         logging.debug("in threaing function")
         self.thread_processing = threading.Thread(target=self.get_ft_components)
-        self.thread_bar = threading.Thread(target=self.mix_button.update_progress)
+        # self.thread_bar = threading.Thread(target=self.mix_button.update_progress)
         self.thread_processing.start()
-        self.thread_bar.start()
-
-    # def check_thread(self):
-    #     logging.debug("Checking threads...")
-
-    #     if self.thread_processing and self.thread_processing.is_alive():
-    #         logging.debug("Stopping previous processing thread...")
-    #         self.stop_flag.set()
-
-    #     if self.thread_bar and self.thread_bar.is_alive():
-    #         logging.debug("Stopping previous progress thread...")
-    #         self.stop_flag.set()
-
-    #     # Reset the stop flag for new thread
-    #     self.stop_flag.clear()
-
-    #     # Start new thread using the imported function
-    #     self.thread_bar = threading.Thread(target=self.mix_button.update_progress, args=(self.stop_flag,))
-    #     self.thread_processing = threading.Thread(target=self.get_ft_components)
-    #     self.thread_bar.start()
-    #     self.thread_processing.start()
+        # self.thread_bar.start()
 
     def get_ft_components(self):
         logging.info("Collecting Fourier Transform components.")
@@ -183,7 +163,7 @@ class Mixer(QMainWindow):
             port = self.controls.get_option()
             logging.debug(f"Port selected: {port}, Mode: {mode}")
             
-            time.sleep(2)
+            # time.sleep(2)
 
             if port == "Port 1":
                 self.port1.set_data([img1, img2, img3, img4], mode, components)

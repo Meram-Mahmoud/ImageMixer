@@ -56,15 +56,15 @@ class Output(QWidget):
                         if item == "Magnitude":
                             self.num_mag += 1
                             if self.output_image_mag is None:
-                                self.output_image_mag = comp['magnitude']
+                                self.output_image_mag = np.exp(comp['magnitude'])
                             else:
-                                self.output_image_mag += comp['magnitude']
+                                self.output_image_mag += np.exp(comp['magnitude'])
                         elif item == "Phase":
                             self.num_phase += 1
                             if self.output_image_phase is None:
-                                self.output_image_phase = comp['phase']
+                                self.output_image_phase = np.exp(1j * comp['phase'])
                             else:
-                                self.output_image_phase += comp['phase']
+                                self.output_image_phase += np.exp(1j * comp['phase'])
                                 self.output_image_phase = np.where(self.output_image_phase < -np.pi, 
                                                                 self.output_image_phase + np.pi, 
                                                                 self.output_image_phase)
@@ -124,12 +124,10 @@ class Output(QWidget):
         try:
             if self.mode == 'mp':  # Magnitude-Phase mode
                 if self.output_image_mag is None:
-                    self.num_mag += 1
                     self.output_image_mag = np.ones_like(self.output_image_phase)
                 if self.output_image_phase is None:
-                    self.num_phase += 1
                     self.output_image_phase = np.ones_like(self.output_image_mag)
-                complex_spectrum = np.exp(self.output_image_mag) * np.exp(1j *self.output_image_phase)
+                complex_spectrum = self.output_image_mag * self.output_image_phase
 
             elif self.mode == 'ri':  # Real-Imaginary mode
                 if self.output_image_real is None:
