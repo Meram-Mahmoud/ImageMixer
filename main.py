@@ -148,7 +148,7 @@ class Mixer(QMainWindow):
                 if self.controls.get_mode() == "Magnitude/Phase":
                     mode = "mp"
                 else:
-                    mode = "ri"
+                    mode = "ri" 
                 img1 = self.image_uploader1.get_component()[1]
                 img2 = self.image_uploader2.get_component()[1]
                 img3 = self.image_uploader3.get_component()[1]
