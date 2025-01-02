@@ -60,8 +60,7 @@ The application offers a user-friendly GUI with the following components:
 This project relies on the following Python libraries:
 - **PyQt6**: For GUI development.
 - **NumPy**: For numerical computations.
-- **Pillow (PIL)**: For image processing.
-- **SciPy**: For performing Fast Fourier Transform (FFT) operations.
+- **OpenCV (cv2)**: For image processing.
 
 ### Install the dependencies:
 ```bash
