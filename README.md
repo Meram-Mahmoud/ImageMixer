@@ -6,8 +6,8 @@ The Image Mixer project is a graphical application designed for mixing and proce
 The application offers a user-friendly GUI with the following components:
 
 ### 1. Image Viewports: Display loaded images for processing.
--[Fourier Transform (FT) Viewports:] (#Show FT components of the loaded images.)
--[Output Viewports:] (#Display the final mixed and processed images.)
+- Fourier Transform (FT) Viewports: Show FT components of the loaded images.
+- Output Viewports: Display the final mixed and processed images.
 ### 2. Image Loading and Processing
 Load Images: Users can upload images in formats like PNG, JPG, JPEG, and JFIF using the "Browse" option in each Image Viewport.
 Image Processing: Loaded images are transformed into Fourier Transform components, which are visualized in the FT Viewports. These components form the basis for mixing operations.
