@@ -58,10 +58,39 @@ The application offers a user-friendly GUI with the following components:
 ## Dependencies
 
 This project relies on the following Python libraries:
-- **PyQt6**: For GUI development.
-- **NumPy**: For numerical computations.
+- **PyQt5**: For GUI development.
+- **NumPy**: For numerical computations and FFT computations.
 - **OpenCV (cv2)**: For image processing.
 
+---
+
+- ## Demo
+Check out the demo video for a walkthrough of the application: `Demo.mp4`
+
+---
+
+## How to run
 ### Install the dependencies:
 ```bash
 pip install -r requirements.txt
+```
+### Run the application using:
+```bash
+python main.py
+```
+
+---
+
+## Contributors
+| [**Talal Emara**](https://github.com/TalalEmara) | [**Meram Mahmoud**](https://github.com/Meram-Mahmoud) | [**Maya Mohammed**](https://github.com/Mayamohamed207) | [**Nouran Hani**](https://github.com/Nouran-Hani) | [**Nariman Ahmed**](https://github.com/nariman-ahmed) |
+|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|
+
+---
+## Contributors
+
+| ![Talal Emara](https://avatars.githubusercontent.com/TalalEmara?s=100) [**Talal Emara**](https://github.com/TalalEmara) | ![Meram Mahmoud](https://avatars.githubusercontent.com/Meram-Mahmoud?s=100) [**Meram Mahmoud**](https://github.com/Meram-Mahmoud) | ![Maya Mohammed](https://avatars.githubusercontent.com/Mayamohamed207?s=100) [**Maya Mohammed**](https://github.com/Mayamohamed207) | ![Nouran Hani](https://avatars.githubusercontent.com/Nouran-Hani?s=100) [**Nouran Hani**](https://github.com/Nouran-Hani) | ![Nariman Ahmed](https://avatars.githubusercontent.com/nariman-ahmed?s=100) [**Nariman Ahmed**](https://github.com/nariman-ahmed) |
+|:------------------:|:----------------------:|:-----------------------:|:-------------------:|:-------------------:|
+
+
+Feel free to explore, experiment, and enhance the Image Mixer application.
+
