@@ -6,12 +6,12 @@ import cv2
 import numpy as np
 from scipy.fft import ifft2, ifftshift
 
-# Configure logging
-logging.basicConfig(
-    filename='ImageMixer/Mixer.log', 
-    level=logging.DEBUG, 
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+# # Configure logging
+# logging.basicConfig(
+#     filename='ImageMixer/Mixer.log', 
+#     level=logging.DEBUG, 
+#     format='%(asctime)s - %(levelname)s - %(message)s'
+# )
 
 class Output(QWidget):
     def __init__(self, parent=None):
@@ -27,7 +27,7 @@ class Output(QWidget):
         self.components = None
         self.mode = None
         self.selected_comp = None
-        logging.info("Output widget initialized")
+        # logging .info("Output widget initialized")
         self.port()
 
     def port(self):
@@ -43,10 +43,10 @@ class Output(QWidget):
         self.original_image_label.setFixedSize(self.width, self.height)
 
         layout.addWidget(self.original_image_label)
-        logging.info("Port initialized with original image label")
+        # logging .info("Port initialized with original image label")
         
     def add_image_components(self):
-        logging.debug("Adding image components with mode: %s", self.mode)
+        # logging .debug("Adding image components with mode: %s", self.mode)
         self.num_mag = 0
         self.num_phase = 0
         try:
@@ -72,8 +72,9 @@ class Output(QWidget):
                                                                 self.output_image_phase - np.pi, 
                                                                 self.output_image_phase)
                         else: 
-                            logging.warning("Unsupported item: %s", item)
-                logging.debug(f"num_mag = {self.num_mag}, num_phase = {self.num_phase}")
+                            pass
+                            # logging .warning("Unsupported item: %s", item)
+                # logging .debug(f"num_mag = {self.num_mag}, num_phase = {self.num_phase}")
             
             else: 
                 for comp, item in zip(self.components, self.selected_comp):
@@ -89,13 +90,15 @@ class Output(QWidget):
                             else:
                                 self.output_image_img += comp["imaginary"]
                         else: 
-                            logging.warning("Unsupported item: %s", item)
+                            pass
+                            # logging .warning("Unsupported item: %s", item)
             self.ifft()
         except Exception as e:
-            logging.error("Error in add_image_components: %s", e)
+            pass
+            # logging .error("Error in add_image_components: %s", e)
     
     def get_rounded_pixmap(self, pixmap, size, radius):
-        logging.debug("Generating rounded pixmap")
+        # logging .debug("Generating rounded pixmap")
         pixmap = pixmap.scaled(size, Qt.KeepAspectRatioByExpanding, Qt.SmoothTransformation)
         rounded_pixmap = QPixmap(size)
         rounded_pixmap.fill(Qt.transparent)
@@ -109,7 +112,7 @@ class Output(QWidget):
         return rounded_pixmap
 
     def set_data(self, new_data, mode, comp):
-        logging.info("Setting data with mode: %s", mode)
+        # logging .info("Setting data with mode: %s", mode)
         self.output_image_real = None
         self.output_image_img = None
         self.output_image_mag = None
@@ -120,7 +123,7 @@ class Output(QWidget):
         self.add_image_components()
 
     def ifft(self):
-        logging.debug("Performing inverse FFT")
+        # logging .debug("Performing inverse FFT")
         try:
             if self.mode == 'mp':  # Magnitude-Phase mode
                 if self.output_image_mag is None:
@@ -142,11 +145,12 @@ class Output(QWidget):
             self.display(reconstructed_image)
 
         except Exception as e:
-            logging.error("Error in ifft: %s", e)
+            pass
+            # logging .error("Error in ifft: %s", e)
 
 
     def display(self, image):
-        logging.debug("Displaying image")
+        # logging .debug("Displaying image")
         try:
             height, width = image.shape
             byte_data = image.tobytes()
@@ -154,6 +158,7 @@ class Output(QWidget):
             pixmap = QPixmap.fromImage(qimage)
             pixmap = self.get_rounded_pixmap(pixmap, self.original_image_label.size(), self.radius)
             self.original_image_label.setPixmap(pixmap)
-            logging.info("Image displayed successfully")
+            # logging .info("Image displayed successfully")
         except Exception as e:
-            logging.error("Error in display: %s", e)
+            pass
+            # logging .error("Error in display: %s", e)

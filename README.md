@@ -58,11 +58,34 @@ The application offers a user-friendly GUI with the following components:
 ## Dependencies
 
 This project relies on the following Python libraries:
-- **PyQt6**: For GUI development.
-- **NumPy**: For numerical computations.
-- **Pillow (PIL)**: For image processing.
-- **SciPy**: For performing Fast Fourier Transform (FFT) operations.
+- **PyQt5**: For GUI development.
+- **NumPy**: For numerical computations and FFT computations.
+- **OpenCV (cv2)**: For image processing.
 
+---
+
+- ## Demo
+Check out the demo video for a walkthrough of the application: `Demo.mp4`
+
+---
+
+## How to run
 ### Install the dependencies:
 ```bash
 pip install -r requirements.txt
+```
+### Run the application using:
+```bash
+python main.py
+```
+
+---
+
+## Developers
+| [**Talal Emara**](https://github.com/TalalEmara) | [**Meram Mahmoud**](https://github.com/Meram-Mahmoud) | [**Maya Mohammed**](https://github.com/Mayamohamed207) | [**Nouran Hani**](https://github.com/Nouran-Hani) | [**Nariman Ahmed**](https://github.com/nariman-ahmed) |
+|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|:------------------------------------------:|
+
+---
+
+Feel free to explore, experiment, and enhance the Image Mixer application.
+
