@@ -1,5 +1,20 @@
 # Image Mixer Application
-The Image Mixer project is a graphical application designed for mixing and processing images using Fourier Transform (FT) components. It provides a user-friendly interface to load images, perform Fourier Transform operations, and create composite images by combining selected FT components.
+The Image Mixer project is a graphical application designed for mixing and processing images using Fourier Transform (FT) components. It provides a user-friendly interface to load images, perform Fourier Transform operations, and create composite images by combining selected FT components. Some of the key feature of this aplication include:
+
+- ### Uploading images and reconstructing each one by their full weights through the sliders
+![Screenshot 2025-01-07 050948](https://github.com/user-attachments/assets/27d04448-263d-4aa9-b306-12407723eb45)
+
+---
+
+- ### Mixing both images together with full weights. Port 1 showing the reconstruction of the inner regions, and port 2 for the outer regions.
+![Screenshot 2025-01-07 050152](https://github.com/user-attachments/assets/a845fbc7-2920-4e27-9033-7cd520b19c6d)
+
+---
+
+- ### Mixing the components with different weights and finding out how the final images withh look like.
+![Screenshot 2025-01-07 050415](https://github.com/user-attachments/assets/7e16c6a2-854d-4fbc-9f53-f0d866a54df7)
+
+---
 
 ## Features
 
@@ -61,11 +76,6 @@ This project relies on the following Python libraries:
 - **PyQt5**: For GUI development.
 - **NumPy**: For numerical computations and FFT computations.
 - **OpenCV (cv2)**: For image processing.
-
----
-
-- ## Demo
-Check out the demo video for a walkthrough of the application: `Demo.mp4`
 
 ---
 
