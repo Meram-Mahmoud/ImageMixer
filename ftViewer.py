@@ -7,12 +7,12 @@ import numpy as np
 from region_selector import ROISelectableLabel
 from controls import Controls
 
-# # Configure logging
-# logging.basicConfig(
-#     filename='ImageMixer/Mixer.log', 
-#     level=logging.DEBUG, 
-#     format='%(asctime)s - %(levelname)s - %(message)s'
-# )
+# Configure logging
+logging.basicConfig(
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 class FourierTransformViewer(QWidget):
     fourier_image = pyqtSignal(object)
@@ -59,9 +59,9 @@ class FourierTransformViewer(QWidget):
         self.comp_combo()
 
     def propagate_roi(self, rect: QRect):
-        # logging .info("Propagating ROI: %s", rect)
+        logging.info("Propagating ROI: %s", rect)
         if self.component is None:
-            # logging .warning("No component selected. Skipping ROI propagation.")
+            logging .warning("No component selected. Skipping ROI propagation.")
             return
         for instance in FourierTransformViewer.instances:
             if instance is not self:
@@ -69,20 +69,20 @@ class FourierTransformViewer(QWidget):
                 instance.get_region_data(rect)
 
     def update_roi(self, rect: QRect):
-        # logging .info("Updating ROI: %s", rect)
+        logging.info("Updating ROI: %s", rect)
         if self.component is None:
-            # logging .warning("No component selected. Skipping ROI update.")
+            logging .warning("No component selected. Skipping ROI update.")
             return
         self.ft_image_label.rect = rect
         self.ft_image_label.update()
 
     def setData(self, original):
-        # logging .debug("Setting data for Fourier Transform.")
+        logging.debug("Setting data for Fourier Transform.")
         self.image = original
         self.compute_fft(self.image)
 
     def compute_fft(self, image):
-        # logging .debug("Computing Fourier Transform.")
+        logging.debug("Computing Fourier Transform.")
         f_transform = np.fft.fft2(image)
         f_shift = np.fft.fftshift(f_transform)
         self.magnitude = np.log1p(np.abs(f_shift))
@@ -97,9 +97,9 @@ class FourierTransformViewer(QWidget):
         self.old_imaginary = np.imag(f_shift)
 
     def update_ft_view(self):
-        # logging .debug("Updating Fourier Transform view.")
+        logging.debug("Updating Fourier Transform view.")
         self.selected = self.component_combo.currentText()
-        # logging .info("Selected component: %s", self.selected)
+        logging.info("Selected component: %s", self.selected)
         if self.selected == "Magnitude":
             self.component = self.magnitude
         elif self.selected == "Phase":
@@ -109,7 +109,7 @@ class FourierTransformViewer(QWidget):
         elif self.selected == "Imaginary":
             self.component = self.imaginary
         else:
-            # logging .warning("Invalid selection in combo box.")
+            logging.warning("Invalid selection in combo box.")
             return
 
         self.display_component(self.component)
@@ -118,7 +118,7 @@ class FourierTransformViewer(QWidget):
         return self.selected
 
     def display_component(self, component):
-        # logging .debug("Displaying selected Fourier component.")
+        logging.debug("Displaying selected Fourier component.")
         normalized_component = cv2.normalize(component, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
         height, width = normalized_component.shape
         qimage_component = QImage(normalized_component.data, width, height, width, QImage.Format_Grayscale8)
@@ -140,7 +140,7 @@ class FourierTransformViewer(QWidget):
         self.ft_image_label.setPixmap(pixmap_component.scaled(self.width, self.height, Qt.KeepAspectRatio))
 
     def get_region_data(self, rect):
-        # logging .debug("Extracting region data for ROI: %s", rect)
+        logging.debug("Extracting region data for ROI: %s", rect)
         if self.image is not None and not rect.isNull() and self.component is not None:
             x1 = int(rect.left() * self.component.shape[1] / self.ft_image_label.width())
             x2 = int(rect.right() * self.component.shape[1] / self.ft_image_label.width())
@@ -164,7 +164,7 @@ class FourierTransformViewer(QWidget):
                 "imaginary": inner_imaginary
             }
 
-            # logging .info("Inner components extracted.")
+            logging.info("Inner components extracted.")
 
             outer_magnitude = np.copy(self.magnitude)
             outer_magnitude[y1:y2, x1:x2] = 0
@@ -185,13 +185,13 @@ class FourierTransformViewer(QWidget):
                 "imaginary": outer_imaginary
             }
 
-            # logging .info("Outer components extracted.")
+            logging.info("Outer components extracted.")
 
     def get_roi(self):
         return self.inner_components, self.outer_components
 
     def add_slider(self):
-        # logging .debug("Adding slider for intensity adjustment.")
+        logging.debug("Adding slider for intensity adjustment.")
         self.slider = QSlider(Qt.Horizontal)
         self.slider.setMinimum(0)
         self.slider.setMaximum(100)
@@ -218,26 +218,26 @@ class FourierTransformViewer(QWidget):
         self.slider.valueChanged.connect(self.update_slider_value)
 
     def update_slider_value(self):
-        # logging .debug("Updating slider value.")
+        logging.debug("Updating slider value.")
         self.magnitude = self.old_magnitude * self.slider.value()/100
         self.phase = self.old_phase * self.slider.value()/100
         self.real = self.old_real * self.slider.value()/100
         self.imaginary = self.old_imaginary * self.slider.value()/100
 
     def comp_combo(self):
-        # logging .debug("Initializing ComboBox for Fourier components.")
+        logging.debug("Initializing ComboBox for Fourier components.")
         # ComboBox for selecting Fourier components
         self.component_combo = QComboBox(self)
         self.component_combo.addItem("Choose Component")
-        # logging .debug("Added default ComboBox item: 'Choose Component'.")
+        logging.debug("Added default ComboBox item: 'Choose Component'.")
 
         # self.update_fourier_options()
         if self.mode == "Magnitude/Phase":
-            # logging .debug("Magnitude/Phase mode.")
+            logging.debug("Magnitude/Phase mode.")
             self.component_combo.addItem("Magnitude")
             self.component_combo.addItem("Phase")
         else: 
-            # logging .debug("Real/Imaginary mode.")
+            logging.debug("Real/Imaginary mode.")
             self.component_combo.addItem("Real")
             self.component_combo.addItem("Imaginary")
 
@@ -257,10 +257,10 @@ class FourierTransformViewer(QWidget):
                 selection-color: #ffffff; /* Text color for selected item */
             }
         """)
-        # logging .debug("Set ComboBox stylesheet.")
+        logging.debug("Set ComboBox stylesheet.")
 
         self.component_combo.currentIndexChanged.connect(self.update_ft_view)
-        # logging .debug("Connected ComboBox currentIndexChanged signal to update_ft_view method.")
+        logging.debug("Connected ComboBox currentIndexChanged signal to update_ft_view method.")
 
     def update_fourier_options(self, mode):
         self.mode = mode

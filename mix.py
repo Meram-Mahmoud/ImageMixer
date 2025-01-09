@@ -3,12 +3,12 @@ from PyQt5.QtCore import pyqtSignal
 import logging
 import time
 
-# # Configure logging
-# logging.basicConfig(
-#     filename='ImageMixer/Mixer.log', 
-#     level=logging.DEBUG, 
-#     format='%(asctime)s - %(levelname)s - %(message)s'
-# )
+# Configure logging
+logging.basicConfig(
+    filename='ImageMixer/Mixer.log', 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 class Mix(QWidget):
     flag = pyqtSignal(object)
@@ -67,7 +67,7 @@ class Mix(QWidget):
             #     break
             self.progress_bar.setValue(i*20)
             time.sleep(0.35)
-            # logging .debug(f"Progress updated to: {i*20}%")
+            logging.debug(f"Progress updated to: {i*20}%")
         self.progress_bar.setValue(0)
         
     @property
